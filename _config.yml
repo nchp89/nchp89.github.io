@@ -63,20 +63,20 @@ plugins:
 author:
   name   : "Nick Hunkins"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "Data scientist, zen practitioner, artist, climber, lover of donuts."
+  bio    : "Data scientist, zen practitioner, artist, climber, bookworm, lover of donuts."
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-fw fa-linked-in" #"fas fa-fw fa-link"
       url: "https://www.linkedin.com/in/nick-hunkins/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+#    - label: "Twitter"
+#      icon: "fab fa-fw fa-twitter-square"
+#      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/nchp89"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://www.instagram.com/nick.hunkins/""
 
 footer:
   links:

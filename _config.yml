@@ -16,9 +16,12 @@
 title: Nick Hunkins
 email: nickhunkins@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal website of Nick Hunkins/ Nicholas C Hunkins, data scientist, 
+  zen practitioner, artist, climber, lover of donuts. Find posts on projects
+  that I've done, adventures that I've had, and art projects that I've made.
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
 twitter_username: username
 github_username: nchp89
 minimal_mistakes_skin: default
@@ -59,7 +62,7 @@ plugins:
 
 author:
   name   : "Nick Hunkins"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.png"
   bio    : "Data scientist, zen practitioner, artist, climber, lover of donuts."
   links:
     - label: "LinkedIn"

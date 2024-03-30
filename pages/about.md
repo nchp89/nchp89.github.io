@@ -32,7 +32,7 @@ In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail fro
 
 <img src="../assets/img/about/ct-painting.jpeg" alt="CT Painting Pic" width="450"/>
 
-At home, I love to paint, write, and play the guitar. After completing the Colorado Trail I made the painting above to honor the time I spent on it wandering through the southern Rocky Mountains. 
+At home, I love to paint, read, and play the guitar. After completing the Colorado Trail I made the above painting to honor that time. It's inspired by scenes both real and imagined through my wanderings over the southern Rocky Mountains. 
 
 <hr>
 
@@ -44,7 +44,7 @@ Here are our pets, Aubrey the cat and Walnut the dog. They're a silly pair, but 
 
 <img src="../assets/img/about/sangha-photo.png" alt="Nick Pic" width="450"/>
 
-I've been fortunate to find Eon Zen, a warm and welcoming community with whom I've been practicing Zen Buddhism for the past few years. Here's a group photo after a weekend retreat in 2022. 
+I've been fortunate to find Eon Zen, a warm and welcoming community with whom I've been practicing Zen Buddhism for the past few years. This is a group photo after a weekend retreat in the winter of 2022. 
 
 <hr>
 

@@ -26,19 +26,19 @@ Though Boulder offers a lot of access to the outdoors, I love to get way out the
 
 <img src="../assets/img/about/ct-finish-photo.png" alt="Durango Pic" width="450"/>
 
-In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail from Denver to Durango. It was one of the greatest experiences of my life, and I hope to do more thru-hiking in the future. Here's me after finishing the trail at the southern terminus in Durango. Despite my smell, my lovely partner Maggie kindly came to meet me (and give me a ride home). 
+In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail from Denver to Durango. It was one of the most memorable experiences of my life, and I hope to do more thru-hiking in the future. Here's me after finishing the trail at the southern terminus in Durango. Despite my smell, my lovely partner Maggie kindly came to meet me (and give me a ride home). 
 
 <hr>
 
 <img src="../assets/img/about/ct-painting.jpeg" alt="CT Painting Pic" width="450"/>
 
-At home, I love to paint, write, and play the guitar. After the completing the trail I made the painting above to honor the time I spent on the CT wandering through the southern Rocky Mountains. 
+At home, I love to paint, write, and play the guitar. After completing the Colorado Trail I made the painting above to honor the time I spent on it wandering through the southern Rocky Mountains. 
 
 <hr>
 
 <img src="../assets/img/about/pets-photo.png" alt="Aubrey & Walnut" width="450"/>
 
-Here are my pets, Aubrey the cat and Walnut the dog. They're a silly pair, but they get along well, and they bring us a lot of joy.
+Here are our pets, Aubrey the cat and Walnut the dog. They're a silly pair, but they get along well, and they bring us a lot of joy.
 
 <hr>
 
@@ -50,7 +50,7 @@ I've been fortunate to find Eon Zen, a warm and welcoming community with whom I'
 
 <img src="../assets/img/about/desk-photo.png" alt="Nick Pic" width="450"/>
 
-For all of my interests, here's where I actually spend the majority of my time -- working at my desk. It's a good desk. It has a comfy chair and a window view over an open space. I like it best with a fresh cup of hot coffee on it. 
+For all of my interests, here's where I actually spend the majority of my time -- working at my desk. It's a good desk. It has a comfy chair and a window view over an open space. I like it best in the morning with a fresh cup of hot coffee on it. 
 <hr>
 
 

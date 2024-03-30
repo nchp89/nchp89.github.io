@@ -6,12 +6,12 @@ permalink: /contact
 
 # Contact
 
-Feel free to contact me with any professional inquiries through my [email](mailto:nickhunkins@gmail.com) or [LinkedIn](www.linkedin.com/in/nick-hunkins) and I will get back to you as soon as I can. 
+Feel free to contact me through any of the below channels. My preferred modes of communication for professional inquiries are via [email](mailto:nickhunkins@gmail.com) or [LinkedIn](www.linkedin.com/in/nick-hunkins). Send me a message and I will get back to you as soon as I can! 
 
-Modes of contact:
 <ul>
-    <li>Email: nickhunkins@gmail.com</li>
-    <li>LinkedIn: www.linkedin.com/in/nick-hunkins</li>
-    <li>Instagram: www.instagram.coom/nick.hunkins</li>
-    <li>GitHub: www.github.io/nchp89</li>
+    <li><a href="mailto:nickhunkins@gmail.com" target="_blank">Email:</a> nickhunkins@gmail.com</li>
+    <li><a href="https://www.linkedin.com/in/nick-hunkins" target="_blank">LinkedIn:</a> www.linkedin.com/in/nick-hunkins</li>
+    <li><a href="https://www.instagram.com/nick.hunkins" target="_blank">Instagram:</a> www.instagram.com/nick.hunkins</li>
+    <li><a href="https://www.github.com/nchp89" target="_blank">GitHub: </a>www.github.com/nchp89</li>
+    <li><a href="https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link" target="_blank">Resume:</a> Google Drive Link</li>
 </ul>

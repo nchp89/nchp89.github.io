@@ -11,11 +11,12 @@ menu:
 # Projects Section
 
 projects:
-- {name: 'About Nick',   url: 'proj-1'}
-- {name: 'Project Two',   url: 'proj-2'}
-- {name: 'Project Three', url: 'proj-3'}
-- {name: 'Project Four',  url: 'proj-4'}
-- {name: 'Project Five',  url: 'proj-5'}
+- {name: 'PRISM',   url: 'prism'}
+- {name: 'SMC: Analysis',   url: 'smc-analysis'}
+- {name: 'SMC: Annotations', url: 'smc-annotations'}
+- {name: 'CETD: Automated Feedback',  url: 'cetd-auto-feedback'}
+- {name: 'CETD: Messages of Belonging',  url: 'cetd-belonging'}
+- {name: 'Graybar: Parallelized Data Ingests',  url: 'gb-parallel-ingests'}
 
 #-------------------------------
 # Contact Section

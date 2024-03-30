@@ -4,9 +4,59 @@ title: About
 permalink: /about
 ---
 
-# About Nick
+# About Me
 
-<img src="../assets/img/misc/bio-photo.png" alt="Nick Pic" width="450"/>
+<img src="../assets/img/about/bio-photo.png" alt="Bio Pic" width="450"/>
 
-This is a personal portfolio theme that I built from the ground up, using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). You can [check out the demo](lenpaul.github.io/portfolio-jekyll-theme/), and [fork the repository](https://github.com/LeNPaul/portfolio-jekyll-theme/fork), to get started.
+Hi there! I'm Nick Hunkins, a data scientist with a masters degree in computer science and a bachelors degree in mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. I currently work as a data scientist for the non-profit Post-Internet Project. While I love using my knowledge of math, stats, and computer science to discover and explain insights in data, I have much more that I'm passionate about!
+
+<hr>
+
+<img src="../assets/img/about/scrambling-photo.jpeg" alt="Scrambling Pic" width="450"/>
+
+I love to spend time outside around Boulder, CO, my current home. Hiking, rock climbing, and scrambling are some of my favorite outdoor activities. Here's a pic of me scrambling one of the flatirons in Boulder's beautiful skyline. 
+
+<hr>
+
+<img src="../assets/img/about/vestal-peak-photo.png" alt="Vestal Peak Pic" width="450"/>
+
+Though Boulder offers a lot of access to the outdoors, I love to get way out there into the backcountry. When summer rolls around you can find me out backpacking or alpine climbing somewhere in or around the great state of Colorado. Here's a shot of me with my two good friends Sam and Owen after we summitted Vestal Peak in the San Juans. 
+
+<hr>
+
+<img src="../assets/img/about/ct-finish-photo.png" alt="Durango Pic" width="450"/>
+
+In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail from Denver to Durango. It was one of the greatest experiences of my life, and I hope to do more thru-hiking in the future. Here's me after finishing the trail at the southern terminus in Durango. Despite my smell, my lovely partner Maggie kindly came to meet me (and give me a ride home). 
+
+<hr>
+
+<img src="../assets/img/about/ct-painting.jpeg" alt="CT Painting Pic" width="450"/>
+
+At home, I love to paint, write, and play the guitar. After the completing the trail I made the painting above to honor the time I spent on the CT wandering through the southern Rocky Mountains. 
+
+<hr>
+
+<img src="../assets/img/about/pets-photo.png" alt="Aubrey & Walnut" width="450"/>
+
+Here are my pets, Aubrey the cat and Walnut the dog. They're a silly pair, but they get along well, and they bring us a lot of joy.
+
+<hr>
+
+<img src="../assets/img/about/sangha-photo.png" alt="Nick Pic" width="450"/>
+
+I've been fortunate to find Eon Zen, a warm and welcoming community with whom I've been practicing Zen Buddhism for the past few years. Here's a group photo after a weekend retreat in 2022. 
+
+<hr>
+
+<img src="../assets/img/about/desk-photo.png" alt="Nick Pic" width="450"/>
+
+For all of my interests, here's where I actually spend the majority of my time -- working at my desk. It's a good desk. It has a comfy chair and a window view over an open space. I like it best with a fresh cup of hot coffee on it. 
+<hr>
+
+
+<img src="../assets/img/about/hiking-photo.jpeg" alt="Nick Pic" width="450"/>
+
+So that's a little bit about me. Please reach out if you'd like to have a conversation! I'm looking forward to hearing from you. 
+
+
 

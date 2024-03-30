@@ -9,4 +9,4 @@ plugins:   [jekyll-sitemap, jekyll-feed,  jekyll-seo-tag]
 
 title:		   "Nick Hunkins"
 description: "Nick Hunkins' personal website - Powered by Jekyll and GitHub Pages"
-author:      "Nick Hunkins, Jekyll theme by Paul Le"
+author:      "Nick Hunkins"

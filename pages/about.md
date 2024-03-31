@@ -8,7 +8,7 @@ permalink: /about
 
 <img src="../assets/img/about/bio-photo.png" alt="Bio Pic" width="450"/>
 
-Hi there! I'm Nick Hunkins, a data scientist with a masters degree in computer science and a bachelors degree in mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. My work has primarily focused on AI for education and the relationship between social media and wellbeing. I currently work as a data scientist for the non-profit Post-Internet Project. If you're interested, [here's my resume](https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link). While I love using my knowledge of math, stats, and computer science to discover and explain insights in data, I have much more that I'm passionate about!
+Hi there! I'm Nick Hunkins, a data scientist with a Masters in Computer Science and a Bachelors in Mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. My work has primarily focused on AI for education and the relationship between social media and wellbeing. I currently work as a data scientist for the non-profit Post-Internet Project. If you're interested, [here's my resume](https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link). While I love using my knowledge of math, stats, and computer science to discover and explain insights in data, I have much more that I'm passionate about!
 
 <hr>
 

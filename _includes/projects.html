@@ -1,5 +1,15 @@
 <section>
+  <div style="width: 100%;">
+    <img class="project-container" src="../assets/img/about/bio-photo.png" alt="Nick Pic" 
+        style="border-radius:250px;width:400px;display:block;margin-left:auto;margin-right:auto;">
+    
+    <p style="text-align: center;">Data Scientist. Outdoorsman. Artist. Zen Student.</p>
+  </div>
+</section>
+<hr>
+<section>
   <div class="project-container">
+    <h1 style="text-align: center;">Projects</h1>
     {% for project in site.data.settings.projects %}
       <a href="{{ site.github.url }}/projects/{{ project.url }}">
         <div class="project-unit" data-folder="{{ site.github.url }}/projects/{{ project.url }}" style="background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/thumbnail.jpg)">

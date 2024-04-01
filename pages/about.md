@@ -8,7 +8,9 @@ permalink: /about
 
 <img src="../assets/img/about/bio-photo.png" alt="Bio Pic" width="450"/>
 
-Hi there! I'm Nick Hunkins, a data scientist with a Masters in Computer Science and a Bachelors in Mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. My work has primarily focused on AI for education and the relationship between social media and wellbeing. I currently work as a data scientist for the non-profit Post-Internet Project. If you're interested, [here's my resume](https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link). While I love using my knowledge of math, stats, and computer science to discover and explain insights in data, I have much more that I'm passionate about!
+Hi there! I'm Nick Hunkins, a data scientist with a Masters in Computer Science and a Bachelors in Mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. My work has primarily focused on AI for education and the relationship between social media and wellbeing. The current instantiation of social media is deeply concerning to me, specifically with respect to how it exploits human cognition to manipulate attention for private profit. In alignment with this concern, I currently work as a data scientist for the non-profit [Post-Internet Project](https://www.postinternetproject.org). If you'd like to learn more, [here's my resume](https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link). 
+
+While I love using my knowledge of math, stats, and computer science to discover and explain insights in data, I have much more that I'm passionate about!
 
 <hr>
 
@@ -20,13 +22,13 @@ I love to spend time outside around Boulder, CO, my current home. Hiking, rock c
 
 <img src="../assets/img/about/vestal-peak-photo.png" alt="Vestal Peak Pic" width="450"/>
 
-Though Boulder offers a lot of access to the outdoors, I love to get way out there into the backcountry. When summer rolls around you can find me out backpacking or alpine climbing somewhere in or around the great state of Colorado. Here's a shot of me with my two good friends Sam and Owen after we summitted Vestal Peak in the San Juans. 
+Though Boulder offers a lot of access to the outdoors, I love to get way out there into the backcountry. When summer rolls around you can find me out backpacking or alpine climbing somewhere in or around the great state of Colorado. Here's a shot of me with my two good friends Sam and Owen on the summit of Vestal Peak in the San Juans. 
 
 <hr>
 
 <img src="../assets/img/about/ct-finish-photo.png" alt="Durango Pic" width="450"/>
 
-In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail from Denver to Durango. It was one of the most memorable experiences of my life, and I hope to do more thru-hiking in the future. Here's me after finishing the trail at the southern terminus in Durango. Despite my smell, my lovely partner Maggie kindly came to meet me (and give me a ride home). 
+In the summer of 2023 I spent five weeks walking the 500-mile Colorado Trail from Denver to Durango. It was one of the most memorable experiences of my life, and I hope to do more thru-hiking in the future. Here's me after finishing the trail at the southern terminus in Durango. Despite my smell, my lovely partner Maggie kindly came to celebrate with me (and give me a ride home). 
 
 <hr>
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Reflection: Just Starting Out"
+title: "Reflecting On Just Starting Out"
 ---
+<hr>
 
-
-#### Coming Back Home 
+#### The Return Home
 
 I remember stepping off the jetway into Lambert Airport in St. Louis, MO. The feeling was surreal. It was March of 2017 and I had just spent the last 13 months teaching English in South Korea. 
 

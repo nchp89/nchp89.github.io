@@ -1,8 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-02T10:13:31-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Graybar: Parallelized SAP Ingests</title><link href="http://localhost:4000/parallel-sap-ingests" rel="alternate" type="text/html" title="Graybar: Parallelized SAP Ingests" /><published>2024-04-01T00:00:00-06:00</published><updated>2024-04-01T00:00:00-06:00</updated><id>http://localhost:4000/parallel-sap-ingests</id><content type="html" xml:base="http://localhost:4000/parallel-sap-ingests"><![CDATA[<p>In my professional experience working as a Sr Advanced Analytics Developer at Graybar Electric, I took on several roles ranging from data analysis to data engineering. A particular challenge we faced as a team was the need to update data in our Hadoop system every day.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-02T11:26:59-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Graybar: Optimizing Hadoop Ingests</title><link href="http://localhost:4000/parallel-sap-ingests" rel="alternate" type="text/html" title="Graybar: Optimizing Hadoop Ingests" /><published>2024-04-02T00:00:00-06:00</published><updated>2024-04-02T00:00:00-06:00</updated><id>http://localhost:4000/parallel-sap-ingests</id><content type="html" xml:base="http://localhost:4000/parallel-sap-ingests"><![CDATA[<hr />
 
-<p>Our daily data ingests (mostly from SAP, but other sources as well) required that over 150 tables be up-to-date every morning that we came into work. The process our team was using to this point was painfully slow, taking nearly 22 hours to complete. Myself and a fellow team member rewrote the ingest process from the bottom up. We used parallel processing to ingest smaller tables in parallel, and for large tables implemented a delta process where only records that had been changed or added were ingested rather than the entire data source.</p>
+<h4 id="the-need-for-data">The Need For Data</h4>
+<p>In my professional experience working as a Sr Advanced Analytics Developer at Graybar Electric, I worked in a variety of roles. Sometimes I would focus on software development and my days were spent writing Python and SQL. At other times I would concentrate on developing data visualization tools in Qlik for the consumption of business users external to our team.</p>
 
-<p>This drastically reduced the time taken for daily data ingestion from 22 hours to around 7 hours. With this improvement, the team was able to build new dashboards in Qlik that could provide other teams within the business up-to-date information to assist their needs.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[In my professional experience working as a Sr Advanced Analytics Developer at Graybar Electric, I took on several roles ranging from data analysis to data engineering. A particular challenge we faced as a team was the need to update data in our Hadoop system every day.]]></summary></entry><entry><title type="html">Reflection: Just Starting Out</title><link href="http://localhost:4000/just-starting-out" rel="alternate" type="text/html" title="Reflection: Just Starting Out" /><published>2024-03-30T00:00:00-06:00</published><updated>2024-03-30T00:00:00-06:00</updated><id>http://localhost:4000/just-starting-out</id><content type="html" xml:base="http://localhost:4000/just-starting-out"><![CDATA[<h4 id="coming-back-home">Coming Back Home</h4>
+<p>Regardless of the task I was working on, one thing was always the same: the need for up-to-date, reliable data.</p>
+
+<p>Our team leveraged an on-prem Hadoop cluster to store and analyze the vast quantities of data produced by the day-to-day business. After about a year of working on the team, I began transitioning into a data engineering role and learned more about Hadoop and the braoder concept of distributed computing.</p>
+
+<h5 id="the-shift-to-data-engineering">The Shift to Data Engineering</h5>
+<p>What prompted my shift into a data engineering role was the emergence of a new and serious problem: the process to update the team data lake each day was severely outdated and was no longer trustworthy.</p>
+
+<p>The troubled process was written at a time when the team required just 24 data tables to conduct all of their work. By this time in the teams lifespan, we needed over 150 tables to be up-to-date each morning we came into work, and that number was only growing. It was time for an upgrade.</p>
+
+<h4 id="the-problem">The Problem</h4>
+
+<p>The old data ingestion process had three major issues: speed, visibility, and reliability. A new process would have to address and improve each of these three parts.</p>
+
+<h5 id="speed">Speed</h5>
+<p>From start to finish, it took about 22 hours for the old process to perform a complete update on all of our data tables. If the team was expected to work 8 hours a day, they should expect to have reliable data for at least that duration. The most they could hope for at this juncture was for 2 hours of stable data. It goes without saying that this status quo was beyond unacceptable.</p>
+
+<h5 id="visibility">Visibility</h5>
+<p>When a data table ingestion failed, it failed silently. The only way to learn of a failed update was to either look into the endless log files or to stumble upon an error while browsing data that one thought was up-to-date. Of course, outdated data can be hard to detect for end users, especially when relying on downstream data that has already been manipulated in some way, and even more so when there is an <i>expection</i> that the data has been updated.</p>
+
+<h5 id="reliability">Reliability</h5>
+<p>Finally, when a table ingest did fail (something that happened all too often), there was no automated process to handle that failure. It just failed and moved on to the next table as if nothing had happened. That meant that any tables that failed during a given ingest had to be manually updated if they were to be used that day. This produced a lot of unnecessary extra work for the team, and it distracted us all from more important and valuable work.</p>
+
+<h4 id="the-solution">The Solution</h4>
+
+<p>A teammate and I sat down together one day and began combing through the code that made up the old process. After a few days of brainstorming and testing ideas, we came up with a solution. It would be a completely new process built on five ideas:</p>
+
+<ol>
+    <li>Parallel Processing</li>
+    <li>Deltas</li>
+    <li>Priority Queue</li>
+    <li>Email Notifications</li>
+    <li>Automatic Retries</li>
+</ol>
+
+<h5 id="parallel-processing">Parallel Processing</h5>
+
+<h5 id="deltas">Deltas</h5>
+
+<h5 id="priority-queue">Priority Queue</h5>
+
+<h5 id="email-notification">Email Notification</h5>
+
+<h5 id="automatic-retry">Automatic Retry</h5>
+
+<h4 id="results">Results</h4>
+
+<p>Myself and a fellow team member rewrote the ingest process from the bottom up. We used parallel processing to ingest smaller tables in parallel, and for large tables implemented a delta process where only records that had been changed or added were ingested rather than the entire data source.</p>
+
+<p>This drastically reduced the time taken for daily data ingestion from 22 hours to around 7 hours. With this improvement, the team was able to build new dashboards in Qlik that could provide other teams within the business up-to-date information to assist their needs.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Reflecting On Just Starting Out</title><link href="http://localhost:4000/just-starting-out" rel="alternate" type="text/html" title="Reflecting On Just Starting Out" /><published>2024-03-30T00:00:00-06:00</published><updated>2024-03-30T00:00:00-06:00</updated><id>http://localhost:4000/just-starting-out</id><content type="html" xml:base="http://localhost:4000/just-starting-out"><![CDATA[<hr />
+
+<h4 id="the-return-home">The Return Home</h4>
 
 <p>I remember stepping off the jetway into Lambert Airport in St. Louis, MO. The feeling was surreal. It was March of 2017 and I had just spent the last 13 months teaching English in South Korea.</p>
 
@@ -26,9 +77,11 @@
 
 <h4 id="gratitude">Gratitude</h4>
 
-<p>As I write about this time in my life, I’m overcome with a sense of gratitude for having gotten the chances that have gotten me to where I am today. I was the beneficiary of the opportunities presented by Korea, LaunchCode, and Graybar, and I will always be grateful for having received them. After working at Graybar for a few years, another opportunity presented itself. I moved to Boulder, CO to begin a graduate education in Computer Science, but that’s for another post.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[Coming Back Home]]></summary></entry><entry><title type="html">nickhunkins.com Is Under Construction</title><link href="http://localhost:4000/test-post" rel="alternate" type="text/html" title="nickhunkins.com Is Under Construction" /><published>2024-03-29T00:00:00-06:00</published><updated>2024-03-29T00:00:00-06:00</updated><id>http://localhost:4000/test-post</id><content type="html" xml:base="http://localhost:4000/test-post"><![CDATA[<h2 id="welcome">Welcome!</h2>
+<p>As I write about this time in my life, I’m overcome with a sense of gratitude for having gotten the chances that have gotten me to where I am today. I was the beneficiary of the opportunities presented by Korea, LaunchCode, and Graybar, and I will always be grateful for having received them. After working at Graybar for a few years, another opportunity presented itself. I moved to Boulder, CO to begin a graduate education in Computer Science, but that’s for another post.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">nickhunkins.com Is Under Construction</title><link href="http://localhost:4000/construction-sign" rel="alternate" type="text/html" title="nickhunkins.com Is Under Construction" /><published>2024-03-29T00:00:00-06:00</published><updated>2024-03-29T00:00:00-06:00</updated><id>http://localhost:4000/construction-sign</id><content type="html" xml:base="http://localhost:4000/construction-sign"><![CDATA[<hr />
 
-<p>Thanks for visiting my personal website. As you may have noticed, things around here are still under construction. The content on the About and Contact pages is up-to-date, but the content on the Projects and Blog pages is still a work-in-progress. Feel free to contact me if you have anything you’d like to know more about. Thanks!</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[Welcome!]]></summary></entry><entry><title type="html">Text Formatting Examples</title><link href="http://localhost:4000/text-formatting-examples" rel="alternate" type="text/html" title="Text Formatting Examples" /><published>2014-01-01T00:00:00-07:00</published><updated>2014-01-01T00:00:00-07:00</updated><id>http://localhost:4000/text-formatting-examples</id><content type="html" xml:base="http://localhost:4000/text-formatting-examples"><![CDATA[<h1 id="markdown-support">Markdown Support</h1>
+<h2 id="welcome">Welcome!</h2>
+
+<p>Thanks for visiting my personal website. As you may have noticed, things around here are still under construction. The content on the About and Contact pages is up-to-date, but the content on the Projects and Blog pages is still a work-in-progress. Feel free to contact me if you have anything you’d like to know more about. Thanks!</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Text Formatting Examples</title><link href="http://localhost:4000/text-formatting-examples" rel="alternate" type="text/html" title="Text Formatting Examples" /><published>2014-01-01T00:00:00-07:00</published><updated>2014-01-01T00:00:00-07:00</updated><id>http://localhost:4000/text-formatting-examples</id><content type="html" xml:base="http://localhost:4000/text-formatting-examples"><![CDATA[<h1 id="markdown-support">Markdown Support</h1>
 
 <p>As always, Jekyll offers support for GitHub Flavored Markdown, which allows you to format your posts using the <a href="https://guides.github.com/features/mastering-markdown/">Markdown syntax</a>. Examples of these text formatting features can be seen below. You can find this post in the <code class="language-plaintext highlighter-rouge">_posts</code> directory.</p>
 

@@ -9,6 +9,14 @@
 <lastmod>2024-03-29T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/just-starting-out</loc>
+<lastmod>2024-03-30T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/parallel-sap-ingests</loc>
+<lastmod>2024-04-01T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -22,9 +30,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/contact</loc>
-</url>
-<url>
-<loc>http://localhost:4000/projects/gb-parallel-ingests</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

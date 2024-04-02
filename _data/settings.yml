@@ -16,7 +16,6 @@ projects:
 - {name: 'SMC: Annotations', url: 'smc-annotations'}
 - {name: 'CETD: Automated Feedback',  url: 'cetd-auto-feedback'}
 - {name: 'CETD: Messages of Belonging',  url: 'cetd-belonging'}
-- {name: 'Graybar: Parallelized Data Ingests',  url: 'gb-parallel-ingests'}
 
 #-------------------------------
 # Contact Section

@@ -1,6 +1,12 @@
 ---
 layout: post
-title: 'SMC Annotations'
+title: ''
 ---
+
+<head>
+  <link rel="stylesheet" href="../assets/css/projectstyles.css">
+</head>
+
+# SMC Annotations
 
 ### NOTE: This project page is still under construction

@@ -1,8 +1,12 @@
 ---
 layout: post
-title: 'Automated Teacher Feedback'
+title: ''
 ---
+<head>
+  <link rel="stylesheet" href="../assets/css/projectstyles.css">
+</head>
 
+# Automated Teacher Feedback
 
 ### NOTE: This project page is still under construction
 

@@ -1,0 +1,43 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+figure {
+  border: 1px solid #B6B2B1;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+figure figcaption {
+  border: 1px dotted #B6B2B1;
+  text-align: center;
+  background-color: #F5F4F4;
+}
+
+h1 {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: left;
+  font-size: 30px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  text-align: left;
+  font-size: 18px;
+  font-style: italic;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}

@@ -1,8 +1,12 @@
 ---
 layout: post
-title: "Reflecting On Just Starting Out"
+title: "Reflection On Just Starting Out"
 ---
-<hr>
+<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css">
+</head>
+
+# Reflection On Just Starting Out
 
 #### The Return Home
 

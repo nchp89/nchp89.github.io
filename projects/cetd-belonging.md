@@ -1,7 +1,12 @@
 ---
 layout: post
-title: 'Teacher Messages of Support'
+title: ""
 ---
+<head>
+  <link rel="stylesheet" href="../assets/css/projectstyles.css">
+</head>
+
+# Teacher Messages of Support
 
 ### NOTE: This project page is still under construction
 

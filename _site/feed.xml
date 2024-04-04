@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-03T12:40:46-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Reflecting On Just Starting Out</title><link href="http://localhost:4000/just-starting-out" rel="alternate" type="text/html" title="Reflecting On Just Starting Out" /><published>2024-03-30T00:00:00-06:00</published><updated>2024-03-30T00:00:00-06:00</updated><id>http://localhost:4000/just-starting-out</id><content type="html" xml:base="http://localhost:4000/just-starting-out"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-03T20:10:56-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Reflection On Just Starting Out</title><link href="http://localhost:4000/just-starting-out" rel="alternate" type="text/html" title="Reflection On Just Starting Out" /><published>2024-04-02T00:00:00-06:00</published><updated>2024-04-02T00:00:00-06:00</updated><id>http://localhost:4000/just-starting-out</id><content type="html" xml:base="http://localhost:4000/just-starting-out"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="reflection-on-just-starting-out">Reflection On Just Starting Out</h1>
 
 <h4 id="the-return-home">The Return Home</h4>
 
@@ -24,200 +28,116 @@
 
 <h4 id="gratitude">Gratitude</h4>
 
-<p>As I write about this time in my life, I’m overcome with a sense of gratitude for having gotten the chances that have gotten me to where I am today. I was the beneficiary of the opportunities presented by Korea, LaunchCode, and Graybar, and I will always be grateful for having received them. After working at Graybar for a few years, another opportunity presented itself. I moved to Boulder, CO to begin a graduate education in Computer Science, but that’s for another post.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">nickhunkins.com Is Under Construction</title><link href="http://localhost:4000/construction-sign" rel="alternate" type="text/html" title="nickhunkins.com Is Under Construction" /><published>2024-03-29T00:00:00-06:00</published><updated>2024-03-29T00:00:00-06:00</updated><id>http://localhost:4000/construction-sign</id><content type="html" xml:base="http://localhost:4000/construction-sign"><![CDATA[<hr />
+<p>As I write about this time in my life, I’m overcome with a sense of gratitude for having gotten the chances that have gotten me to where I am today. I was the beneficiary of the opportunities presented by Korea, LaunchCode, and Graybar, and I will always be grateful for having received them. After working at Graybar for a few years, another opportunity presented itself. I moved to Boulder, CO to begin a graduate education in Computer Science, but that’s for another post.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Less Helpful Side of Self-Help</title><link href="http://localhost:4000/unhelpful-self-help" rel="alternate" type="text/html" title="The Less Helpful Side of Self-Help" /><published>2024-03-12T00:00:00-06:00</published><updated>2024-03-12T00:00:00-06:00</updated><id>http://localhost:4000/unhelpful-self-help</id><content type="html" xml:base="http://localhost:4000/unhelpful-self-help"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
 
-<h2 id="welcome">Welcome!</h2>
+<h1 id="the-less-helpful-side-of-self-help">The Less Helpful Side of Self-Help</h1>
 
-<p>Thanks for visiting my personal website. As you may have noticed, things around here are still under construction. The content on the About and Contact pages is up-to-date, but the content on the Projects and Blog pages is still a work-in-progress. Feel free to contact me if you have anything you’d like to know more about. Thanks!</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Text Formatting Examples</title><link href="http://localhost:4000/text-formatting-examples" rel="alternate" type="text/html" title="Text Formatting Examples" /><published>2014-01-01T00:00:00-07:00</published><updated>2014-01-01T00:00:00-07:00</updated><id>http://localhost:4000/text-formatting-examples</id><content type="html" xml:base="http://localhost:4000/text-formatting-examples"><![CDATA[<h1 id="markdown-support">Markdown Support</h1>
+<h4 id="avoiding-the-self-help-trap">Avoiding the Self-help Trap</h4>
 
-<p>As always, Jekyll offers support for GitHub Flavored Markdown, which allows you to format your posts using the <a href="https://guides.github.com/features/mastering-markdown/">Markdown syntax</a>. Examples of these text formatting features can be seen below. You can find this post in the <code class="language-plaintext highlighter-rouge">_posts</code> directory.</p>
+<p>Self-help is a popular genre for a reason. Nobody knows you better than yourself, so you require some help, why not take ownership over that process? This sounds great on its surface, but there is a pernicious side-effect to this project.</p>
 
-<h2 id="basic-formatting">Basic Formatting</h2>
+<p>Don’t get me wrong. Good things can come out of good self-help books. I’m grateful for having spent the time and energy to learn from books like Atomic Habits, Time Management for Mortals, and Deep Work, just to name a few. Smart people have smart ideas, who would have thought? In addition to the ideas themselves, reading self-help books can be deeply inspirational! You can have a better life, and here’s a new way to do it! Isn’t it wonderful to imagine? But, as is so often the case, there’s a dark side to this hopeful venture.</p>
 
-<p>With Markdown, it is possible to emphasize words by making them <em>italicized</em>, using <em>astericks</em> or <em>underscores</em>, or making them <strong>bold</strong>, using <strong>double astericks</strong> or <strong>double underscores</strong>. Of course, you can combine those two formats, with both <em><strong>bold and italicized</strong></em> text, using any combination of the above syntax. You can also add a strikethrough to text using a <del>double tilde</del>.</p>
+<h4 id="problem-1-who-are-you">Problem 1: Who are you?</h4>
+<p>Imagine that you’ve just purchased a self-help book at your local bookstore. Before you’ve even flipped open the cover, you’ve already made an implicit assumption: I need help, and this book has answers. With your purchase you have assumed a vulnerable mental stance and allotted the author a certain amount of trust.</p>
 
-<h2 id="paragraphs">Paragraphs</h2>
+<p>This is a mistake. By design the book is written for a general audience – a general recipe for the average reader of the rough demographic the book was meant to target in its inception. The text may speak with authority, but its target audience is a caricature where you are a fully-fleshed human being.</p>
 
-<p>This is what a paragraph looks like. For the purpose of demonstration, the rest of this paragraph and the next paragraph after will mean absolutely nothing. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+<p>The common strategy these books deploy is to simplify problems and then assert their correctness. In other words, they approach their reader with bravado and conveniently ignore the complexities of individual circumstances, the very complexities that give rise to life’s greatest difficulties and deepest questions.</p>
 
-<p>Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+<h4 id="problem-2-youre-on-your-own">Problem 2: You’re on your own.</h4>
+<p>Remember, the author does not know you, and they are not around to help you integrate all of their impressive ideas into your life. That leaves the job up to you, dear reader, to get yourself into shape! So, how will you manage it? Ask anybody whose great at what they do, and they’ll likely tell you that it can be very difficult to be your own coach.</p>
 
-<h2 id="headings">Headings</h2>
+<p>How can you perform your best when you’re simultaneously looking over your own shoulder judging yourself? Inevitably, we simplify the situation by binarizing outcomes. We reckon that we either succeed or fail, and we forget that we can improve without doing it perfectly, or that sometimes a thing just doesn’t work for us. Instead of accepting these more obvious answers to our struggles, we tunnel vision on success and unintentionally undermine our own self-confidence with misplaced faith and perfectionism.</p>
 
-<p>Sometimes it is useful to have different levels of headings to structure your documents. Start lines with <code class="language-plaintext highlighter-rouge">#</code> to create headings. Multiple <code class="language-plaintext highlighter-rouge">##</code> in a row denote smaller heading size. The following demonstrate the full range of heading sizes:</p>
+<p>When you’ve fallen into this trap, it can very quickly turn into a downward spiral. You’ve got your bible, you’ve learned the gospel, and now you’re on a crusade towards perfection! Push harder! Read the book again! Do it exactly the way they wrote it! Because, if you were the kind of person who the author described (i.e., a successful person), then you should be able to do what they say and be happier for it. But… you’re not happier, so it must not be working, which means you must not be doing it right, which means you’re failing… Maybe you should buy a self-help book on self-discipline… or perhaps it was a lack of self-acceptance that led to your failure… Maybe you should buy books on both topics, just to be safe.</p>
 
-<h1 id="heading-one-h1">Heading One (h1)</h1>
+<h4 id="problem-3-life-will-be-great-tomorrow">Problem 3: Life will be great tomorrow.</h4>
+<p>The most pernicious challenge of self-help books is that it engenders a mindset of putting off one’s sense of wellbeing to an arbitrary time in the future. Once you get this time management system down, then you’ll be happy. Once you lose 30 pounds and get abs, then you’ll be happy. Once you can run a marathon, then you’ll be happy.</p>
 
-<h2 id="heading-two-h2">Heading Two (h2)</h2>
+<p>This is a problem. As anybody who has accomplished anything knows: happiness is fleeting. A first kiss lasts but a moment. You return to your seat after collecting your diploma. Eventually you drift off to sleep after the best night of your life. Wellbeing is predicated on contentment, and contentment must happen in the present moment where the content of real life actually exists. We must learn to be happy with what we already have, with who we already are. But the very concept of self-help books is that we can be better, and we should be better, and here’s a simple way to do it, and we should not compromise on our potential!</p>
 
-<h3 id="heading-three-h3">Heading Three (h3)</h3>
+<p>Consequently, too many self-help books promise more than they can deliver on. They offer grand promises of perfect productivity leading to the top of your career! An absolutely perfect training system that will lead you to smash records and be interviewed by Sports Illustrated. Of course, there’s nothing wrong with having a dream, but to pretend that a book can be a perfect road map to that dream and then conditioning one’s happiness on whether that dream is achieved is a recipe for disappointment and self-loathing. You couldn’t do it, and since you tried to do it by yourself, you have only yourself to blame, you loser.</p>
 
-<h4 id="heading-four-h4">Heading Four (h4)</h4>
+<h4 id="conclusion">Conclusion</h4>
+<p>I don’t want to dismiss the whole project of self-improvement as invalid. However, I think we should rethink our approach to the self-help genre by individually considering the following three points:</p>
 
-<h5 id="heading-five-h5">Heading Five (h5)</h5>
+<h5 id="know-your-circumstances">Know your circumstances</h5>
+<p>First, we must recognize that the authors of these books cannot know our lives in any detail, so the burden falls to us to know what may or may not work for our unique circumstances.</p>
 
-<h6 id="heading-six-h6">Heading Six (h6)</h6>
+<h5 id="set-your-own-criteria">Set your own criteria</h5>
+<p>Second, all of the work in interpretation and implementation of any self-help advice falls to us, the reader. Consequently, we must set the criteria for success and failure ourselves, with all their requisite gradients, while also maintaining the knowledge that nothing works for everyone.</p>
 
-<h2 id="links">Links</h2>
+<h5 id="no-silver-bullet">No silver bullet</h5>
+<p>Finally, no book (or anything else) is a silver bullet. We will never figure everything out, and any attempt to do so will inevitably breed more problems, which then need to be figured out, and so on. As such, we must remember to find contentment with ourselves now despite our shortcomings, and still strive to improve ourselves.</p>
 
-<p>You can create an inline link by wrapping link text in square brackets <code class="language-plaintext highlighter-rouge">[ ]</code>, and then wrapping the URL in parentheses <code class="language-plaintext highlighter-rouge">( )</code>. For example, it is very easy to <a href="http://google.com">link to Google!</a>.</p>
+<h4 id="final-word">Final Word</h4>
+<p>While many self-help books offer legitimate advice, many others overpromise, underdeliver, repackage common sense, or veer off into something one could only consider obliquely helpful. As long as we recognize the limits of these books and exercise our personal agency, then we can keep what’s good about self-help while avoiding its dark side.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Merits of Walking Really, Really Far</title><link href="http://localhost:4000/walking-really-far" rel="alternate" type="text/html" title="The Merits of Walking Really, Really Far" /><published>2024-02-17T00:00:00-07:00</published><updated>2024-02-17T00:00:00-07:00</updated><id>http://localhost:4000/walking-really-far</id><content type="html" xml:base="http://localhost:4000/walking-really-far"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
 
-<h2 id="blockquotes">Blockquotes</h2>
-
-<p>Blockquotes are useful for denoting quotes, or highlighting a large block of text. Single line blockquote:</p>
+<h1 id="the-merits-of-walking-really-really-far">The Merits of Walking Really, Really Far</h1>
 
 <blockquote>
-  <p>This quote will change your life.</p>
+  <p>“<i>Walking, ideally, is a state in which the mind, the body, and the world are aligned, as though they were three characters finally in conversation together, three notes suddenly making a chord. Walking allows us to be in our bodies and in the world without being made busy by them.</i>”</p>
+  <blockquote>
+    <blockquote>
+      <p>Rebecca Solnit, <i>Wanderlust: A History of Walking</i></p>
+    </blockquote>
+  </blockquote>
 </blockquote>
 
-<p>Multi line blockquote with a cite reference:</p>
+<h4 id="rhododenron-or">Rhododenron, OR</h4>
 
+<p>It was a warm and sunny September day in Rhododendron, Oregon when Adam and Kylie pulled their rented Subaru into a dusty gravel parking lot. They woke in the dark of the early morning to catch a plane from Denver to Portland, and the interim 45 miles of highway from Portland International Airport were driven in a state of quiet anticipation.</p>
+
+<p>Just over a month ago, Kylie, or Tang as she’s better known on the trail, was standing atop Mt. Katahdin deep in the wilderness of central Maine. She had just finished hiking the Appalachian Trail, the last of the three long trails she needed to complete one of the most prestigious achievements in the world of thru-hiking: The Triple Crown. Alongside her stood her partner Adam, or Chipotle as he’s known on trail. He had completed his Triple Crown less than a year before and came to join Kylie for the last few hundred miles of her effort. It was a moment neither of them would ever forget, and now, a few weeks later, they were sitting in a dusty parking lot in Rhododendron outside the venue of the Triple Crown Ceremony, the magnificent Mt. Hood standing proudly in the distance.</p>
+
+<h4 id="thru-hiking-is-hard">Thru-hiking Is Hard</h4>
+
+<p>Thru-hiking has a reputation of being a sport for misfits, and if you boil it down to its component parts, it’s a wonder that anybody chooses to do it at all. Who would want to carry a bunch of heavy equipment on their back and then trek into the wilderness for weeks on end? Such a person would spend all day sweating up steep inclines and pulverizing their knees on meandering descents. They’d get drenched in the rain and they’d shiver in the snow. They’d have to ration food and filter all of their water – that is, whenever they could find it. And at the end of the day, they wouldn’t get to shower and sleep in a soft bed. No, they’d crawl into a dirty sleeping bag and sleep in their accrued daily dirt and sweat on the hard ground. Oh, and did I mention that there are no bathrooms out in the wilderness? Even something as simple as relieving oneself turns into work, something to be planned and executed.</p>
+
+<p>Indeed, many people who attempt thru-hiking promptly give up! Nearly a third of those who start the Appalachian Trail with full intent to stand on top of Mt. Katahdin themselves quit within the first 100 miles, and another third quit within the first 500. And yet, there remains the few that do make it all the way to Maine. These are members of a subculture that lives to live outside. When they’re on the trail, they feel alive. When they’re not, they’re thinking about when they will be back on the trail.</p>
+
+<h4 id="trail-names">Trail Names</h4>
+
+<p>Kylie and Adam are squarely in this latter group, as are the others in attendance at the Triple Crown Ceremony. Of course, in these circles, Kylie and Adam go by their trail names: Tang and Chipotle. A trail name is a funny, sacred thing. One’s given name is for the real world, but on trail, the real world is so distant that it may as well be ancient Mesopotamia. Out on trail one needs a different name for different circumstances. Trail names can be anything, but usually, they are bestowed by a companion who notices some personality quirk or witnesses some funny or strange happening. The aptly monikered Chipotle earned his title from his love of the chain restaurant of the same name. Chipotle estimates that he’s eaten Chipotle no less than 2000 times, and every time a new store opens up he is one of the first to try it out.</p>
+
+<p>Other trail names aren’t so obvious. The origin of Tang’s trail name remains a mystery to most of those who know her, and she likes it that way. Shades, Sticks, Boomerang, All-You-Can-Eat, Double-Stuff, Longfish, Church, Thoroughbred, Scab, and Dirty-Girl are all names that invite speculation of epics and comedies. Kylie and Adam were happy to be in this room, among these people, and with them felt a deep sense of camaraderie. These people all get each other. They’ve seen what’s out there in the wilderness, and they understand why it’s worth pursuing.</p>
+
+<h4 id="the-science-behind-walking">The Science Behind Walking</h4>
+
+<h5 id="some-famous-walkers">Some Famous Walkers</h5>
+<p>There is a long history of folks who found purpose along their walks in nature. Jean-Jaques Rousseau, Henry David Thoreau, William Wordsworth, Virginia Woolf, Charles Darwin, John Muir, and countless others discovered that walking through wilderness could be a source of inspiration and clarity – a way to not only know the world better, but to know oneself better, too.</p>
+
+<h5 id="cognitive-health">Cognitive Health</h5>
+<p>Reflect on your own life, dear reader. You yourself may have “gone on a walk to clear your head” or “taken a stroll to find room to think”. Indeed, there is a longstanding and important relationship between the mind and the feet that has become of scientific interest in recent years. Researchers have found that walking for as little as 90 minutes a week can decrease cognitive decline in elderly women, that walking for an hour on a treadmill prior to a divergent thinking test improved creativity scores by 60%, and that regular periods of walking can even increase the volume of the hippocampus, the brain’s memory center. The fact that walking, a simple, non-cognitive task, has such a wealth of benefits for our brain health is on its surface quite surprising. However, the story begins to make much more sense when we consider our ancient ancestors.</p>
+
+<h5 id="evolutionary-biology">Evolutionary Biology</h5>
+<p>Evolutionary biologists have much to say on walking and the brain, and many have gone so far as to credit our bipedalism as a necessary precursor to our high intelligence. The use of two legs rather than four, the thinking goes, resulted in two important changes in our evolutionary history: the development of our hands and more efficient ambulation. The development of hands entailed the development of complex manipulation – the exact kind of skill that required the use of cortical tissue, the brain matter associated with complex thought and reasoning. Additionally, more efficient ambulation meant that excess energy could be devoted to the brain rather than musculature.</p>
+
+<p>Together, these changes formed a virtuous cycle. As our brains grew, we developed new skills and tools, like hunting and language. As our skills and tools developed, our species developed more efficient methods of collecting and storing resources. An excess amount of resources meant more energy could be devoted to the brain and its development. And so on. Summed up by the evolutionary biologist Mary Leaky,</p>
 <blockquote>
-  <p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p>
+  <p>“One cannot overemphasize the role of bipedalism in hominid development. It stands as perhaps the salient point that differentiates the forebears of man from other primates. This unique ability freed the hands for myriad possibilities - carrying, tool-making, intricate manipulation. From this single development, in fact, stems all modern technology. Somewhat oversimplified, the formula holds that this new freedom of forelimbs posed a challenge. The brain expanded to meet it. And mankind was formed.”</p>
 </blockquote>
 
-<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
+<h4 id="a-way-of-life">A Way of Life</h4>
 
-<p>Code blocks are part of the Markdown spec, but syntax highlighting isn’t. However, many renderers - like GitHub or most Jekyll themes - support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. You can find the full list of supported programming languages <a href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers">here</a>. Also, it is possible to do <code class="language-plaintext highlighter-rouge">inline code blocks</code>, by wrapping the text in ` ` ` quotations.</p>
+<p>Of course, none of this was on the minds of Kylie or Adam as they traded trail stories with the other Triple Crowners in that stuffy room in Rhododendron. Their brains may have benefited from the thousands of miles they spent on the trail, but brain health wasn’t ever on the list of reasons why they chose to hike thousands and thousands of miles. To them, being on trail was a way of life, something that was deeply challenging and fulfilling, something that simply wasn’t available in their day-to-day lives back home.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No language indicated, so no syntax highlighting.
-</code></pre></div></div>
+<p>Thru-hiking engenders a clarity of purpose that has become all-too-rare in the modern world. When you wake in the morning nestled in your sleeping bag, early morning sun illuminating your colorful nylon cocoon, there is a very clear idea of what needs to be done, and that simplifies life to a delightful degree. What will you eat today? Whatever you have in your bag. How far will you walk? However far you need to go.  Who will you walk with? Whoever is walking in the same direction you are. Beyond these questions remain a few points of uncertainty, such as the afternoon weather or the quality of trail in the upcoming national forest, but life on the trail takes on a quality of streamlined unity – something notably lacking in much of modernity. As observed by the author Rebecca Solnit over twenty years ago:</p>
+<blockquote>
+  <p>“Many people nowadays live in a series of interiors - home, car, gym, office, shops - disconnected from each other. On foot everything stays connected, for while walking one occupies the spaces between those interiors in the same way one occupies those interiors. One lives in the whole world rather than in interiors built up against it.”</p>
+</blockquote>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
-</code></pre></div></div>
+<h4 id="the-triple-crown-ceremony">The Triple Crown Ceremony</h4>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console</span>
+<p>There were a series of guest speakers that afternoon in Rhododenron. Apple Pie, a well-known thru-hiker kicked things off with a few words of congratulations to the newest Triple Crowners, then she shared a personal anecdote from her time spent on the CDT. She described how she had lost her toilet paper right out of town just before a very remote part of the trail, so she had to use rocks to wipe herself for three days before finally encountering another hiker who mercifully donated some of his supplies to her. Adam laughed hard, though he had heard the story once before when he and Apple Pie hiked a leg of the AT together.</p>
 
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+<p>Later, a woman named Fidget spoke about her seven year hike from the southernmost tip of South America to the northernmost tip of North America - a 22,000 mile epic filled with stories of terror, compassion, and triumph. She shared a story of how she met a man in a small village as she hiked through Peru. He had taken a liking to her and offered his bread to take for her journey. However, she had learned earlier that the village was so poor that a loaf of bread was equivalent to an entire day’s worth of food. Not wanting him to starve over her, she refused his offer, believing that it was the most respectful action she could take, and the man accepted her decision with kindness. Her story was powerful, moving some to tears, but it was by no means unique. Each and every one of the hikers in the room that day had their own stories, their own experiences, their own lessons learned, but most would never be shared outside the circles of a few close friends and hiking partners.</p>
 
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span></code></pre></figure>
+<h4 id="now-what">Now What?</h4>
 
-<p>Another option is to embed your code through <a href="https://en.support.wordpress.com/gist/">Gist</a>.</p>
-
-<h2 id="unordered-and-numbered-lists">Unordered and Numbered Lists</h2>
-
-<p>You can make an unordered and nested list by preceding one or more lines of text with <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">*</code>, or <code class="language-plaintext highlighter-rouge">+</code>, and indenting sublists. The following lists show the full range of possible list formats.</p>
-
-<ul>
-  <li>List item one
-    <ul>
-      <li>List item one
-        <ul>
-          <li>List item one</li>
-          <li>List item two</li>
-          <li>List item three</li>
-          <li>List item four</li>
-        </ul>
-      </li>
-      <li>List item two</li>
-      <li>List item three</li>
-      <li>List item four</li>
-    </ul>
-  </li>
-  <li>List item two</li>
-  <li>List item three</li>
-  <li>List item four</li>
-</ul>
-
-<p>Numbered lists are made by using numbers instead of bullet points.</p>
-
-<ol>
-  <li>List item one
-    <ol>
-      <li>List item one
-        <ol>
-          <li>List item one</li>
-          <li>List item two</li>
-          <li>List item three</li>
-          <li>List item four</li>
-        </ol>
-      </li>
-      <li>List item two</li>
-      <li>List item three</li>
-      <li>List item four</li>
-    </ol>
-  </li>
-  <li>List item two</li>
-  <li>List item three</li>
-  <li>List item four</li>
-</ol>
-
-<h2 id="mathjax-example">MathJax Example</h2>
-
-<p>The <a href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation">Schrödinger equation</a> is a partial differential equation that describes how the quantum state of a quantum system changes with time:</p>
-
-\[i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)\]
-
-<p><a href="https://en.wikipedia.org/wiki/Joseph-Louis_Millennial">Joseph-Louis Millennial</a> was an Italian mathematician and astronomer who was responsible for the formulation of Lagrangian mechanics, which is a reformulation of Newtonian mechanics.</p>
-
-\[\frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac {\partial  L}{\partial \dot{q}_j} \right ) =  \frac {\partial L}{\partial q_j}\]
-
-<h2 id="tables">Tables</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title 1</th>
-      <th style="text-align: center">Title 2</th>
-      <th style="text-align: left">Title 3</th>
-      <th style="text-align: right">Title 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>lorem</td>
-      <td style="text-align: center">lorem ipsum</td>
-      <td style="text-align: left">lorem ipsum dolor</td>
-      <td style="text-align: right">lorem ipsum dolor sit</td>
-    </tr>
-    <tr>
-      <td>lorem ipsum dolor sit</td>
-      <td style="text-align: center">lorem ipsum dolor sit</td>
-      <td style="text-align: left">lorem ipsum dolor sit</td>
-      <td style="text-align: right">lorem ipsum dolor sit</td>
-    </tr>
-    <tr>
-      <td>lorem ipsum dolor sit</td>
-      <td style="text-align: center">lorem ipsum dolor sit</td>
-      <td style="text-align: left">lorem ipsum dolor sit</td>
-      <td style="text-align: right">lorem ipsum dolor sit</td>
-    </tr>
-    <tr>
-      <td>lorem ipsum dolor sit</td>
-      <td style="text-align: center">lorem ipsum dolor sit</td>
-      <td style="text-align: left">lorem ipsum dolor sit</td>
-      <td style="text-align: right">lorem ipsum dolor sit</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="embedding">Embedding</h2>
-
-<p>Plenty of social media sites offer the option of embedding certain parts of their site on your own site, such as YouTube and Twitter:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mthtn1X4eUY" frameborder="0" allowfullscreen=""></iframe>
-
-<p><a class="twitter-grid" data-partner="tweetdeck" href="https://twitter.com/paululele/timelines/755079130027352064">New Collection</a> <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<h2 id="inline-html-elements">Inline HTML elements</h2>
-
-<p>HTML defines a long list of available inline tags, which you can mix with Markdown if you like. A complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
-<h2 id="useful-resources">Useful Resources</h2>
-
-<p>More information on Markdown can be found at the following links:</p>
-
-<ul>
-  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#code">Markdown Here Cheatsheet</a></li>
-  <li><a href="http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html">Quick Markdown Example</a></li>
-  <li><a href="https://daringfireball.net/projects/markdown/basics">Markdown Basics</a></li>
-  <li><a href="https://github.github.com/gfm/">GitHub Flavoured Markdown Spec</a></li>
-  <li><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists">Basic writing and formatting syntax</a></li>
-</ul>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[Markdown Support]]></summary></entry></feed>
+<p>The Appalachian Trail is 2,200 miles long starting in Georgia and ending in Maine. The Pacific Crest Trail is 2,600 miles long starting in California and ending in Washington. The Continental Divide Trail is 3,100 miles long starting in New Mexico and ending in Montana. Together, they add up to nearly 8,000 miles in length. It takes some people their whole lives to complete the Triple Crown, while others make the (insane) attempt to complete it in a single year. Regardless of pace, it is an unbelievably impressive achievement, and it is no wonder that fewer than 700 people to date have officially completed it – about as many people who have been to space. At the conclusion of the ceremony, small wooden plaques were awarded to 2023’s batch of Triple Crowners – a tiny trophy next to the enormity of their achievement. Adam and Kylie have their plaques displayed next to each other on a shelf in their home. After such a massive achievement, I wondered what could be next for the two of them. Could they have quenched their thirst for adventure? I was happy to learn that the answer was a decisive no. Kylie plans on running 250 miles in three days in Arizona, and Adam wants to thru-hike the 500 mile-long Colorado Trail in 11 days. I wish both of them luck, and I look forward to the stories they bring back from these adventures.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>

@@ -13,6 +13,8 @@ menu:
 projects:
 - {name: 'PRISM',   url: 'prism'}
 - {name: 'Optimizing Hadoop Ingests',   url: 'optimizing-hadoop-ingests'}
+- {name: 'ChatGPT Knowledge Probing: Let Alone',   url: 'let-alone-chatgpt'}
+- {name: 'Digital Signal Processing: Neurokit 2 EDA',   url: 'eda-signal-processing'}
 - {name: 'SMC: Analysis',   url: 'smc-analysis'}
 - {name: 'SMC: Annotations', url: 'smc-annotations'}
 - {name: 'CETD: Automated Feedback',  url: 'cetd-auto-feedback'}

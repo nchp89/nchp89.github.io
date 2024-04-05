@@ -5,17 +5,8 @@
   width: 70%;
 }
 
-figure {
-  border: 1px solid #B6B2B1;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 figure figcaption {
-  border: 1px dotted #B6B2B1;
   text-align: center;
-  background-color: #F5F4F4;
 }
 
 h1 {
@@ -31,6 +22,10 @@ h2 {
   font-size: 30px;
   padding-top: 20px;
   margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h5 {

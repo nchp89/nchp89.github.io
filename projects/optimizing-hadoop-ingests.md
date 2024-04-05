@@ -7,6 +7,19 @@ title: ''
   <link rel="stylesheet" href="../assets/css/projectstyles.css">
 </head>
 
+<style>
+figure {
+  border: 1px solid #B6B2B1;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+figure figcaption {
+  border: 1px dotted #B6B2B1;
+  text-align: center;
+  background-color: #F5F4F4;
+}
+</style>
 
 # Optimizing Hadoop Ingests
 

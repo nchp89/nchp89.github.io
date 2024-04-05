@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal portfolio powered by Jekyll and GitHub Pages ">
+    <meta rel="author" href="https://plus.google.com/u/0/#">
+    <meta rel="publisher" href="https://plus.google.com/u/0/#">
+    <title>
+      
+         | Nick Hunkins
+      
+    </title>
+    <link rel="stylesheet" href="/assets/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Use Atom -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nick Hunkins" />
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-112060364-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+    <!-- Use Jekyll SEO plugin -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Nick Hunkins | Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Nick Hunkins" />
+<meta name="author" content="Nick Hunkins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages" />
+<meta property="og:description" content="Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages" />
+<link rel="canonical" href="http://localhost:4000/projects/eda-signal-processing" />
+<meta property="og:url" content="http://localhost:4000/projects/eda-signal-processing" />
+<meta property="og:site_name" content="Nick Hunkins" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Nick Hunkins" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Nick Hunkins"},"description":"Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages","headline":"Nick Hunkins","url":"http://localhost:4000/projects/eda-signal-processing"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div class="site-container">
+      <header>
+  <div class="logo" style="width:250px;">
+    <a href="/">Nick Hunkins</a>
+  </div>
+  <nav>
+    
+      <a href="/">Home</a>
+    
+      <a href="/blog">Blog</a>
+    
+      <a href="/about">About</a>
+    
+      <a href="/contact">Contact</a>
+    
+  </nav>
+  <hr>
+</header>
+
+      <section>
+  <div class="post-container">
+    <h4 class="project-title"></h4>
+    <div class="project-load"><head>
+  <link rel="stylesheet" href="../assets/css/projectstyles.css" />
+</head>
+
+<h1 id="neurokit2-processing-tools-electrodermal-activity-eda">Neurokit2 Processing Tools: <br />Electrodermal Activity (EDA)</h1>
+
+<h4 id="1-introduction">1. Introduction</h4>
+<p>Electrodermal activity (EDA) has many names (galvanic skin response (GSR), electrodermal response (EDR), psychogalvanic reflex (PGR)) and has been studied ever since its discovery in the mid 1800’s. The EDA signal itself is simply a measure of the skin’s electrical conductance over time. When an increase in sweating occurs, it produces a higher concentration of water (in addition to other substances like lactic acid and urea) which then augments the electrical conductance of the skin. As more sweat is present between the skin and affixed electrodes, less resistance – or more conductivity – is recorded. These changes in sweat gland activity can result from both thermoregulatory processes and sympathetic reactions to stimuli. If electrodes are placed on the skin – specifically on the plantar and palmar sides of the hand, regions known to be more associated with performance than temperature control – then the resulting EDA signal can be interpreted as a functional measure of sudomotor activity, and consequently, an objective measure of arousal.</p>
+
+<h4 id="2-the-eda-signal">2. The EDA Signal</h4>
+<p>The EDA signal itself is measured in microsiemens (µS) ranging from 0.5-45 µS and is characterized by slow rolling changes in amplitude with sharper changes associated with specific responses. We typically want to decompose the EDA signal into two parts: the tonic component, which consists of the slow, smooth changes over time, and the phasic component, which consists of sharper, stimuli-specific responses. The most salient features of the phasic component of an EDA signal are the skin conductance responses (SCRs) and are caused by underlying sympathetic reactions to stimuli. SCRs appear in the signal as peaks with sharp increases and steady decreases over time (fig 1.).</p>
+
+<p>We can use SCRs to evaluate a subject’s response to event-related or tonic stimuli. When caused by a stimulus, the onset of an SCR is usually between 1 and 5 seconds after delivery. The time from the onset to the peak – termed the rise time – varies between 0.5 and 5 seconds. The time it takes from the peak to the end of an SCR– known as the recovery time – is the longest phase of an SCR and need not complete before another SCR starts, a fact that complicates EDA analysis.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig1.png" />
+  <figcaption color="red"><b>Fig.1</b> EDA signal with 3 SCRs.</figcaption>
+</figure>
+
+<p>The benefits of EDA data are clear. We can use the signal to evaluate the arousal of experimental subjects in response to stimuli presented in experimental settings. An index of arousal alongside other streams of data (i.e. EEG, speech transcripts, eye gaze features, mind wandering predictions, etc.) promises new areas of exploration and analysis for several studies within the Emotive Computing lab. So, what exactly is stopping us from processing all this EDA data and getting started?</p>
+
+<h4 id="3-eda-signal-quality">3. EDA Signal Quality</h4>
+
+<p>Like most other methods for recording biological signals, collecting EDA data is subject to a variety of noise. The two most common sources of noise are high-frequency noise and motion artifacts.</p>
+
+<p>High-frequency noise is introduced when the recording device picks up activity from other nearby electrical instruments (i.e. computers, lab equipment, lights, etc.). When plotted, this noise appears as low-amplitude, high frequency wiggling in the signal.  Motion artifacts are introduced when a participant moves their body in a way that interferes with the EDA recording device, which appears as a large and rapid change in the EDA signal.</p>
+
+<p>In addition to these sources of noise, there is the added challenge of separating the signal into its tonic and phasic components. As mentioned earlier, one SCR need not complete before a second one starts, meaning that many SCRs can overlap in the signal. This issue of separation has led to a variety of approaches and algorithms to separate the two components. Details about the methods to separate the tonic and phasic components is beyond the scope of this current effort but note that there is no standard approach to this problem and a variety of algorithms exist. For this project, we will primarily focus on cleaning the originally recorded EDA signal prior to its separation into its phasic and tonic components.</p>
+
+<h4 id="4-raw-eda-sample-data">4. Raw EDA Sample Data</h4>
+
+<p>Below is a plot displaying the EDA data collected from four subjects who participated in a study of collaborative problem solving. The quality of the signal was ranked by people who have been trained to assess the quality of EDA signals. The rank for each signal is either A, B, C, or F, where A is of the highest quality and F is of the lowest. We can see from the plot that the F quality signal is not usable and is thus not considered moving forward. The device used to collect EDA data samples at a frequency of 51.2Hz and is used in 15-minute studies, resulting in 46,080 data points per signal.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig2.png" />
+  <figcaption color="red"><b>Fig.2</b> EDA signals with quality ratings of A,B,C,&amp; F.</figcaption>
+</figure>
+
+<p>In addition to the raw EDA data collected from real participants, included is a synthetic signal with a sampling rate of 51.2Hz for 1000 data points composed of sin waves to use for testing purposes. The equation used to generate this signal is:</p>
+
+<blockquote>
+\[f(x) = 5 + sin(4\pi x) + 0.5 sin(2\pi x) + 2 sin(0.6\pi x)\]
+</blockquote>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig3.png" />
+  <figcaption color="red"><b>Fig.3</b> Synthetic Signal</figcaption>
+</figure>
+
+<h4 id="5-investigating-eda-signal-cleaning-in-neurokit2">5. Investigating EDA Signal Cleaning in Neurokit2</h4>
+
+<p><a href="github.com/neuropsychology/NeuroKit">Neurokit2</a> is an open-source Python toolbox for neurophysiological signal processing. It has functionality to handle a variety of bodily signals including ECG, PPG, EDA, EMG, and RSP. For our purposes, we focus on its EDA functionality.</p>
+
+<p>The traditional approach for automatically handling noise and motion artifacts in EDA data is to first smooth the signal with a low-pass filter and then identify and remove corrupted signal segments. The frequency threshold for the low-pass filter can be as low as 1-5Hz to remove the unwanted high-frequency noise introduced by extraneous electrical equipment.</p>
+
+<h5 id="51-signal-cleaning-on-a-quality-data">5.1 Signal Cleaning on A-Quality Data</h5>
+
+<p>Neurokit2 performs this cleaning step with a single function called eda_clean, which takes in the raw EDA signal, the sampling rate, and our choice of either the neurokit or BioSPPy methods. The neurokit method low-pass filters the raw signal using the Butterworth method. The BioSPPy method similarly applies a low-pass filter but then smooths the signal using a convolution with a boxzen kernel. Let’s plot a chunk of the A quality EDA signal before and after cleaning using these two methods.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig4.png" />
+  <figcaption color="red"><b>Fig.4</b> Comparison of Neurokit vs BioSPPy signal cleansing techniques</figcaption>
+</figure>
+
+<p>At first glance, we see that the BioSPPy method removed the high frequency noise and smoothed our signal substantially. Particularly in the middle ridge of data we notice that the faster oscillations (higher frequency) in the signal were smoothed almost completely. By comparison, it does not look like much happened to the signal between the raw signal and neurokit-cleansed signal, but when we zoom in and plot only 100 sample points, we see that the neurokit method did indeed remove high frequency noise as well as perform smoothing.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig5.png" />
+  <figcaption color="red"><b>Fig.5</b> Close up of Neurokit signal cleansing technique</figcaption>
+</figure>
+
+<h5 id="52-signal-cleaning-on-synthetic-data">5.2 Signal Cleaning on Synthetic Data</h5>
+
+<p>To get a better insight into what’s going on here, we repeat the investigation of these two methods on our synthetic signal.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig6.png" />
+  <figcaption color="red"><b>Fig.6</b> Signal cleansing techniques on synthetic data</figcaption>
+</figure>
+
+<p>We see from this plot that the BioSPPy method removes a lot of information about the higher frequency oscillations in our signal. Let’s use the DFT to see what kind of information is being removed between our raw synthetic signal and the BioSPPy-cleaned signal.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig7.png" />
+  <figcaption color="red"><b>Fig.7</b> Synthetic signal &amp; DFT output of magnitude in frequency domain</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig8.png" />
+  <figcaption color="red"><b>Fig.8</b> BioSPPY-cleaned synthetic signal &amp; DFT output of magnitude in frequency domain</figcaption>
+</figure>
+
+<p>By comparing the output of the DFT on the synthetic signal both before and after cleaning using the BioSPPy method, we can see that the frequencies at 1Hz and 2Hz have been almost entirely filtered out of the signal, whereas the 0.3Hz frequency survived. From this we can determine that the BioSPPy cleaning method employs a lower low-pass filter than the neurokit method and is perhaps better suited to clean data with a high amount of noise (i.e. EDA data collected off of a wearable devices ‘in the wild’ that are subject to unpreventable motion artifacts throughout the day).</p>
+
+<h5 id="53-signal-cleaning-on-c-quality-data-with-a-motion-artifact">5.3 Signal Cleaning on C-Quality Data With a Motion Artifact</h5>
+
+<p>We now compare the two methods on a chunk of C quality EDA data that includes a motion artifact.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig9.png" />
+  <figcaption color="red"><b>Fig.9</b> Comparing cleansing techniques on motion artifact data</figcaption>
+</figure>
+
+<p>We can see from this plot that a motion artifact is present in the raw data around the 380th sample. Neither method handles this well, and in fact the BioSPPy method has changed the shape so much that it could be mistakenly interpreted as an SCR. So it seems we found that while Neurokit2’s eda_clean() function handles the high frequency filtering and smoothing steps of EDA preprocessing quite well, it does not automatically address large motion artifacts such as this.</p>
+
+<h5 id="54-detecting-motion-artifacts">5.4 Detecting Motion Artifacts</h5>
+
+<p>Is it possible to detect motion artifacts in EDA data in an automated way? By using a similar method to the one described in [3], we can convolve our EDA signal with the first derivative kernel [-1,1] and take the absolute value at every point of the resulting convolution to find the rate of change in EDA between each sample. After performing this convolution, we can then locate and flag motion artifacts in the data simply by finding where the rates of change of EDA in our signal are impossible (or extremely unlikely). Below is a plot of our C quality signal and its resulting convolution with the first derivative kernel.</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig10.png" />
+  <figcaption color="red"><b>Fig.10</b> C-quality signal convolved with first derivative kernel</figcaption>
+</figure>
+
+<p>We can see from the plot that our method does a pretty good job! Most noticeable is the huge motion artifact occurring around the 9000th sample point (~3 min into the experiment), which was detected and proportionally represented in our convoluted signal. As a sanity check, let’s perform this same technique on our A quality signal. Since the quality of the signal is known to be much higher, then we would expect fewer motion artifacts to be present, and consequently, lower magnitudes of change detected in the convolution. As we can see in the following plot, our prediction was correct!</p>
+
+<figure>
+  <img src="../assets/img/projects/eda-signal-processing/fig11.png" />
+  <figcaption color="red"><b>Fig.11</b> A-quality signal convolved with first derivative kernel</figcaption>
+</figure>
+
+<h3 id="check-out-the-github-repo-for-this-project-here"><a href="https://github.com/nchp89/dsp-fp-sp21/tree/main"><u>Check out the github repo for this project here!</u></a></h3>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>The goal of our investigation into cleaning EDA data using Neurokit2 has been to learn whether the automatic EDA processing functionality provided by Neurokit2 was sufficiently aligned with standard practices as described in the literature.</p>
+
+<p>The standard practices to clean noisy EDA data are to low-pass filter the EDA signal, smooth it, and then detect and repair motion artifacts [1]. We found that the standard EDA cleaning methods in Neurokit2 (neurokit and BioSPPy) both clean and smooth the EDA data in a way that is aligned with existing literature. While both processes perform low-pass filters and smoothing operations, the BioSPPy method’s filter is lower than the neurokit method and removes frequencies even below 1Hz.</p>
+
+<p>We also found that neither method automatically handles motion artifacts. We then chose to implement a method like the one discussed in [3], where the EDA signal is convolved with the first derivative kernel [-1, 1] to find rates of change in the signal. The absolute value of each point in the resulting convolution was then taken to determine the magnitude of the change in signal. We saw that this technique shows promise in the automatic detection of motion artifacts in EDA data.</p>
+
+<h3 id="references">References</h3>
+
+<p>[1]	Posada-Quintero, H. F., &amp; Chon, K. H. (2020). Innovations in electrodermal activity data collection and signal processing: A systematic review. Sensors (Switzerland), 20(2). https://doi.org/10.3390/s20020479</p>
+
+<p>[2]	Makowski, D., Pham, T., Lau, Z. J., Brammer, J. C., Lespinasse, F., Pham, H., Schölzel, C., &amp; Chen, S. H. A. (2021). NeuroKit2: A Python toolbox for neurophysiological signal processing. Behavior Research Methods. https://doi.org/10.3758/s13428-020-01516-y</p>
+
+<p>[3]	Subramanian, S., Barbieri, R., &amp; Brown, E. N. (2019). A Systematic Method for Preprocessing and Analyzing Electrodermal Activity. 2019 41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), 6902–6905. https://doi.org/10.1109/EMBC.2019.8857757</p>
+</div>
+  </div>
+  
+</section>
+
+      <footer>
+  <div class="footer-wrap">
+    <div class="footer-tagline">
+      <p></p>
+    </div>
+    <div class="social-media">
+      <nav>
+        
+          <a href="https://instagram.com/nick.hunkins" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        
+          <a href="https://github.com/nchp89" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        
+          <a href="https://linkedin.com/in/nick-hunkins" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        
+          <a href="mailto:nickhunkins@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        
+      </nav>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>

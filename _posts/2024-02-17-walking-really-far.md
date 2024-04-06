@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "The Merits of Walking Really, Really Far"
+title: "On the Merits of Walking Really, Really Far"
 ---
 <head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css">
 </head>
 
-# The Merits of Walking Really, Really Far
+# On the Merits of <br>Walking Really, Really Far
 
 
 > “<i>Walking, ideally, is a state in which the mind, the body, and the world are aligned, as though they were three characters finally in conversation together, three notes suddenly making a chord. Walking allows us to be in our bodies and in the world without being made busy by them.</i>”

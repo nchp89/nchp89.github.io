@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal portfolio powered by Jekyll and GitHub Pages ">
+    <meta rel="author" href="https://plus.google.com/u/0/#">
+    <meta rel="publisher" href="https://plus.google.com/u/0/#">
+    <title>
+      
+        Grounded Cognition and Reinforcement Learning | Nick Hunkins
+      
+    </title>
+    <link rel="stylesheet" href="/assets/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Use Atom -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nick Hunkins" />
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-112060364-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+    <!-- Use Jekyll SEO plugin -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Grounded Cognition and Reinforcement Learning | Nick Hunkins</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Grounded Cognition and Reinforcement Learning" />
+<meta name="author" content="Nick Hunkins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages" />
+<meta property="og:description" content="Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages" />
+<link rel="canonical" href="http://localhost:4000/grounded-cognition-and-rl" />
+<meta property="og:url" content="http://localhost:4000/grounded-cognition-and-rl" />
+<meta property="og:site_name" content="Nick Hunkins" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-12T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Grounded Cognition and Reinforcement Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nick Hunkins"},"dateModified":"2022-12-12T00:00:00-07:00","datePublished":"2022-12-12T00:00:00-07:00","description":"Nick Hunkins’ personal website - Powered by Jekyll and GitHub Pages","headline":"Grounded Cognition and Reinforcement Learning","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/grounded-cognition-and-rl"},"url":"http://localhost:4000/grounded-cognition-and-rl"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div class="site-container">
+      <header>
+  <div class="logo" style="width:250px;">
+    <a href="/">Nick Hunkins</a>
+  </div>
+  <nav>
+    
+      <a href="/">Home</a>
+    
+      <a href="/blog">Blog</a>
+    
+      <a href="/about">About</a>
+    
+      <a href="/contact">Contact</a>
+    
+  </nav>
+  <hr>
+</header>
+
+      <section>
+  <div class="post-container">
+    <h4 class="project-title"></h4>
+    <div class="project-load"><head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="grounded-cognition-and-reinforcement-learning">Grounded Cognition and Reinforcement Learning</h1>
+
+<h4 id="introduction">Introduction</h4>
+
+<p>Grounded cognition as we know it today was born out of a reaction against the early to middle 20th century psychological view of cognition as an amodal system of symbolic representation and manipulation. However, grounded cognition has in fact been the dominant view of cognition for most of recorded history and extends back to ancient philosophers like Epicurus (Barsalou, 1999, J. Prinz 2002, as cited in Barsalou, 2008). From the perspective of grounded cognition, it is unlikely that the brain contains amodal symbols. Further, if it does happen to contain amodal symbols, they must work together with modal representations to create cognition (Barsalou, 2008). Instead, the grounded perspective stresses an emphasis on the interactions between perception, action, the body, the environment, and other agents, typically during goal achievement. The mechanisms by which cognition operates within these interactions include simulation, situated action, and bodily states. The emphasis on agent, environment, goal achievement, and situated action positions grounded cognition as particularly suitable to modeling using reinforcement learning, a computational approach focused on goal-directed learning through interaction (Sutton &amp; Barto, 1998). Indeed, grounded cognition and reinforcement learning are a natural pairing, with evidence from the former being largely accounted for by the theoretical outlook of the latter. In what follows we describe reinforcement learning, discuss theories of grounded cognition in that context, and then step through evidence presented in Barsalou’s Grounded Cognition (Barsalou, 2008).</p>
+
+<h4 id="reinforcement-learning">Reinforcement Learning</h4>
+
+<p>Reinforcement learning (RL) is a computational approach to learning from interaction, and is commonly used in machine learning and robotics (Sutton &amp; Barto, 1998). In a nutshell, RL is learning what to do so as to maximize a reward signal. It is characterized by two distinguishing properties: trial-and-error search, and delayed reward. That is, the agent does not know what actions to take in advance but must discover them by trial and error, and similarly, the agent does not know how rewarding its actions will be or how rewards may aggregate over time. Thus, it must consider the known and unknown, as well as delayed and immediate rewards.</p>
+
+<p>The conflict between immediate and delayed rewards presents a primary challenge for RL: the tradeoff between exploration and exploitation. How can an agent balance between behaviors it knows are rewarding versus exploring for new behaviors that may be potentially more (or less) rewarding? This exploitation-exploration tradeoff is another key feature of RL. The following components constitute an RL model: a policy, a reward function, a value function, and (optionally) a model of the environment (Sutton &amp; Barto, 1998). An agent’s policy maps perceived states of the environment to actions that can be taken in those states and psychologically corresponds to a set of stimulus-response rules. Its reward function maps each perceived state-action pair to a reward (immediate rewards). Its value function represents the total amount of reward an agent can expect to accumulate over the future from its current state (long-term rewards). An agent uses its model of the environment (model) and bodily state to determine a set of potential actions to take (policy). It then chooses an action to take based on consideration of both immediate (reward function) and long-term (value function) rewards.</p>
+
+<p>What makes RL unique to other computational learning approaches is that it characterizes a learning problem rather than a method (Sutton &amp; Barto, 1998). This shift in focus inherently encapsulates an agent, its motivation, and its environment, making it amenable to the grounded view of cognition.</p>
+
+<h4 id="grounded-cognition">Grounded Cognition</h4>
+
+<p>There are several theories of grounded cognition, each capturing different aspects of how humans operate within the world. Each theory builds off the importance of simulation, situated action, and bodily states.</p>
+
+<p>First, we consider cognitive linguistics theories, which assert that people possess extensive knowledge of their bodies and experiences. Abstract concepts draw upon this knowledge metaphorically. To demonstrate, consider the ubiquitous use of concrete metaphors to discuss abstract concepts across cultures (e.g., happiness is associated with “up” and sadness with “down”) (Lakoff &amp; Johnson, 1980, 1999, as cited in Barsalou, 2008).</p>
+
+<p>Second, there are theories of situated action, which focus on the central roles of perception and action in cognition. These theories place emphasis on the tight coupling of environment, goal achievement, and social interaction, which engender a focus on dynamic systems rather than computational architectures that only manipulate symbols.</p>
+
+<p>Both classes of theories align with RL, where learning and behavior is undertaken by a goal-directed agent within an environment. Note that the agents we are concerned with are humans who operate as social creatures within a social environment and consequently have social goals. A final class of theories are those of cognitive simulation, which can be subdivided into perceptual symbol systems, memory theories, and social simulation theories. Perceptual symbol systems integrate traditional symbolic systems with grounded cognition via simulation of symbol manipulation (i.e., you can internally imagine and manipulate symbols to which you have previously been exposed). Grounded memory theories originated out of the belief that past theories of memory have focused too much on passive storage and not enough on situated action. Glenberg proposed that memory primarily serves to control situated action, and that stored memories reflect bodily actions and their ability to mesh with goal pursuit (Glenberg, 1997, as cited in Barsalou, 2008). Social simulation theories offer a grounded view of interpersonal interaction. It is argued that theory of mind – where one infers another’s internal state – is achieved through the representation of another’s mind by simulating one’s own. Relatedly, mirror neurons are an interesting component of social cognition, as they fire when we perceive an action taken by another person. Importantly, mirror neurons respond to the goal of the action, not the action itself, which echoes the RL focus on goal-directed learning and behavior.</p>
+
+<p>Indeed, all these cognitive simulation theories can be represented in the RL framework as an agent’s policy and reward/value function, where the agent simulates the potential actions available to it and assigns rewards to those actions prior to choosing one. Further, if we take Glenberg’s view of stored memories as primarily to control situated action, then we can consider the memories of the agent to be the learning resulting from the RL process. As actions are taken, memory (policy) is updated to reflect its outcome (reward function/ value function). From a theoretical view, this is a nice start on mapping grounded cognition to RL, but how does this mapping hold up with empirical findings?</p>
+
+<h4 id="relation-to-empirical-findings">Relation to Empirical Findings</h4>
+
+<p>There has been much work showing how simulation, situations, and bodily states play central roles in cognition. In the domain of perception and action, results show that perception of the world influences which actions are perceived to be available, and, conversely, the actions perceive as available influence how the world is perceived. States of perception get stored in memory, and are later triggered when similar stimuli are presented, which produces perceptual inferences that go beyond what is perceived, a useful mechanism for determining how best to act in a familiar situation (Goldstone, 1995; Hanson, 2006 as cited in Barsalou, 2008). Relatedly, as visual objects are perceived, simulations of potential actions become active in preparation for situated action. Indeed, even perception of space is shaped by how the body may act within it (Franklin &amp; Tversky, 1990, as cited in Barsalou, 2008). The intertwined relationship between perception and action reflects the stimulus-response pairs available to an agent. Note that perception here includes internal states (i.e., perception includes simulation). In the RL framework, the policy reflects an agent’s current state (perception) and its potential choices (actions). In the grounded view, one’s policy would be under continuous revision as the world and new behavior is explored. However, one’s attention would align accordingly with the policy most suitable to the situation, thereby biasing perception towards the elements relevant to that policy. This accounts for the perceptual distortion within the perception-action (stimulus-response) cycle.</p>
+
+<p>With respect to memory, both implicit and explicit memory have been shown to heavily rely on multimodal simulations of previous episodes (Roediger &amp; McDermott, 1993; Schacter et al., 2004; Paivio, 1971, 1986; Conway, 1990, 2002; Rubin, 2006, as cited in Barsalou, 2008). Simulations of stimuli held in implicit memory improve perceptual fluency and increase the likelihood of correct categorization of subsequent stimuli. Simulation within explicit memory appears central to constructing future events from past events. Working memory has been shown to be maintained by simulations of absent stimuli. Further, when stimuli is relevant to visual imagery, the motor system becomes engaged, suggesting that the salience of the simulation is related to how our bodies may use it to act (Barsalou, 2008). We can map the grounded view of memory onto the RL concept of policy (again), where an agent uses past experiences as a mapping between perception and action. By simulating past experiences (implicitly or explicitly) we bias our attention to what we believe will be important to achieve our goals (implicit or explicit) given our current state. Successfully doing so results in improved performance, whereas unsuccessful attention may result in surprise and subsequently a larger policy (memory/belief) update.</p>
+
+<p>While simulation in memory has been accepted for many years, simulation as the basis of knowledge representation is still considered a radical proposal (Barsalou, 2008). However, even here there is evidence for the grounded view of cognition. There has been work demonstrating that properties are more difficult to describe as they become larger, and that many detailed properties are difficult to verbalize. Both findings indirectly support the idea that we simulate objects and their properties to verify them (Solomon &amp; Barsalou, 2004; Morison &amp; Tversky, 1997, as cited in Barsalou, 2008). Additionally, lesion damage to different parts of the brain results in the loss of conceptual categories. For example, damage to the visual cortex results in the loss of the animal categories, as we categorize animals by their visual properties. Similarly, damage to the motor cortex results in the loss of tools, as we categorize tools by how we use them with our bodies. Everything we know about the world is stored in our brains, and the RL mechanism by which knowledge is updated is through exploration and exploitation, action and reward, and the environmental state and goal-pursuit. It stands to reason that the knowledge we learn is tightly coupled within the context in which it was learned, which includes how we came to learn it, including the brain regions involved in our learning. However, this connection is somewhat tenuous, as RL intentionally avoids the concept of knowledge on its own and is instead focused on the learning problem as a whole. One might make the argument that knowledge is encapsulated within the notion of policy, but it is not explicit. Indeed, one of the reasons RL seems to be so successful is that it does not attempt to nail down what knowledge is, but rather how an agent learns in an environment to achieve a goal.</p>
+
+<h4 id="simulation">Simulation</h4>
+
+<p>In what has been discussed, we can notice a pattern emerging. Simulation is the mechanism in grounded cognition by which agents make sense and act within world, which consists of a body and environment. Further, perception of the world is contingent on the simulations maintained by the agent and is often biased towards available action choices. This relationship between state and action is well captured by the notion of policy within RL. As we consider other findings found in grounded cognition, we find again and again the suitability of RL to explain them. Take the domain of language comprehension. The meaning of language is simulated using situation models, which represent information with spatial properties (Barsalou, 2008). In other words, readers comprehend text by simulating what they read. Findings show that reading an action word activates the motor system. Similarly, readers simulate affect (emotional states) during comprehension. If we take the goal of reading to be comprehension, then comprehension can be thought of as the successful recall and integration of the meanings of the words. To that extent, RL is perfectly suitable to explain language comprehension (although the process itself would happen very rapidly). The policy (stimulus-response) would consist of rapid choices (likely unconsciously made) of integrating the meaning of language into one’s internal representation (or situation model). The reward function would be the immediate comprehensibility of one’s internal representation after integration of the most recent language, and the value function would be represented as the cohesiveness of the meaning of the overall thrust of the complete message communicated. The flexibility of RL can be used to extend to all sorts of phenomena in grounded cognition. In the domain of thought, physical reasoning relies on simulations of physical situations, suggesting that past experiences inform the understanding and reasoning of the current physical world (i.e., the policy has updated to inform current state-action choices). Mental model theory is used to explain abstract reasoning, and there is evidence that simulation plays a key role. Additionally, social cognition relies on simulation (that’s what empathy is!). In each case (language comprehension, thought, and social cognition), the problem can be broken down and represented as an RL model. The policy consists of choice-action pairs based on past experiences and the current environment, while the goal is defined as successful comprehension, or reasoning, or social connection, and the reward reflects the success of the interpretation, thinking, or communicating towards achieving its respective goal.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>Reinforcement learning is well-suited to explain the theories and evidence prominent in grounded cognition, but there are still some gaps to address. First, as mentioned earlier, there is no explicit definition of what knowledge is within RL. In my view, this is no problem, as knowledge is captured within the notion of policy (in a functional sense). However, it may be desirable to extend a version of RL to make a concrete definition of knowledge. Another gap to address would be the disconnect between the sequential processing of RL and the inherently dynamic, parallel, noisy processes of the grounded view of cognition, where environment and agent mutually interact with and influence each other in multiple and simultaneous ways. Perhaps the solution here is not to modify RL, but to parallelize it! Cognition is composed of myriad parallel processes, and if they can each be accounted for by an RL framework, perhaps extending the range and number of RL algorithms is the way forward. Finally, as a direction for further investigation, it would be interesting to see how the explore-exploit tradeoff is accounted for from the grounded perspective. In (Daw et al., 2006), a majority of gamblers explored new slot machines to play. How would this result hold up for decisions that have higher stakes, like choosing a spouse, trekking through unknown territory, or playing high-stakes poker? Grounded cognition and RL may offer the means to explore these problems.</p>
+
+<h3 id="references">References</h3>
+
+<p>Barsalou, L. W. (2008). Grounded cognition. Annual Review of Psychology, 59, 617–645. https://doi.org/10.1146/annurev.psych.59.103006.093639</p>
+
+<p>Daw, N. D., O’Doherty, J. P., Dayan, P., Seymour, B., &amp; Dolan, R. J. (2006). Cortical substrates for exploratory decisions in humans. Nature, 441(7095), 876–879. https://doi.org/10.1038/nature04766</p>
+
+<p>Sutton, R. S., &amp; Barto, A. G. (1998). Reinforcement Learning Chap 2. MIT Press, 465(1), 90–94. http://www.ncbi.nlm.nih.gov/pubmed/20351022</p>
+
+</div>
+  </div>
+  
+</section>
+
+      <footer>
+  <div class="footer-wrap">
+    <div class="footer-tagline">
+      <p></p>
+    </div>
+    <div class="social-media">
+      <nav>
+        
+          <a href="https://instagram.com/nick.hunkins" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        
+          <a href="https://github.com/nchp89" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        
+          <a href="https://linkedin.com/in/nick-hunkins" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        
+          <a href="mailto:nickhunkins@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        
+      </nav>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>

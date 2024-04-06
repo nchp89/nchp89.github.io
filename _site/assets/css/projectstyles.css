@@ -38,3 +38,10 @@ h5 {
   padding-left: 10px;
   margin-bottom: 10px;
 }
+
+/* The animation code */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+  

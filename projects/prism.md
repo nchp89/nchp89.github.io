@@ -17,7 +17,7 @@ title: ''
 </video>
 
 ## What is it?
-PRISM is an educational experience intended to help young people who show signs of social media addiction. PRISM focuses on education, agency, and self-directed change to improve personal relationships with social technologies (e.g., smartphones, social media, etc.). It is based on scientific research and has been proven to be an effective intervention for reducing addiction levels of social media use. Much of the work that led to the instantiation of PRISM has roots in my prior work which can be found in the [SMC Analysis](./smc-analysis) and [SMC Annotations](smc-annotations) projects on the Home page.
+PRISM is an educational experience intended to help young people who show signs of social media addiction. PRISM focuses on education, agency, and self-directed change to improve personal relationships with social technologies (e.g., smartphones, social media, etc.). It is based on scientific research and has been proven to be an effective intervention for reducing addiction levels of social media use. Much of the work that led to the instantiation of PRISM has roots in my prior work which can be found in the [SMC Analysis](smc-analysis) and [SMC Annotations](smc-annotations) projects on the Home page.
 
 {% include image.html url="https://www.postinternetproject.org/prism" image="projects/prism/thumbnail.jpg" %}
 

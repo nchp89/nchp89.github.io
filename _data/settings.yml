@@ -2,20 +2,20 @@
 # General Site Settings
 
 menu:
-- {name: 'Home', url: ''}
-- {name: 'Blog',     url: 'blog'}
-- {name: 'About',    url: 'about'}
-- {name: 'Contact',  url: 'contact'}
+- {name: 'home', url: ''}
+- {name: 'blog',     url: 'blog'}
+- {name: 'about',    url: 'about'}
+- {name: 'contact',  url: 'contact'}
 
 #-------------------------------
 # Projects Section
 
 projects:
 - {name: 'PRISM',   url: 'prism'}
+- {name: 'Social Media Challenge: Data Analysis',   url: 'smc-analysis'}
 - {name: 'Optimizing Hadoop Ingests',   url: 'optimizing-hadoop-ingests'}
 - {name: 'ChatGPT Knowledge Probing: Let Alone',   url: 'let-alone-chatgpt'}
 - {name: 'Digital Signal Processing: Neurokit 2 EDA',   url: 'eda-signal-processing'}
-- {name: 'SMC: Analysis',   url: 'smc-analysis'}
 - {name: 'SMC: Annotations', url: 'smc-annotations'}
 - {name: 'CETD: Automated Feedback',  url: 'cetd-auto-feedback'}
 - {name: 'CETD: Messages of Belonging',  url: 'cetd-belonging'}

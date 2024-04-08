@@ -4,8 +4,9 @@ title: About
 permalink: /about
 ---
 
-# About Me
-
+<br>
+<h1 style="text-align: center; font-variant: small-caps; color:#716262">about nick</h1>
+<br>
 <img src="../assets/img/about/bio-photo.png" alt="Bio Pic" width="100%"/>
 
 Hi there! I'm Nick Hunkins, a data scientist with a Masters in Computer Science and a Bachelors in Mathematics. I have 3 years of industry experience working in the data science profession and 4 years of experience in applying these skills to conduct academic research. My work has primarily focused on AI for education and the relationship between social media and wellbeing. The current instantiation of social media is deeply concerning to me, specifically with respect to how it exploits human cognition to manipulate attention for private profit. In alignment with this concern, I currently work with the non-profit [Post-Internet Project](https://www.postinternetproject.org) as a data scientist. If you'd like to learn more, [here's my resume](https://drive.google.com/file/d/1cIncJAtieWxsv3reWe-Kk3UpfnWXtz1k/view?usp=drive_link). 

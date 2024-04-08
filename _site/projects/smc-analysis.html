@@ -57,17 +57,17 @@
     <div class="site-container">
       <header>
   <div class="logo" style="width:250px;">
-    <a href="/">Nick Hunkins</a>
+    <a href="/"><p style="font-size:26px;color:#716262;">Nick Hunkins</p></a>
   </div>
   <nav>
     
-      <a href="/">Home</a>
+      <a href="/"><p style="font-variant:small-caps;color:#716262;">home</p></a>
     
-      <a href="/blog">Blog</a>
+      <a href="/blog"><p style="font-variant:small-caps;color:#716262;">blog</p></a>
     
-      <a href="/about">About</a>
+      <a href="/about"><p style="font-variant:small-caps;color:#716262;">about</p></a>
     
-      <a href="/contact">Contact</a>
+      <a href="/contact"><p style="font-variant:small-caps;color:#716262;">contact</p></a>
     
   </nav>
   <hr>
@@ -80,10 +80,145 @@
   <link rel="stylesheet" href="../assets/css/projectstyles.css" />
 </head>
 
-<h1 id="smc-analysis">SMC Analysis</h1>
+<h1 id="social-media-challenge-data-analysis">Social Media Challenge: <br />Data Analysis</h1>
 
-<h3 id="note-this-project-page-is-still-under-construction">NOTE: This project page is still under construction</h3>
+<h4 id="introduction">Introduction</h4>
 
+<p>In this analysis, we take first steps towards insight into how social media behaviors differentially relate to outcomes of well-being by analyzing a novel data set collected from 576 college students who participated in a four-week, self-directed social media challenge. It contains free response data about social media behaviors, self-directed goals for change, a number of survey items related to well-being, and weekly self-reported success scores. With this rich dataset, we are uniquely positioned to better understand how outcomes of well-being may relate to different patterns of social media use, how some forms of goal-setting may be more effective than others for improving social media behavior, and whether a simple reduction of time spent on social media is a realistic goal in the social fabric of the modern world, which is increasingly facilitated by online interactions.</p>
+
+<h4 id="project-scope">Project Scope</h4>
+
+<p>This project primarily focuses on the <b><i>initial data anlysis</i></b> performed on the social media challenge dataset. We focus primarily on relationships between variables and patterns of success as it relates to reducing social media addiction scores as measured by the Bergen Social Media Addiction Scale (BSMAS). Note that further steps were taken with this data and those details can be found elsewhere, specifically in the <a href="prism">PRISM</a> and <a href="smc-annotations">SMC Annotations</a> projects.</p>
+
+<h3 id="check-out-the-github-repo-for-this-project-here"><a href="https://github.com/nchp89/social_media_challenge_public/tree/main"><u>Check out the github repo for this project here!</u></a></h3>
+
+<h4 id="impact">Impact</h4>
+
+<p>This project contributed to the founding of the non-profit <a href="https://www.postinternetproject.org">Post-Internet Project</a> and its upcoming product, <a href="https://www.postinternetproject.org/prism">PRISM</a>.</p>
+
+<p>This analysis also resulted in a publication in <a href="&quot;https://theconversation.com/it-is-hijacking-my-brain-a-team-of-experts-found-ways-to-help-young-people-addicted-to-social-media-to-cut-the-craving-219954&quot;">The Conversation</a>, a research-based news publisher.</p>
+<div class="image-container">
+  <a href="https://theconversation.com/it-is-hijacking-my-brain-a-team-of-experts-found-ways-to-help-young-people-addicted-to-social-media-to-cut-the-craving-219954" target="_blank">
+    <img src="/assets/img/projects/smc-analysis/conversation-article.jpg" alt="Avatar" class="image" />
+    <div class="overlay">
+      <div class="text">
+        
+          Link <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        
+      </div>
+    </div>
+  </a>
+</div>
+
+<h4 id="data">Data</h4>
+
+<p>Our data was collected from six semesters of college students who participated in a social media cleanse challenge (n=2607, N=576). All data was de-identified prior to any analysis. At the start of the challenge, each student was asked to reflect on their personal relationship with social media, determine appropriate goals to improve their social media behavior, and then commit to a four-week self-directed effort in intentional behavior change. Students would check in once a week to complete a set of surveys related to their well-being and stress, report their success in sticking to their goals, and write a reflection on the previous week. A full table of included surveys can be found below in Table 1.</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/psych-surveys.png" />
+    <figcaption>Table 1. Psychological Surveys</figcaption>
+</figure>
+
+<p><br /></p>
+
+<p>Note that the surveys administered for each semester changed over time so that not every student completed every survey. Table 2. quantifies which surveys were administered across each of the six semesters.</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/psych-surveys-by-sem.png" />
+    <figcaption>Table 2. Psychological Surveys</figcaption>
+</figure>
+
+<p><br /></p>
+
+<p>While each student ideally completed five rounds of surveys (an initial survey and four follow-up surveys), many completed fewer. The distribution of completed surveys can be seen below. Participants with fewer than the complete five surveys were either kept or removed from consideration depending on the analysis being conducted.</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/survey-count.png" />
+</figure>
+
+<h4 id="wellbeing-and-social-media-correlations">Wellbeing and Social Media: Correlations</h4>
+
+<p>We start the investigation by asking what the relationship is between social media addiction (BSMAS) and the other surveys that relate to outcomes of wellbeing. We do this by looking at the pearson correlation (\(\rho\)) between the participant mean scores of the surveys and their BSMAS levels. Below is a table of correlations sorted by descending magnitude.</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas-corr.png" />
+    <figcaption>Table 4. Mean BSMAS &amp; Survey Correlations </figcaption>
+</figure>
+
+<p>TODO: talk about the table</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/corr-surveys-platforms.png" />
+    <figcaption>Table 5. Survey Correlations with Social Media Platforms </figcaption>
+</figure>
+
+<p>TODO: talk about the table</p>
+
+<h4 id="does-social-media-addiction-make-it-harder-to-succeed">Does Social Media Addiction Make it Harder to Succeed?</h4>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_pss_corr.png" />
+</figure>
+
+<p>TODO: talk about the plot</p>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_self_assess_corr.png" />
+</figure>
+
+<p>TODO: talk about the plot</p>
+
+<h4 id="the-effect-of-the-intervention">The Effect of the Intervention</h4>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_over_time_1.png" />
+</figure>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_over_time_2.png" />
+</figure>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_over_time_3.png" />
+</figure>
+
+<h4 id="gender-differences">Gender Differences?</h4>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_by_gender_1.png" />
+</figure>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_by_gender_2.png" />
+</figure>
+
+<figure>
+    <img src="../assets/img/projects/smc-analysis/bsmas_by_gender_3.png" />
+</figure>
+
+<h4 id="current-and-future-directions">Current and Future Directions</h4>
+
+<div class="image-container">
+  <a href="https://www.postinternetproject.org/prism" target="_blank">
+    <img src="/assets/img/projects/smc-analysis/prism-logo.jpg" alt="Avatar" class="image" />
+    <div class="overlay">
+      <div class="text">
+        
+          Link <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        
+      </div>
+    </div>
+  </a>
+</div>
+
+<h3 id="references">References</h3>
+<p>[1] Kross, E., Verduyn, P., Sheppes, G., Costello, C. K., Jonides, J., &amp; Ybarra, O. (2021). Social Media and Well-Being: Pitfalls, Progress, and Next Steps. Trends in Cognitive Sciences, 25(1), 55–66. https://doi.org/10.1016/j.tics.2020.10.005</p>
+
+<p>[2] Cohen, S., Kamarck, T., &amp; Mermelstein, R. (1983). A Global Measure of Perceived Stress. Journal of Health and Social Behavior, 24(4), 385–396.</p>
+
+<p>[3] ANDREASSEN, C. S., TORSHEIM, T., BRUNBORG, G. S., &amp; PALLESEN, S. (2012). Development of a Facebook Addiction Scale. Psychological Reports, 110(2), 501–517. https://doi.org/10.2466/02.09.18.PR0.110.2.501-517</p>
+
+<p>[4] Rosen LD, Whaling K, Carrier LM, Cheever NA, Rokkum J. The Media and Technology Usage and Attitudes Scale: An empirical investigation. Comput Human Behav. 2013 Nov 1;29(6):2501-2511. doi: 10.1016/j.chb.2013.06.006. PMID: 25722534; PMCID: PMC4338964.</p>
 </div>
   </div>
   

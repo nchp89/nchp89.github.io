@@ -4,7 +4,10 @@ title: Contact
 permalink: /contact
 ---
 
-# Contact
+<br>
+<h1 style="text-align: center; font-variant: small-caps; color:#716262">contact information</h1>
+<br>
+<img src="../assets/img/misc/contact-img.png" alt="paperplane" width="100%"/>
 
 Feel free to contact me through any of the below channels. My preferred modes of communication for professional inquiries are via [email](mailto:nickhunkins@gmail.com) or [LinkedIn](www.linkedin.com/in/nick-hunkins). Send me a message and I will get back to you as soon as I can! 
 

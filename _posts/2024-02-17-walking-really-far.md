@@ -62,3 +62,8 @@ Later, a woman named Fidget spoke about her seven year hike from the southernmos
 #### Now What?
 
 The Appalachian Trail is 2,200 miles long starting in Georgia and ending in Maine. The Pacific Crest Trail is 2,600 miles long starting in California and ending in Washington. The Continental Divide Trail is 3,100 miles long starting in New Mexico and ending in Montana. Together, they add up to nearly 8,000 miles in length. It takes some people their whole lives to complete the Triple Crown, while others make the (insane) attempt to complete it in a single year. Regardless of pace, it is an unbelievably impressive achievement, and it is no wonder that fewer than 700 people to date have officially completed it – about as many people who have been to space. At the conclusion of the ceremony, small wooden plaques were awarded to 2023’s batch of Triple Crowners – a tiny trophy next to the enormity of their achievement. Adam and Kylie have their plaques displayed next to each other on a shelf in their home. After such a massive achievement, I wondered what could be next for the two of them. Could they have quenched their thirst for adventure? I was happy to learn that the answer was a decisive no. Kylie plans on running 250 miles in three days in Arizona, and Adam wants to thru-hike the 500 mile-long Colorado Trail in 11 days. I wish both of them luck, and I look forward to the stories they bring back from these adventures.
+
+<figure>  
+  <img class="center" src="../assets/img/blog/adam-and-kylie.png" alt="Adam (Chipotle) and Kylie (Tang)">
+  <figcaption>Adam (Chipotle) and Kylie (Tang)</figcaption>
+</figure>

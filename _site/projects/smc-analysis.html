@@ -136,25 +136,105 @@
     <img src="../assets/img/projects/smc-analysis/survey-count.png" />
 </figure>
 
-<h4 id="wellbeing-and-social-media-correlations">Wellbeing and Social Media: Correlations</h4>
+<h4 id="wellbeing-and-social-media">Wellbeing and Social Media</h4>
 
-<p>We start the investigation by asking what the relationship is between social media addiction (BSMAS) and the other surveys that relate to outcomes of wellbeing. We do this by looking at the pearson correlation (\(\rho\)) between the participant mean scores of the surveys and their BSMAS levels. Below is a table of correlations sorted by descending magnitude.</p>
+<p>We start the investigation by asking the high-level question: what is the relationship between social media and wellbeing?</p>
+
+<h5 id="wellbeing-and-social-media-addiction">Wellbeing and Social Media Addiction</h5>
+
+<p>To start, we investigate the relationship between addiction (BSMAS) and the other surveys that relate to outcomes of wellbeing. We do this by looking at the pearson correlation (\(\rho\)) between the participant mean scores of the surveys and their BSMAS levels. Below is a table of correlations sorted by descending magnitude.</p>
 
 <figure>
     <img src="../assets/img/projects/smc-analysis/bsmas-corr.png" />
     <figcaption>Table 4. Mean BSMAS &amp; Survey Correlations </figcaption>
 </figure>
 
-<p>TODO: talk about the table</p>
+<p>From this table, we can group correlations into three categories: moderate-strong (\(\rho \gt 0.3\)), moderate-weak (\(0.3 \gt \rho \gt 0.5\)), and weak (\(\rho \lt 0.15\)). The weak correlations indicate no clear linear relationship between mean BSMAS and the mean survey score, and so I will not discuss them further.</p>
+
+<h6 id="moderate-strong-correlations">Moderate-Strong Correlations</h6>
+<ul>
+  <li><b><u>SoNA</u></b>: Sense of Negative Agency
+    <ul>
+      <li>(\(\rho=0.496\))</li>
+      <li>The strong correlation with social media addiction is sense of negative agency, and this makes sense to intuition! Addiction undermines choice and agency by coopting the reward circuitry in the brain. Addicts report feeling as if they are not in control of their actions, and it appears that that pattern holds strongly for social media addicts as well.</li>
+    </ul>
+  </li>
+  <li><b><u>ADTS Anx</u></b>: Anxious Attitudes Towards Technology
+    <ul>
+      <li>(\(\rho=0.436\))</li>
+      <li>Anxious attitudes towards tech also has a strong correlation with addiction. This indicates that those addicted to social media may be experiencing more anxiety as a result, or use social media as relief from anxiety, or some combination of the two.</li>
+    </ul>
+  </li>
+  <li><b><u>PSS</u></b>: Perceived Stress
+    <ul>
+      <li>(\(\rho=0.394\))</li>
+      <li>Perceived stress likely shares a similar story with anxious attitudes in its relationship with social media addiction. Those with a heightened sense of stress may seek respite in social media, or they may experience more stress as a result of their addiction to social media, or some combination of both.</li>
+    </ul>
+  </li>
+  <li><b><u>ChQ</u></b>: Change Questionnaire
+    <ul>
+      <li>(\(\rho=0.334\))</li>
+      <li>Finally, we see a moderate-strong correlation between desire and motivation to change and social media addiction. This could suggest that those with social media addiction issues may themselves sense that something is “off” and consequently desire to change. Alternatively, time spent on social media could be making them feel unsatisfied with their lives, thus motivating change.</li>
+    </ul>
+  </li>
+</ul>
+
+<h6 id="moderate-weak-correlations">Moderate-Weak Correlations</h6>
+<ul>
+  <li><b><u>SWLS</u></b>: Life Satisfaction
+    <ul>
+      <li>(\(\rho=-0.210\))</li>
+      <li>Negatively correlated with social media addiction is life satisfaction. Perhaps low life satisfaction can lead to social media addiction or vice versa.</li>
+    </ul>
+  </li>
+  <li><b><u>ADTS Neg</u></b>: Negative Attitudes Towards Technology
+    <ul>
+      <li>(\(\rho=0.206\))</li>
+      <li>The correlation between negative attitudes towards technology and social media addiction suggests that those who have a low opinion of technology may also be at higher risk of addiction to it.</li>
+    </ul>
+  </li>
+  <li><b><u>SoPA</u></b>: Sense of Positive Agency
+    <ul>
+      <li>(\(\rho=-0.172\))</li>
+      <li>Finally, we see a negative correlation between social media addiction and a sense of positive agency. This is expected, because as was described above, addiction and agency typically do not coincide.</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="wellbeing-and-social-media-platform">Wellbeing and Social Media Platform</h5>
+
+<p>What about the relationship between wellbeing and the specific social media platforms? Are some better or worse than others? To get at this question, we correlate survey scores with social media platform indicator variables.</p>
 
 <figure>
     <img src="../assets/img/projects/smc-analysis/corr-surveys-platforms.png" />
     <figcaption>Table 5. Survey Correlations with Social Media Platforms </figcaption>
 </figure>
 
-<p>TODO: talk about the table</p>
+<p>There are too many correlations to discuss meaningfully here, so I will make just a few observations of what I believe to represent a larger pattern.</p>
 
-<h4 id="does-social-media-addiction-make-it-harder-to-succeed">Does Social Media Addiction Make it Harder to Succeed?</h4>
+<ol>
+  <li><b>There are clear differences between platforms with respect to wellbeing.</b>
+    <ul>
+      <li>Take Reddit and TikTok. TikTok has the highest correlation with social media addiction compared to any other platform. Its associated with higher anxiety towards technology, lower self-esteem, lower sense of positive agency, and a higher sense of negative agency.</li>
+    </ul>
+  </li>
+  <li><b>There are tradeoffs in terms of wellbeing and social media platform choice.</b>
+    <ul>
+      <li>If we resume our comparison from above, for all of its merits, Reddit is also associated with low perceptions of social support whereas TikTok is associated with higher levels of social support.</li>
+    </ul>
+  </li>
+  <li><b>Social connection is highly varied across platforms.</b>
+    <ul>
+      <li>Despite its name, <i>social</i> media doesn’t appear to be consistenty social. Some platforms may be better at fostering social connection than others (see PSOC correlations). Or, certain platforms may attract people who have fewer social ties.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>As mentioned before, there’s a lot more to get into here. Why is Facebook so strongly correlated with a sense of negative agency while instagram isn’t? Why are pinterest users so interested in change, while discord users are not? How often is there an overlap of useage between social media platforms? Which ones co-occur and which ones are usually mutually exclusive?</p>
+
+<p><br /></p>
+
+<h4 id="social-media-addiciton-and-stress">Social Media Addiciton and Stress</h4>
 
 <figure>
     <img src="../assets/img/projects/smc-analysis/bsmas_pss_corr.png" />

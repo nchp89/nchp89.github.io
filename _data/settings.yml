@@ -13,11 +13,11 @@ menu:
 projects:
 - {name: 'Social Media Challenge: Data Analysis',   url: 'smc-analysis'}
 - {name: 'PRISM',   url: 'prism'}
+- {name: 'Social Media Challenge: Behavior & Goal Annotations', url: 'smc-annotations'}
 - {name: 'Optimizing Hadoop Ingests',   url: 'optimizing-hadoop-ingests'}
 - {name: "\"Beautiful work, you're rock stars!\" Teacher Discourse Analytics",  url: 'cetd-belonging'}
 - {name: 'ChatGPT Knowledge Probing: Let Alone',   url: 'let-alone-chatgpt'}
 - {name: 'Digital Signal Processing: Neurokit 2 EDA',   url: 'eda-signal-processing'}
-- {name: 'SMC: Annotations', url: 'smc-annotations'}
 - {name: 'CETD: Automated Feedback',  url: 'cetd-auto-feedback'}
 
 #-------------------------------

@@ -80,9 +80,185 @@
   <link rel="stylesheet" href="../assets/css/projectstyles.css" />
 </head>
 
-<h1 id="smc-annotations">SMC Annotations</h1>
+<h1 id="social-media-challengebehavior--goal-annotations">Social Media Challenge:<br />Behavior &amp; Goal Annotations</h1>
 
-<h3 id="note-this-project-page-is-still-under-construction">NOTE: This project page is still under construction</h3>
+<h4 id="project-overview--motivation">Project Overview &amp; Motivation</h4>
+
+<p>In my collaboration with Dr. Annie Margaret at the University of Colorado Boulder, we investigated the effects of social media usage on wellbeing. This work was primarily conducted by way of analysis described in the <a href="smc-analysis">Social Media Challenge: Data Analysis Project</a>. The dataset used in that analysis is the same used here. However, rather than focusing on outcomes of wellbeing as they relate to social media addiction, we instead turn to the language used by participants to describe their social media behaviors and goals for change.</p>
+
+<p>Specifically, we developed an annotation system to code each sentence given by participants as to whether it indicated some specific aspect of behavior and goal-setting that were of interest for our work. Developing an annotation system for this data could be used for several purposes, including:</p>
+<ol>
+  <li>Analyzing specific linguistic features that may indicate a healthy/unhealthy social media behavior.</li>
+  <li>Understanding what sort of behavior &amp; goal combination lead to the best wellbeing outcomes.</li>
+  <li>Developing machine learning models to automatically classify speech into informative and actionable categories.</li>
+</ol>
+
+<h4 id="data">Data</h4>
+
+<p>We start by generating two datasets from our original social media challenge data. Each dataset was created by splitting a freeform text entry into individual sentences. Since many entries were not formal English (e.g., bulleted lists), we segmented entries based on several criteria, including: periods, question marks, newline breaks, etc. Consequently, sentences were highly variable, ranging from grammatically correct English sentences to single-word sentence fragments.</p>
+
+<h5 id="social-media-behaviors-n5712">Social Media Behaviors (n=5,712)</h5>
+
+<p>The Social Media Behaviors dataset came from the following prompt:</p>
+
+<blockquote>
+  <p>Describe your social media behaviors, and be specific. Which platforms do you use? For how long? How do you connect with friends/family virtually? Which behaviors leave you feeling connected/satisfied? Which leave you feeling empty or frustrated with wasted time? You may want to consult “screentime” on your phone to see which apps you’ve used an for how long, you might be surprised.</p>
+</blockquote>
+
+<p><img src="../assets/img/projects/smc-annotations/behaviors-sample.png" /></p>
+
+<h5 id="behavior-change-goals-n2747">Behavior Change Goals (n=2,747)</h5>
+
+<p>The Behavior Change Goals dataset came from the following prompt:</p>
+
+<blockquote>
+  <p>How would you like to see your social media behaviors change? Be specific when listing your goals and intentions. For example “I would like use Instagram for 20 mins per day or less and I will set a limit on my phone to achieve this goal.” Describe AT LEAST 3 concrete goals and intentions.</p>
+</blockquote>
+
+<p><img src="../assets/img/projects/smc-annotations/goals-sample.png" /></p>
+
+<h4 id="code-book">Code Book</h4>
+
+<p>We developed the following codebook to capture constructs related to wellbeing and social media use. We group these codes into five categories for conceptual coherence. Note that tables 1.1, 1.2, and 2 are meant to capture behavior, while tables 3, 4, and 5 are meant to capture goals. Also note that the <i>Past</i> code was used for both behavior and change annotations.</p>
+
+<h5 id="behavior-codes">Behavior Codes</h5>
+<p><img src="../assets/img/projects/smc-annotations/sat-dis.png" /></p>
+
+<p><img src="../assets/img/projects/smc-annotations/sm-behaviors.png" /></p>
+
+<h5 id="change-codes">Change Codes</h5>
+<p><img src="../assets/img/projects/smc-annotations/sm-change.png" /></p>
+
+<p><img src="../assets/img/projects/smc-annotations/external.png" /></p>
+
+<p><img src="../assets/img/projects/smc-annotations/misc.png" /></p>
+
+<h4 id="annotation-process">Annotation Process</h4>
+
+<p>The annotation process was performed as follows: two trained annotators separately read each sentence and entered the relevant codes for both the behavior and goal datasets. The annotators were given the following guidelines to keep in mind while annotating the data:</p>
+
+<ol>
+  <li>Don’t infer
+    <ul>
+      <li>Only code what the sentence itself tells you.</li>
+      <li>Do not reference adjacent sentences for more information.</li>
+    </ul>
+  </li>
+  <li>Ignore tense
+    <ul>
+      <li>Code for behaviors and goals regardless of whether the participant stated they no longer behave the way they state or if they have already completed the goal</li>
+      <li>Tense is captured in its own code</li>
+    </ul>
+  </li>
+  <li>When in doubt, bias towards False
+    <ul>
+      <li>The sentence should state something specific that fits into one of our codes.</li>
+      <li>If you can’t point out the specific words that make that sentence fit with a code, then you should not enter True for that code.</li>
+    </ul>
+  </li>
+  <li>These codes are NOT mutually exclusive
+    <ul>
+      <li>One sentence can be coded as True for all codes!</li>
+    </ul>
+  </li>
+  <li>You can ask questions
+    <ul>
+      <li>While you cannot collaborate with your fellow coders during the sample coding process, you may email me for clarification questions about the coding scheme.</li>
+      <li>However, I cannot tell you what a sentence should be coded as.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The two annotators started with a subset of data equal to 10% of the total dataset. Following this initial step, small adjustments were made to the coding scheme for the sake of clarity before continuing on to the rest of the data.</p>
+
+<p>Upon completing the codes for both datasets, inter-rater reliability metrics were taken to validate the annotation system. Codes that had sufficiently high metrics were kept and then passed to a third party – a subject matter expert – for adjudication. This final action resolved all conflicted codes and left us with a completed set of codes for each dataset.</p>
+
+<h4 id="validation">Validation</h4>
+
+<p>We start the analysis of the validity of our annotation system by investigating the conflicts between our two annotators and then computing several metrics of inter-rater reliability – metrics meant to quantify the reliability of a coding scheme across separate annotators.</p>
+
+<p><img src="../assets/img/projects/smc-annotations/conflicts.png" /></p>
+
+<p>We start by checking the number of conflicts occurred between annotators for each code. Note that each sentence could have multiple conflicts, as the codes were not mutually exclusive. Consider the behaviors dataset, which is composed of 5,712 sentences each with 8 codes. That makes for 5,712 x 8 = 45,696 codes. We see that some codes had more disagreement than others, specifically Observer Intentional (OI) in the behavor codes. More informative are the IRR metrics below.</p>
+
+<h5 id="inter-rater-reliability-metrics">Inter-Rater Reliability Metrics</h5>
+
+<p>The metrics below from left to right are the following:</p>
+<ol>
+  <li>% Agreement
+    <ul>
+      <li>The percentage of annotations where codes matched for both annotators.</li>
+    </ul>
+  </li>
+  <li>Pearson \(\rho\)
+    <ul>
+      <li>Pearson correlation between code entries (1=True, 0=False) between annotators.</li>
+    </ul>
+  </li>
+  <li>Gwet’s AC1
+    <ul>
+      <li>IRR metric that is particularly good at handling imbalanced classes.</li>
+    </ul>
+  </li>
+  <li>Krippendorf’s \(\alpha\)
+    <ul>
+      <li>IRR metric that is more stable for classes without imbalance.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>For our purposes, we focus on Gwet’s AC1 metric, as our classes were imbalanced. We went by the following rule-of-thumb cutoff for the AC1 metric:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Quality</th>
+      <th style="text-align: center">AC1 Score Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Unusable</td>
+      <td style="text-align: center">\(0.0-0.5\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Poor</td>
+      <td style="text-align: center">\(0.5-0.7\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fair</td>
+      <td style="text-align: center">\(0.7-0.8\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Good</td>
+      <td style="text-align: center">\(0.8-0.9\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Geat</td>
+      <td style="text-align: center">\(0.9-1.0\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><img src="../assets/img/projects/smc-annotations/behaviors-irr.png" /></p>
+
+<p>Based on our scores and AC1 cutoffs, we see that all of our behavior codes are usable! OI was the lowest performing code, a score 0.785 that falls into the Fair category. The next lowest performing code was PSI, which was at the upper end of the Good category, and the rest of the behavior codes are considered great by the AC1 metric.</p>
+
+<p><img src="../assets/img/projects/smc-annotations/goals-irr.png" /></p>
+
+<p>For our goal codes, we see that all but three fall into the Great category: OI Change, DBC, and S_DBC, with each of these considered to be good.</p>
+
+<p>In summary, according to the IRR metrics, we have validated the coding scheme presented above.</p>
+
+<h4 id="future-work">Future Work</h4>
+
+<p>What has been described here is the crucial first step towards understanding and leveraging language about social media and behavior change towards better outcomes of wellbeing for young people. With this we can analyze what sort of linguistic features that relate to higher and lower scores on wellbeing outcome metrics, positive and negative social media behaviors, and better and worse strategies for successful change.</p>
+
+<h3 id="note">NOTE</h3>
+
+<p>Work has paused on this project due to financial constraints with intent to resume in the summer of 2024</p>
 </div>
   </div>
   

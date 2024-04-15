@@ -49,6 +49,17 @@ h6 {
   margin-bottom: 10px;
 }
 
+table, th, td {
+  border: 1px solid;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: bisque;
+}
+
 /* The animation code */
 @keyframes example {
   from {background-color: red;}

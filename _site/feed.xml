@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-13T12:06:55-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-14T10:24:29-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />
 </head>
 
@@ -30,7 +30,7 @@
 
 <p>First and foremost, write what is meaningful. You might ask, ”what do you mean by meaningful?” and that is indeed a good question! Meaning lies in the hidden truths of our everyday life. It’s the smell of a fresh cup of coffee on a Sunday morning, the pure joy of throwing a rubber ball to a gleeful dog, the glimpse of a bird flying overhead and out of sight. These moments are too often treated as mere filler between the “real” parts of life, but this is all wrong. If we cannot experience these simple moments fully for what they are, then we are missing out on our own life, and that is an unthinkable tragedy.</p>
 
-<p>Of course, meaning lies in the big truths, too! Too often the most obvious truths go unnoticed or unappreciated. For example, I have gotten older since I started writing this, and I will never get that time back again, because like it or not, I am always aging. I am always choosing how to spend my limited time on this earth, and the truth is, I never have known nor will I ever know exactly how much time I have left. Of course, I know this on some level, but on another level, I’m in denial about it, or I forget about it, and that is exactly what makes for an interesting and important piece of writing.</p>
+<p>Of course, meaning lies in the big truths, too! Too often the most obvious truths go unnoticed or unappreciated. For example, I have gotten older since I started writing this, and I will never get that time back again, because like it or not, I am always aging. I am always choosing how to spend my limited time on this earth, and the truth is, I never have known nor will I ever know exactly how much time I have left. I know this on some level, but on another level, I’m in denial about it, or I forget about it, and that is exactly what makes for an interesting and important piece of writing.</p>
 
 <p>Obviously, I cannot in just a few short paragraphs answer the age old question of “what is meaningful?” I’m not attempting to take on such a stupid task, and I don’t believe there is a single answer to the question. In my opinion, meaning is everywhere, but you have to refine it a little bit before it’s worth anything. What I’ve described above is some territory in my life where the raw stuff bubbles up a little more readily.</p>
 
@@ -38,11 +38,11 @@
 
 <h3 id="2-write-only-what-is-essential">2. Write Only What Is Essential</h3>
 
-<p>Second, write only what is essential. I once lamented an episode in my undergraduate days where I enrolled in “Writing for Engineers.” The class emphasized concise, clear writing, and discouraged all else. If math could be converted to language, this was how to do it. After taking this course I complained that “the whole project turned my insides gray.” However, throughout the past few months I’ve changed my mind on this. I’ve written a lot of technical writing since taking that class way back in 2014, and after taking this creative writing class, I’ve realized just how strong my writing fundamentals are as a result. While there is much room for improvement, I believe this tendency to write only what is necessary comes through in my work. The whole point of technical writing is to convey what must be said and then to move on. This writing tendency manifests itself in a few, useful ways:</p>
+<p>Second, write only what is essential. I once lamented an episode in my undergraduate days where I enrolled in “Writing for Engineers.” The class emphasized concise, clear writing, and discouraged all else. If math could be converted to language, this was what it would look like. After taking this course I complained that “the whole project turned my insides gray.” However, throughout the past few months I’ve changed my mind on this. I’ve written a lot of technical writing since taking that class way back in 2014, and after taking this creative writing class, I’ve realized just how strong my writing fundamentals are as a result. The whole point of technical writing is to convey what must be said and then to move on. This writing tendency manifests itself in my writing in a few, useful ways:</p>
 
 <ol>
   <li>
-    <p>My work has detail, but is not overwritten. I don’t waste time describing how the light trickles through the canopy to rain down on the bushes below. Well, I will write that, but then I’ll move on. You see the forest? You see the sunshine? How about the bushes? Okay, you get the picture, let’s keep going.</p>
+    <p>My work has detail, but is not overwritten. I don’t waste time describing how the light trickles through the canopy to rain down on the bushes below. Well, I will write that, but then I’ll move on. You see the forest? You see the sunshine? How about the bushes? Okay, you get the picture. Let’s keep going.</p>
   </li>
   <li>
     <p>My work doesn’t get stuck. There’s no purpose in including something that doesn’t have purpose. Either it’s essential to the piece or it’s superfluous. If it doesn’t do any work for the direction of the piece, then it doesn’t belong in the piece.</p>
@@ -52,7 +52,7 @@
   </li>
 </ol>
 
-<p>My work has detail, it has summary, it doesn’t get stuck or overwritten, and it always conveys something. Of course, this is only my opinion, but it’s the honest one that I have. My initial chagrin at all that time spent in the weeds of technical writing has turned to gratitude for the skillset it has given me.</p>
+<p>My work has detail, it has summary, it doesn’t get stuck or overwritten, and it always conveys something. This is only my opinion, but it’s the honest one that I have. My initial chagrin at all that time spent in the weeds of technical writing has turned to gratitude for the skillset it has given me.</p>
 
 <h3 id="3-write-with-humor-and-honesty">3. Write With Humor and Honesty</h3>
 
@@ -60,9 +60,9 @@
 
 <p>The virtue of honesty is obvious. You’ll sound like an idiot if you don’t know what you’re talking about, and even if you were to successfully bullshit your way out of overt idiocy, the writing itself is no less insincere. Maybe others can make something useful out of that, but not me, and I doubt I’d respect the words of anything that emerged from such a process. Further, honestly requires serious self-reflection. You cannot be honest unless you know what you think, and if you don’t know what you think, then your writing will reflect that. Good writing requires honesty.</p>
 
-<p>However, honesty very quickly turns boring without a good dose of levity, and that’s why humor is so important. I don’t want to pour facts onto a page, I want to convey something meaningful, and humor can act as a wonderful lubricant to deliver that message. Note that I do not mean humor in the sense of being carefree or frivolous. No, that would be to denigrate the whole purpose of writing! Why write anything if it doesn’t matter? Nor do I mean that the piece <i>must</i> be funny. Sure, if it is funny, that’s great! However, I’m not a comedian, I’m a writer. What I mean is that the writing should be sincere, but not take itself too seriously. Life is short. Life is complicated. Everybody is tangled in a personal web of contradictions while sipping a cocktail of inherited bullshit. What I have to say may be insightful or useful or entertaining, but it’s also just a bunch of words from some guy upside down in a web sipping on his own cocktail.</p>
+<p>However, honesty quickly turns boring without a good dose of levity, and that’s why humor is so important. I don’t want to pour facts onto a page, I want to convey something meaningful, and humor can act as a wonderful lubricant to deliver that message. Note that I do not mean humor in the sense of being carefree or frivolous. No, that would be to denigrate the whole purpose of writing! Why write anything if it doesn’t matter? Nor do I mean that the piece <i>must</i> be funny. Sure, if it is funny, that’s great! However, I’m not a comedian, I’m a writer. What I mean is that the writing should be sincere, but not take itself too seriously. Life is short. Life is complicated. Everybody is tangled in a personal web of contradictions while sipping a cocktail of inherited bullshit. What I have to say may be insightful or useful or entertaining, but it’s also just a bunch of words from some guy upside down in a web sipping on his own cocktail.</p>
 
-<p>Good writing should make you feel or think something new, but it should go down easily, too. The best meals are healthy <i>and</i> tasty.</p>
+<p>Good writing should make you feel or think something real, but it should go down easily, too. The best meals are healthy <i>and</i> tasty.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -93,7 +93,7 @@
 
 <p>Indeed, there is something fun when it comes to learning about ourselves, and that’s about as much stock as I placed into the world of personality assessments. They’re something fun and curious, but after the initial wave of novelty wears off, the results melt from my brain and dribble out of my ears.</p>
 
-<p>This is the attitude I had when I recently took the <a href="https://www.gallup.com/cliftonstrengths/en/252137/home.aspx">Clifton Strengths Assessment</a> by Gallup. I received the opportunity to take the Clifton Strengths Assessment for free through my work with the <a href="https://www.postinternetproject.org">Post-Internet Project</a>, and after some initial resistance I agreed to give it a try. So, one morning last week, I brewed a cup of hot coffee and sat down at my desk to begin.</p>
+<p>This was my attitude when I recently took the <a href="https://www.gallup.com/cliftonstrengths/en/252137/home.aspx">Clifton Strengths Assessment</a> by Gallup. I got the opportunity to take the Clifton Strengths Assessment for free through my work with the <a href="https://www.postinternetproject.org">Post-Internet Project</a>, and after some initial resistance I agreed to give it a try. So, one morning last week, I brewed a cup of hot coffee and sat down at my desk to begin.</p>
 
 <h4 id="the-clifton-strengths-assessment">The Clifton Strengths Assessment</h4>
 
@@ -116,13 +116,13 @@
 The results I got from the assessment deeply resonated with my own sense of who I am, which was unexpected! I know it may seem stupid to be surprised that a personality test accurately captured some features of my personality, but after so many “meh” results from other tests, this one truly felt… well, surprising!</p>
 
 <ol>
-  <li><span style="color:green;"><b>Ideation</b><i>(Strategic Thinking)</i></span>:I love ideas! I love learning about new ones or thinking about the same ole stuff in new exciting ways. My favorite conversations are the ones situated around ideas, and when a new idea connects other concepts that previously seemed unrelated... oh yeah, that's my jam.</li>
+  <li><span style="color:green;"><b>Ideation</b><i>(Strategic Thinking):</i></span> I love ideas! I love learning about new ones or thinking about the same ole stuff in new exciting ways. My favorite conversations are the ones situated around ideas, and when a new idea connects other concepts that previously seemed unrelated... oh yeah, that's my jam.</li>
   <br />
   <li><span style="color:blue;"><b>Adaptability</b> <i>(Relationship Building):</i></span> I've always been a "go with the flow" kind of guy (occasionally to a fault). You never know where a flow might take you. After all, change is inevitable, surprises are wonderful, and, as they say, variety is the spice of life.</li>
   <br />
-  <li><span style="color:green;"><b>Intellection</b> <i>(Strategic Thinking):</i></span> What resonates most here is introspection and reflection, which are absolutely invaluable to me. The great task of life is to know thyself, and to know thyself one must study oneself. (And, as Dogen would say, to study the self is to forget the self, but that's for another post).</li>
+  <li><span style="color:green;"><b>Intellection</b> <i>(Strategic Thinking):</i></span> What resonates most here is introspection and reflection, which are absolutely invaluable to me. The great task of life is to know thyself, and to know thyself one must study oneself. (And, as Dogen said, to study the self is to forget the self, but that's for another post).</li>
   <br />
-  <li><span style="color:blue;"><b>Developer</b> <i>(Relationship Building):</i></span> In my adult life I've really come to appreciate the importance of other people in one's own journey of personal growth. Further, I've come to realize that helping others is perhaps the most important thing one can do in life, period.</li>
+  <li><span style="color:blue;"><b>Developer</b> <i>(Relationship Building):</i></span> In my adult life I've really come to appreciate the importance of other people in one's own journey of personal growth. Other people can help you grow in ways you didn't think possible, and you can do the same for them.</li>
   <br />
   <li><span style="color:purple;"><b>Restorative</b> <i>(Executing):</i></span> Problem solving is how I make a living. I've always enjoyed the activity of it, from fixing broken appliances to playing word games to <a href="projects/optimizing-hadoop-ingests">optimizing ingests into a Hadoop cluster</a>.</li>
 </ol>
@@ -303,7 +303,7 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 <br />
 <span style="color:green;"><b>Guideposts:</b> </span>Reward myself for improving on existing things, learning new material, and building up others, especially if I do these things with a sense of flexibility. 
 <br />
-<span style="color:red;"><b>Warnings:</b> </span>Watch out for those times when tempted take on too many new projects. Specifically, examine my motivations for a new project and bias towards completing existing projects before taking on a new one. Additionally, be wary of overthinking, indecisiveness, and negativity, as they may be symptoms of a lack of clarity or conviction. Finally, I need to really value my own time, being careful to give it only to those who most deserve it.</p>
+<span style="color:red;"><b>Warnings:</b> </span>Watch out for those times when tempted to take on a new project. Specifically, examine my motivations for the new project and bias towards completing existing projects before taking on anything new. Additionally, be wary of overthinking, indecisiveness, and negativity, as they may be symptoms of a lack of clarity or conviction. Finally, I need to really value my own time, being careful to give it only to those who most deserve it.</p>
 </blockquote>
 
 <h3 id="5-raw--mature">5. Raw &amp; Mature</h3>
@@ -355,12 +355,12 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 <i>Synthesis</i></p>
 
 <blockquote>
-  <p>The raw and mature distinction seems to distinguish between what only appears to be a healthy strength and an actually healthy strength. In a certain sense, it’s striking a balance where a strength is cultivated fully, but not taken too far. Underlying each balancing point is the necessity of strong awareness and concentration, without which no balance could be struck. I would be wise to do the following:</p>
+  <p>The raw and mature distinction seems to distinguish between what only appears to be a healthy strength and an truly healthy strength. In a certain sense, it’s striking a balance where a strength is cultivated fully, but not taken too far. Underlying each balancing point is the necessity of strong awareness and concentration, without which no balance could be struck. I would be wise to do the following:</p>
   <ol>
-    <li>Trust my big imagination, but stay grounded in reality.</li>
+    <li>Imagine big, but stay grounded in reality.</li>
     <li>Reflect deeply on life, but be willing to share it with others.</li>
     <li>Invest in others, but be wise in the choice of whom to invest.</li>
-    <li>Find out what isn’t working, but don’t hold back in fixing it.</li>
+    <li>Recognize what isn’t working, but don’t hold back in fixing it.</li>
   </ol>
 </blockquote>
 
@@ -368,9 +368,11 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 
 <h2 id="takeaway">Takeaway</h2>
 
-<p>According to Gallup, the Clifton Strengths Assessment results are very stable over time, meaning that the results I’ve posted here should be relevant for my personal and professional life for years to come. With that in mind, it seems pertinent to really nail down what I can carry forward with me into the future. For this, I’d like to summarize what I’ve learned about my top five strengths with respect to three domains of life: self, work, and other. I imagine each of these domains as petals out of a spiritual center, my personal spiritual practice being Zen Buddhism.</p>
+<p>According to Gallup, the Clifton Strengths Assessment results are very stable over time, meaning that the results I’ve posted here should be relevant for my personal and professional life for years to come. With that in mind, it seems pertinent to nail down what I can carry forward with me into the future. For this, I’d like to summarize what I’ve learned about my top five strengths with respect to three domains of life: self, work, and other. I imagine each of these domains as petals out of a spiritual center, my personal spiritual practice being Zen Buddhism.</p>
 
-<p><img src="../assets/img/blog/clifton-top5/three-domains.png" class="center" /></p>
+<p><br />
+<img src="../assets/img/blog/clifton-top5/three-domains.png" class="center" />
+<br /></p>
 
 <p>A strong sense of awareness and concentration is necessary to live well. That is, they are necessary to ensure that ones thought, speech, and action come from a place of clarity and wisdom. Therefore, a precursor to all of what follows is this:</p>
 
@@ -381,9 +383,9 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 <ul>
   <li>Intentionally set aside regular time for solitude and reflection.</li>
   <li>Experiment with new ways of working and living. Avoid dull, pointless routine.</li>
-  <li>Beware overthinking, indecisiveness, and negativity.</li>
+  <li>Beware overthinking, indecision, and negativity. Seek clarity and conviction.</li>
   <li>Reward yourself for desirable behavior.</li>
-  <li>Have a big imagination, but stay grounded in reality.</li>
+  <li>Imagine big, but stay grounded in reality.</li>
 </ul>
 
 <h4 id="work">Work</h4>
@@ -391,7 +393,7 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 <ul>
   <li>Make room to explore potential solutions before committing to one.</li>
   <li>Look for existing things to improve upon and concrete problems to solve.</li>
-  <li>Remember your love for learning and building new things.</li>
+  <li>Remember your love for learning and building things.</li>
   <li>Be very picky about taking on new projects. Carefully examine your “why.”</li>
   <li>Try your very best, but be adaptable and humorous in times of adversity.</li>
 </ul>
@@ -408,7 +410,7 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>To wrap this up with the proverbial bow, I want to set an intention with how to use the knowledge that I’ve synthesized here. I’m not typically one for checklists and rules, so setting some simple “read over this once each day” heuristic doesn’t hold much appeal to me. However, there is an unavoidable truth in learning: memory requires repetition. So, I’m going to make some flashcards for the bullet points I listed above and keep them on my desk for a while. Flashcards are old school, but damn are they effective. After a few weeks these gems should be firmly lodged in my memory, and after a few months (assuming I’m practicing what I’m memorizing) they should be second nature.</p>
+<p>To wrap this up in the proverbial bow, I want to set an intention with how to use the knowledge that I’ve synthesized here. I’m not typically one for checklists and rules, so setting some simple “read this over once a day” heuristic doesn’t hold much appeal to me. However, there is an unavoidable truth in learning: memory requires repetition. So, I’m going to make some flashcards for the bullet points I listed above and keep them on my desk for a while. Flashcards are old school, but damn are they effective. After a few weeks these gems should be firmly lodged in my memory, and after a few months (assuming I’m practicing what I’m memorizing) they should be second nature.</p>
 
 <p>This post has been entirely about me, Nick, the author. If you read the whole thing, great! Thanks for your time and attention. Even though this has been an exercise in my own personal growth, I hope you found something useful or interesting to you.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">On the Merits of Walking Really, Really Far</title><link href="http://localhost:4000/walking-really-far" rel="alternate" type="text/html" title="On the Merits of Walking Really, Really Far" /><published>2024-04-07T00:00:00-06:00</published><updated>2024-04-07T00:00:00-06:00</updated><id>http://localhost:4000/walking-really-far</id><content type="html" xml:base="http://localhost:4000/walking-really-far"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />

@@ -1,4 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-14T10:24:29-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-12T15:34:30-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-fundamentals" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-12T00:00:00-06:00</published><updated>2024-08-12T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-fundamentals</id><content type="html" xml:base="http://localhost:4000/pytorch-fundamentals"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
+
+<h2 id="part-2-fundamentals">Part 2: Fundamentals</h2>
+
+<h3 id="note-this-page-is-under-construction">Note! This page is under construction!</h3>
+
+<p>Intro to Tensors</p>
+
+<ul>
+  <li>What is a tensor?
+    <ul>
+      <li>Similar to NumPy ndarrays with additional functionality to optimizer for backdrop</li>
+      <li>How we represent data that passes thru NNs and the NNs themselves</li>
+    </ul>
+  </li>
+  <li>Common tensors
+    <ul>
+      <li>Zeros</li>
+      <li>Ones</li>
+      <li>Random</li>
+    </ul>
+  </li>
+  <li>Common Operations
+    <ul>
+      <li>Add</li>
+      <li>Subtract</li>
+      <li>Multiply</li>
+      <li>Division</li>
+      <li>Matmul</li>
+    </ul>
+  </li>
+  <li>Aggregations
+    <ul>
+      <li>Min</li>
+      <li>Max</li>
+      <li>Mean</li>
+      <li>Sum</li>
+      <li>Etc.</li>
+    </ul>
+  </li>
+  <li>Tensor Transformations
+    <ul>
+      <li>Reshape</li>
+      <li>View</li>
+      <li>Permute</li>
+      <li>Stack</li>
+      <li>Squeeze</li>
+      <li>Unsqueeze</li>
+    </ul>
+  </li>
+  <li>Indexing into Tensors
+    <ul>
+      <li>Indexing</li>
+      <li>Slicing</li>
+    </ul>
+  </li>
+  <li>Numpy Compatibility</li>
+</ul>
+
+<p>Utilizing a GPU (if you’ve got one)</p>
+<ul>
+  <li>Device agnostic code</li>
+</ul>
+
+<p>Essential PyTorch Workflow</p>
+
+<ol>
+  <li>Data</li>
+  <li>Build a model</li>
+  <li>Model training
+    <ol>
+      <li>Instantiate model</li>
+      <li>Select loss function and optimizer</li>
+      <li>Iterate over training data - epochs</li>
+      <li>For each epoch
+        <ol>
+          <li>Generate predictions by calling forward() on the NN</li>
+          <li>Calculate the loss using the loss function from earlier</li>
+          <li>Clear the gradients from the optimizer using .zero_grad()</li>
+          <li>Call backward() on loss function to calculate gradients (back propagation)</li>
+          <li>Call optimizer.step() to update network weights according to calculated gradients (gradient descent)</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Inference and evaluation</li>
+  <li>Save a model</li>
+</ol>
+
+<p>Simple Example - linear model</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Deep Learning With PyTorch, Part 1: A Gentle Introduction</title><link href="http://localhost:4000/pytorch-introduction" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 1: A Gentle Introduction" /><published>2024-08-02T00:00:00-06:00</published><updated>2024-08-02T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-introduction</id><content type="html" xml:base="http://localhost:4000/pytorch-introduction"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
+
+<h2 id="part-1-a-gentle-introduction">Part 1: A Gentle Introduction</h2>
+
+<p>With all the media coverage of ChatGPT and other large language models, you’re probably aware that the field of artificial intelligence is red hot these days. Indeed, the initial release and subsequent success of ChatGPT nearly two years ago sent shockwaves through the AI community and brought the technology to fore of public discussion.</p>
+
+<p>But just how do these technologies work? After all, hasn’t AI been a topic of research and discussion for decades? Why has it just now come into prominence?</p>
+
+<p>There are several major factors driving the success of modern AI models like ChatGPT. First, the internet and age of information has given rise to enormous amounts of data, an essential ingredient for model training. Second, modern advances in computing architecture (e.g., distributed computing) and hardware (e.g., GPUs) have made it possible to train larger and more complex models. The final driver, and the topic of this and several future posts, is the maturation of the field of <i>deep learning.</i></p>
+
+<h4 id="what-is-deep-learning">What is Deep Learning?</h4>
+<p>At a high level, deep learning is a machine learning technique that was inspired by the structure of neurons in the brain. Deep learning models are composed of layers of connected artificial neurons, mimicking how neurons connect and fire together in the brain. For this reason, deep learning networks are also referred to as neural networks. The term “deep” comes from when there are at least two layers within the network, but modern deep neural networks (DNNs) can have dozens or even hundreds of layers.</p>
+
+<figure>  
+  <img class="center" src="../assets/img/blog/pytorch/dnn.png" alt="Example DNN" />
+  <figcaption>Example Deep Neural Network</figcaption>
+</figure>
+
+<p>The above description of DNNs might sound too abstract to be helpful. However, the abstract nature of DNNs is exactly what makes them so powerful. It’s up to us as designers to create the DNN best suited to the problem we are trying to solve. Depending on the application, one could choose completely different components of underlying architecture (e.g., Attention, GANs, CNNs, LSTMs). Indeed, if you could open up and look inside a popular AI application like ChatGPT or Dall-E you would see a composition of these components.</p>
+
+<h4 id="why-pytorch">Why PyTorch?</h4>
+<p><a href="https://pytorch.org/">PyTorch</a> is an open source deep learning framework created by the folks over at Facebook (Meta). In recent years it has grown in popularity both in industry and academia due to its flexibility, readability, and behind-the-scenes optimization. Check out the trends over at <a href="https://paperswithcode.com/trends">paperswithcode</a> to get an idea of just how popular PyTorch has become! It’s used at Facebook, Microsoft, Tesla, and OpenAI to name a few. For this reason, PyTorch is an excellent framework in which to learn the basics of deep learning.</p>
+
+<figure>  
+  <img src="../assets/img/blog/pytorch/pytorch-trends.png" alt="pytorch trends" />
+  <figcaption>PyTorch Trends (Aug 2024)</figcaption>
+</figure>
+
+<h4 id="join-me">Join Me!</h4>
+<p>As I explore and learn the rich PyTorch ecosystem! Over a series of blog posts I will write about the fundamentals of PyTorch, some principles of deep learning and machine learning, and how to apply PyTorch to solve some common ML problems.</p>
+
+<h3 id="continue-reading-part-2-pytorch-fundamentals"><a href="pytorch-fundamentals">Continue Reading Part 2: PyTorch Fundamentals</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />
 </head>
 
@@ -878,131 +1006,4 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 
 <p>Murphy, G. L., &amp; Medin, D. L. (1985). The Role of Theories in Conceptual Coherence. Psychological Review, 92(3), 289–316. https://doi.org/10.1037/0033-295X.92.3.289</p>
 
-<p>Nisbett, R. E., Choi, I., Peng, K., &amp; Norenzayan, A. (2001). Culture and systems of thought: Holistic versus analytic cognition. Psychological Review, 108(2), 291–310. https://doi.org/10.1037/0033-295X.108.2.291</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Our Attention Crisis</title><link href="http://localhost:4000/attention-crisis" rel="alternate" type="text/html" title="Our Attention Crisis" /><published>2022-05-02T00:00:00-06:00</published><updated>2022-05-02T00:00:00-06:00</updated><id>http://localhost:4000/attention-crisis</id><content type="html" xml:base="http://localhost:4000/attention-crisis"><![CDATA[<head>
-  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
-</head>
-
-<h1 id="our-attention-crisis">Our Attention Crisis</h1>
-
-<h4 id="the-current-situation">The Current Situation</h4>
-
-<p>We are living through an attention crisis. Despite all the progress we have made as a society, it seems we have lost our ability to focus. A study in 2014 found that the average college student switches tasks every 65 seconds [19]. Almost as bleak for office workers, another study found they only remain focused for about three minutes before switching tasks [6]. What’s going on here? In an age where people have a portal in their pocket to all human knowledge, where a wealth of information about nearly any obstacle can be accessed almost instantaneously, it would stand to reason that we should be more focused, not less. But, of course, nothing is so simple.</p>
-
-<p>The information age has given rise to an unprecedented amount of content. For example, as of February 2020, more than 500 hours of video were uploaded to YouTube every minute [10]. The sheer quantity of content available online is far more than any one person could hope to meaningfully engage with. For the individual, this situation presents a need for effective navigation through a ceaselessly expanding ocean of information. For the purveyors of content, the challenge becomes attracting and holding attention. Some services accomplish this by providing quality content to their users in exchange for a subscription fee (e.g., Netflix), while others, like Facebook and YouTube, generate revenue through advertisements. This advertising model is most profitable when it captures as much time as possible from as many people as possible. To that end, these attention merchants (a term coined by Tim Wu in his book The Attention Merchants [18]) have discovered, developed, and deployed an array of tactics to distract us and gobble up our time, often using unethical practices.</p>
-
-<p>In a world with so many things competing for our attention, we must stop and ask ourselves: what is it that we are paying attention to? William James, the American psychologist and father of pragmatism, once said,</p>
-
-<blockquote>
-  <p>“My experience is what I agree to attend to. Only those items which I notice shape my mind.”</p>
-</blockquote>
-
-<p>At the end of our days, when we look back at our lives, we will remember our experience as the composition of all we attended to over the years. Simply put, the brief time we have on Earth is precious. Is it ethical to allow an entire industry to exploit our attention and consume our lives to increase their quarterly earnings? What can we do as individuals to better protect our attention and devote it to the things we find meaningful in our own lives? Whatever the answers may be, to adequately address either of these questions we must first understand how attention works.</p>
-
-<h4 id="the-attentional-bottleneck">The Attentional Bottleneck</h4>
-
-<p>The concept of attention has captivated some of our deepest thinkers throughout the ages. Today, it is a crucial area of investigation in many domains, such as education, psychology, and neuroscience. Attention can be conceptualized in many ways. Here, we define it as the behavioral and cognitive process of allocating limited cognitive resources by selectively concentrating on discrete aspects of information while ignoring other perceivable information. Effective allocation of cognitive resources is crucial, as the amount of information impinging on our senses far exceeds our processing capabilities, resulting in an attentional bottleneck. To illustrate, in human vision, less than 1% of available visual input information can enter the bottleneck, leading to a phenomenon known as inattentional blindness [16]. Indeed, vision and attention are closely linked (even mind-wandering, where internal attention has refocused on task irrelevant stimuli, can be predicted from eye movements [2]). Consequently, much of the research related to attention has placed an emphasis on visual attention.</p>
-
-<p>There are two general models of visual attention. The first is known as the spotlight model, and it was inspired by the work of William James [8]. This model describes attention as having three parts: a focus, a margin, and a fringe. The focus of attention is high resolution, the center of which being where attention is directed. The focus is surrounded by a low-resolution zone called the fringe, which is then circumscribed by the margin of attention, or where attention is completely absent. The second model of visual attention is called the zoom lens model, and it inherits all the properties of the spotlight model with the added property of the focus changing in size [3] (similar to how a zoom lens on a camera works). The zoom lens feature accounts for the attentional bottleneck by assuming that attentional resources are fixed. In this model, it follows that the larger the area of focus is, the slower the processing of that region will be since the fixed resource is distributed over a larger area.</p>
-
-<h4 id="sifting-through-the-infinite-haystack">Sifting Through the Infinite Haystack</h4>
-
-<p>The attentional bottleneck presents a challenge for us in the modern world. Today’s deluge of content is flooding our senses (and inboxes) at an unprecedented pace.  As observed by Herbert A. Simon back in 1971:</p>
-
-<blockquote>
-  <p>“In an information-rich world, the wealth of information means a dearth of something else: a scarcity of whatever it is that information consumes. What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention and a need to allocate that attention efficiently among the overabundance of information sources that might consume it [15].”</p>
-</blockquote>
-
-<p>In other words, in our modern world of near infinite content, a need has emerged to efficiently connect people with the proverbial needle in the haystack. The tech giant Google made its name and fortune by creating a solution to this problem in the form of a search engine, a feat so well done that to ‘google’ something is itself a verb meaning to search for something on the internet. Search engines are great for users who can describe what they are looking for. But what about the users who want to discover something new? For them, recommendation systems have been a boon. Recommendation systems, like their name implies, offer recommendations of new content to a user based on that user’s history, such as the content they have viewed in the past (e.g., YouTube), what they’ve purchased (e.g., Amazon), or how they write their emails (e.g., Gmail autocomplete).  These systems can conveniently connect people with new content that they may have never encountered on their own.</p>
-
-<p>Unfortunately for these innovations, several ethical concerns have been raised about these systems. Some believe that they may be subtly guiding users into echo chambers, driving tribalism, and fracturing our shared culture [9]. Others think that these systems learn to exploit cognitive biases in people and manipulate them into making decisions they wouldn’t otherwise make (e.g., impulse buying) [1]. While considering these ethical issues, we should remember that these systems are tools meant to assist our attention and guide it to what we find interesting, which begs the question: what is our attention drawn to? That is, how is attention oriented in our environment?</p>
-
-<h4 id="may-stimul-i-have-your-attention">May Stimul-I Have Your Attention?</h4>
-
-<p>There are two kind of cues (or stimuli) that attract attention: endogenous (i.e., central/internal) and exogenous (i.e., peripheral/external) [14]. Endogenous attention is the intentional allocation of cognitive resources and is typically oriented to one’s goals or desires. This goal-driven, or “top-down,” attention can be manipulated by the demands of a task that aligns with one’s intentions. Conversely, exogenous attention is guided through external processes and is responsive to stimuli in one’s environment. A sudden loud noise or movement in a shadowy bush attracts attention in a non-volitional way – a useful feature for our ancient ancestors. This non-volitional, or “bottom-up,” attention is reflexive, automatic, and stimulus driven.</p>
-
-<p>As mentioned before, the attentional bottleneck makes it essential to have an effective strategy to attend to the most important aspects of the world around us. Endogenous and exogenous orientation, respectively driven by internal and external cues, ideally help us strike a balance between the demands of our inner goals and the constraints of our external environment. If there are relatively few constraints in the environment (e.g., there are no lions chasing us, we can pay our bills, we are healthy, etc.), then we have more cognitive resources to devote to our personal goals.</p>
-
-<p>Humans, being social creatures, also have a particular sensitivity to social cues. For a person living in the distant past, it was crucial to survival that they be accepted by their tribe. Social acceptance meant food, shelter, status, and the chance to reproduce. Social rejection, on the other hand, was dangerous, and perhaps even fatal. Though the stakes aren’t as high as they once were, the biological infrastructure still exists in us today, and we still care deeply about what others think of us. Our attention is deeply intertwined with this fact, and the stimuli from our social environment are particularly salient, which may be one reason why social media has taken such a firm hold on so many people today.</p>
-
-<h4 id="social-media-attention-merchantspirates">Social Media: Attention Merchants/Pirates</h4>
-
-<p>Social connection has been one of the greatest drivers of the internet’s popularity since the 1990’s, with companies like America Online (AOL) selling itself as a place to connect with anybody in the world who has an internet connection. In the early and mid-2000’s, social media services began appearing, such as Friendster, MySpace, and Facebook. These platforms made big promises to bring people together in online communities, thus making friendships and connections possible for people living all over the planet. Even better, they were going to provide this service –- at least on the surface –- free of charge.</p>
-
-<p>As mentioned previously, platforms like Facebook are attention merchants. That is, they profit off the attention of their users by showing them advertisements. Facebook uses the illusion of social cues (e.g., the number of likes on a posted photo) and variable reward signals (e.g., randomly notifying users of their friend’s activity) to keep users coming back to check the platform and scroll through ads. Ironically, Facebook isn’t interested in social connections in the real world (what our social sensitivies developed for), because their goal is to maximize user engagement (i.e., people’s time and attention) with their platform. To an attention merchant like Facebook, people are products. They earn money from advertisers by delivering ads to eyeballs. The more ads they show and the more effective the advertising is, the more profitable they become. That is what they care about, because that is where the money is.</p>
-
-<p>The fiscal interests of attention merchants are aligned with a two-pronged strategy: maximize engagement (i.e., time spent in the platform), and deliver targeted advertisements. To these ends, an enormous amount of effort is taken to collect data from users, often without their knowledge or consent. This data is then used to train algorithms that maximize user engagement and deliver targeted ads, an ethically questionable practice termed surveillance capitalism [20]. It should be obvious that this strategy is not necessarily aligned with beneficence, as there is no consideration of whether it provides useful (or even accurate) content. Indeed, this mindset of engagement above all else is exemplified in Nir Eyal’s book Hooked: How to Build Habit-forming Products [4].</p>
-
-<h5 id="broken-promises">Broken Promises</h5>
-
-<p>What modern social media platforms have turned into is a far cry from their original promise of bringing people together. As has been pointed out by people like Tristan Harris and Aza Raskin in their film The Social Dilemma [13], this business strategy is likely causing serious harm to the fabric of society as we know it by driving polarization and proliferating misinformation, and it all starts with the exploitation of human attention. Worse still, the strategy of engagement above all else forces other industries to abide by the same rules. For example, news outlets have become more and more polarized since the advent of social media, as they are incentivized to sell stories that engage rather than stories that are true. Consider the findings of a 2018 study conducted at MIT which found that false news spreads six time faster than true news on the social media platform Twitter [17].</p>
-
-<p>The fact that our information space has been corrupted by this business model of surveillance capitalism should alarm anybody, yet any meaningful reform currently seems remote. The problem is nuanced enough that it takes real technical knowledge to address it, something lacking in most of today’s politicians. Additionally, there is no incentive for the businesses themselves to change and every reason to maintain the status quo, as they are thriving in the current environment. So, what is there to do?</p>
-
-<h4 id="what-do-we-do">What Do We Do?</h4>
-
-<p>With the endless flood of content available to us and an array of powerful entities competing for our eyes, it seems very difficult to protect our attention and use it for our own interests. Fortunately, there are several ways that we as individuals can defend ourselves.</p>
-
-<h5 id="education">Education</h5>
-
-<p>The first step is education. People like Tristan Harris and Aza Raskin, who were once Silicon Valley insiders, have made great efforts to broadcast the severity of the situation to the public, and have even started the non-profit Center for Humane Technology. Nir Eyal, mentioned before for his book Hooked, wrote another book titled Indistractable: How to Control Your Attention and Choose Your Life [5], in which he offers some practical solutions to protect one’s attention (ostensibly from the exploitative practices that he helped proliferate). Johann Hari took a broader perspective on the attention crisis in his book Stolen Focus: Why You Can’t Pay Attention – and How to Think Deeply Again [7], where he considers a range of factors including social media, the modern diet, and our culture’s obsession with speed and convenience.</p>
-
-<h5 id="device-management">Device Management</h5>
-
-<p>There is no shortage of resources for understanding this problem and its potential solutions. However, while these may offer some useful advice for protecting our attention, they are focused primarily on exogenous factors. It certainly helps to disable notifications and to turn our phones to grayscale, but these address only the hook. What about when our attention has already been captured? Identifying when our attention has gone to a place that isn’t serving us and then reorienting it to something that is aligned with our interests takes a certain degree of self-awareness and executive functioning. Luckily, there is a way to cultivate these skills.</p>
-
-<h5 id="mindfulness-practice">Mindfulness Practice</h5>
-
-<p>Within the western psychological context, mindfulness is usually described as non-judgmental awareness of the present moment and is thought to entail paying attention with a certain attitude [12].  Training and refining attention skills are central to most conceptualizations of mindfulness practices, which often takes place during meditation [11]. Developing mindfulness skills positively impacts attentional functions by improving the allocation of attentional resources, specifically during early stages of processing [12]. A common form of mindfulness practice is to place attention on one’s breath for a fixed period (e.g., 10 minutes), and, when the mind inevitably wanders, to recognize where attention has gone and then return it to the breath non-judgmentally. Repeating this process over and over again develops an ability to recognize when attention has been unintentionally captured. Aside from the wealth of benefits that mindfulness practices offer, this one is particularly useful for protecting our attention from those who seek to prey upon it. Whereas disabling notifications is a form of exogenous defense, mindfulness can be considered a form of endogenous defense, training our executive functioning to recognize and reorient away from stimuli that have captured our attention but have nothing of substance to offer.</p>
-
-<p>It should be noted that just because mindfulness practice can breed a form of equanimity with the world as it is, that doesn’t mean the world should not change. While we as individuals can use exogenous and endogenous defense strategies to protect our attention, we must ask ourselves whether the industries that seek to harvest our attention should be entitled to such power over us to begin with.</p>
-
-<h4 id="conclusion">Conclusion</h4>
-
-<p>Each of us has only a short time on Earth to do the things that we truly want to do, to live a life that is meaningful to us. This requires that we devote our time and attention to the things that matter most. But our attention, limited by the attentional bottleneck, can only be allocated to so many things. Attention merchants like Facebook further complicate the picture by exploiting our social sensitivities to attract and keep our attention to boost their bottom line. While human attention has been sought after for a long time, never has it been harvested at such a massive scale and with such impunity. Even though we as individuals can disable notifications on our phones and practice mindfulness to bolster our attentional defenses, there remain glaring ethical issues in the practices of some of today’s largest attention merchants. Despite their lucrative business model, systemic change is needed. To quote him once more, William James once said,</p>
-
-<blockquote>
-  <p>“The moral flabbiness born of the exclusive worship of the bitch-goddess success. That – with the squalid cash interpretation put on the word ‘success’ – is our national disease.”</p>
-</blockquote>
-
-<p>We must ask whether these tech giants are successful in a way that is commensurate with the needs of society, or if they’re just rich from exploiting the society they’re embedded in. There is a world in which the technology we use helps us achieve our deeper goals rather than subverting them, but that is a world we must build together, and that will take a lot of attention.</p>
-
-<h3 id="references">References</h3>
-<p>[1]	Adomavicius, G. et al. 2013. Do recommender systems manipulate consumer preferences? A study of anchoring effects. Information Systems Research. 24, 4 (2013), 956–975. DOI:https://doi.org/10.1287/isre.2013.0497.</p>
-
-<p>[2]	D’Mello, S.K. and Mills, C.S. 2021. Mind wandering during reading: An interdisciplinary and integrative review of psychological, computing, &amp; intervention research and theory. Language and Linguistics Compass: Cognitive Science of Lanuage. (2021).</p>
-
-<p>[3]	Eriksen, C.W. and James, J.D.S. 1986. Visual attention within and around the field of focal attention. Perception &amp; Psychophysics. 40, 4 (1986), 225–240.</p>
-
-<p>[4]	Eyal, N. 2014. Hooked: How to Build Habit-Forming Products. Penguin Random House.</p>
-
-<p>[5]	Eyal, N. 2019. Indistractable: How to Control Your Attention and Choose Your Life. BenBella Books, Inc.</p>
-
-<p>[6]	González, V.M. and Mark, G. 1960. Managing Multiple Working Spheres “ Constant , Constant , Multi-tasking Craziness ”: Human Factors. 6, 1 (1960), 113–120.</p>
-
-<p>[7]	Hari, J. 2022. Stolen Focus: Why You Can’t Pay Attention - and How to Think Deeply Again. Random House.</p>
-
-<p>[8]	Hoffman, J.E. and Eriksen, C.W. 1972. Temporal and spatial characteristics of selective coding from visual displays. Perception &amp; Psychophysics. 12, August (1972), 201–204.</p>
-
-<p>[9]	Hosanagar, K. et al. 2014. Will the global village fracture into tribes recommender systems and their effects on consumer fragmentation. Management Science. 60, 4 (2014), 805–823. DOI:https://doi.org/10.1287/mnsc.2013.1808.</p>
-
-<p>[10]	Hours of video uploaded to YouTube every minute as of February 2020: 2022. https://www.statista.com/statistics/259477/hours-of-video-uploaded-to-youtube-every-minute/. Accessed: 2022-02-05.</p>
-
-<p>[11]	Lutz, A. et al. 2008. Attention regulation and monitoring in meditation. Trends in Cognitive Sciences. 12, 4 (2008), 163–169. DOI:https://doi.org/10.1016/j.tics.2008.01.005.</p>
-
-<p>[12]	Malinowski, P. 2013. Neural mechanisms of attentional control in mindfulness meditation. Frontiers in Neuroscience. 7, 7 FEB (2013), 1–11. DOI:https://doi.org/10.3389/fnins.2013.00008.</p>
-
-<p>[13]	Orlowski, J. 2020. The Social Dilemma.</p>
-
-<p>[14]	Posner, M.I. 1980. Orienting of attention. The Quarterly journal of experimental psychology. 32, 1 (1980), 3–25. DOI:https://doi.org/10.1080/00335558008248231.</p>
-
-<p>[15]	Simon, H.A. 1971. Designing Organizations for an Information-Rich World. Computers, Communication, and the Public Interest. (1971), 37–72.</p>
-
-<p>[16]	Simons, D.J. and Chabris, C.F. 1999. Gorillas in our midst: Sustained inattentional blindness for dynamic events. Perception. 28, 9 (1999), 1059–1074. DOI:https://doi.org/10.1068/p281059.</p>
-
-<p>[17]	Vosoughi, S. et al. 2018. The Spread of True and False News Online. Science. 1151, March (2018), 1146–1151.</p>
-
-<p>[18]	Wu, T. 2016. The Attention Merchants. Vintage Books.</p>
-
-<p>[19]	Yeykelis, L. et al. 2014. Multitasking on a Single Device: Arousal and the Frequency, Anticipation, and Prediction of Switching Between Media Content on a Computer. Journal of Communication. 64, 1 (2014), 167–192. DOI:https://doi.org/10.1111/jcom.12070.</p>
-
-<p>[20]	Zuboff, S. 2019. Surveillance Capitalism and the Challenge of Collective Action. New Labor Forum. 28, 1 (2019), 10–29. DOI:https://doi.org/10.1177/1095796018819461.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>Nisbett, R. E., Choi, I., Peng, K., &amp; Norenzayan, A. (2001). Culture and systems of thought: Holistic versus analytic cognition. Psychological Review, 108(2), 291–310. https://doi.org/10.1037/0033-295X.108.2.291</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>

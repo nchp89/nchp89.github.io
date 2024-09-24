@@ -8,44 +8,9 @@ title: "Deep Learning With PyTorch, Part 2: Fundamentals"
 
 # Deep Learning With PyTorch
 
-## Part 2: Fundamentals
+## Part 3: Basic PyTorch Workflow
 
-### Note! This page is under construction!
-
-
-
-Intro to Tensors
-
-* What is a tensor?
-    * Similar to NumPy ndarrays with additional functionality to optimizer for backdrop
-    * How we represent data that passes thru NNs and the NNs themselves
-* Common tensors
-    * Zeros
-    * Ones
-    * Random
-* Common Operations
-    * Add
-    * Subtract
-    * Multiply
-    * Division
-    * Matmul
-* Aggregations
-    * Min
-    * Max
-    * Mean
-    * Sum
-    * Etc.
-* Tensor Transformations
-    * Reshape
-    * View
-    * Permute
-    * Stack
-    * Squeeze
-    * Unsqueeze
-* Indexing into Tensors
-    * Indexing
-    * Slicing
-* Numpy Compatibility
+### THIS PAGE IS STILL UNDER CONSTRUCTION
 
 
 Utilizing a GPU (if you’ve got one)

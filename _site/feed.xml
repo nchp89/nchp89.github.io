@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-12T15:34:30-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-fundamentals" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-12T00:00:00-06:00</published><updated>2024-08-12T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-fundamentals</id><content type="html" xml:base="http://localhost:4000/pytorch-fundamentals"><![CDATA[<head>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-24T12:57:54-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-fundamentals" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-16T00:00:00-06:00</published><updated>2024-08-16T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-fundamentals</id><content type="html" xml:base="http://localhost:4000/pytorch-fundamentals"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />
 </head>
 
@@ -6,60 +6,215 @@
 
 <h2 id="part-2-fundamentals">Part 2: Fundamentals</h2>
 
-<h3 id="note-this-page-is-under-construction">Note! This page is under construction!</h3>
+<h4 id="what-is-a-tensor">What Is A Tensor?</h4>
 
-<p>Intro to Tensors</p>
+<p>Mathematically, a <a href="https://en.wikipedia.org/wiki/Tensor">tensor</a> is an algebraic object that describes the relationship between its elements as it pertains to a vector space. That sounds like a lot, but it’s actualy not so complicated. You can think of a tensor as an extension of a multidimensional array where each element within the array is a vector.</p>
+
+<p>If that’s confusing and abstract, don’t worry. We can leave the exact definition of a tensor to the mathematicians. The point is that tensors are similar to multidimensional arrays, but have a few extra perks that make them ideal for representing deep neural networks.</p>
+
+<h4 id="tensors-in-pytorch">Tensors in PyTorch</h4>
+
+<p>A PyTorch tensor is very similar to NumPy array. They can hold similar data structures and even share the same syntax for indexing. However, PyTorch tensors come with a couple of crucial bonus features:</p>
+<ul>
+  <li><strong>Device Flexibility</strong>: Tensors can be moved easily between the CPU and GPU to optimize your workflow.</li>
+  <li><strong>Autograd Support</strong>: PyTorch tensors can automatically keep track of the operations performed on them, an essential feature for backpropagation.</li>
+</ul>
+
+<h3 id="note">NOTE</h3>
+<p class="center"><i>While I will include sample code snippets with this post, I will not include much output. This is on purpose! The best thing to learn quickly is to try these code snippets out for yourself and see what happens!</i></p>
+<p><br />
+<br /></p>
+
+<h4 id="creating-tensors">Creating Tensors</h4>
+
+<p>Tensors can be made in multiple ways. Below are a few of the most common methods. Before we do anything, let’s import the PyTorch library</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import torch
+</code></pre></div></div>
+
+<h5 id="scalars">Scalars</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scalar = torch.tensor(7)
+</code></pre></div></div>
+
+<h5 id="vectors">Vectors</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vector = torch.tensor([7, 7])
+</code></pre></div></div>
+
+<h5 id="matrices">Matrices</h5>
+<ul>
+  <li>Note that matrix variable names are capitalized by convention.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MATRIX = torch.tensor([[7, 7],
+                       [7, 7]])
+</code></pre></div></div>
+
+<h5 id="tensors-of-ones-zeros--random-values">Tensors of Ones, Zeros, &amp; Random Values</h5>
+<p>We can make tensors filled with ones, zeros, or random values in a single line. All we need to do is pass in the dimensions we want of the output tensor.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ones = torch.ones(size=(3, 4))
+zeros = torch.zeros(size=(1, 2, 3, 4))
+random = torch.randn(size=(3, 20, 20))
+</code></pre></div></div>
+
+<h5 id="other-useful-methods---arange--like">Other Useful Methods - arange &amp; like</h5>
+
+<p><code class="language-plaintext highlighter-rouge">torch.arange(start, stop, step)</code> - Create a tensor populated with values ranging from <i>start</i> to <i>stop</i> at incrememnts of size <i>step</i></p>
+
+<p><code class="language-plaintext highlighter-rouge">torch.zeros_like(input=other_tensor)</code> - Create a tensor of zeros (could be ones or randn) with the same shape as the input tensor</p>
+
+<h4 id="working-with-tensors">Working With Tensors</h4>
+
+<p>If tensors are going to do all the heavy lifting for our DNNs, then we better know how to work with them and how they can interact with each other. Here are some of the most common tensor operations, aggregations, and transformations. :</p>
+
+<h5 id="common-operations">Common Operations</h5>
+<ul>
+  <li>Addition (<code class="language-plaintext highlighter-rouge">+</code>):
+    <ul>
+      <li>Add a scalar to each element of a tensor or element-wise addition of two tensors of the same shape.</li>
+      <li><code class="language-plaintext highlighter-rouge">A + B</code></li>
+      <li><code class="language-plaintext highlighter-rouge">A + c</code></li>
+    </ul>
+  </li>
+  <li>Subtraction (<code class="language-plaintext highlighter-rouge">-</code>):
+    <ul>
+      <li>Subtract a scalar from each element of a tensor or element-wise subtraction of two tensors of the same shape.</li>
+      <li><code class="language-plaintext highlighter-rouge">A - B</code></li>
+      <li><code class="language-plaintext highlighter-rouge">A - c</code></li>
+    </ul>
+  </li>
+  <li>Multiplication (<code class="language-plaintext highlighter-rouge">*</code>):
+    <ul>
+      <li>Multiply each element of a tensor by a scalar or element-wise multiplication of two tensors of the same shape.</li>
+      <li><code class="language-plaintext highlighter-rouge">A * B</code></li>
+      <li><code class="language-plaintext highlighter-rouge">A * c</code></li>
+    </ul>
+  </li>
+  <li>Division (<code class="language-plaintext highlighter-rouge">/</code>):
+    <ul>
+      <li>Divide each element of a tensor by a scalar or element-wise division of two tensors of the same shape.</li>
+      <li><code class="language-plaintext highlighter-rouge">A / B</code></li>
+      <li><code class="language-plaintext highlighter-rouge">A / c</code></li>
+    </ul>
+  </li>
+  <li>Matrix Multiplication (<code class="language-plaintext highlighter-rouge">@</code>):
+    <ul>
+      <li>Matrix multiplication between two tensors with matching inner dimensions (i.e. <code class="language-plaintext highlighter-rouge">[m x n] @ [n x k]</code> )</li>
+      <li><code class="language-plaintext highlighter-rouge">A @ B</code></li>
+      <li><code class="language-plaintext highlighter-rouge">torch.matmul(A, B)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="aggregations">Aggregations</h5>
+<ul>
+  <li>Min
+    <ul>
+      <li>Return the minimum value in a tensor</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.min()</code></li>
+    </ul>
+  </li>
+  <li>Max
+    <ul>
+      <li>Return the maximum value in a tensor</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.max()</code></li>
+    </ul>
+  </li>
+  <li>Mean
+    <ul>
+      <li>Return the mean value of a tensor</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.mean()</code></li>
+    </ul>
+  </li>
+  <li>Sum
+    <ul>
+      <li>Return the sum of values in a tensor</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.sum()</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="tensor-transformations">Tensor Transformations</h5>
+<ul>
+  <li>Reshape
+    <ul>
+      <li>Reshape input tensor to specified new dimensions ()</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.reshape(9, 1)</code></li>
+    </ul>
+  </li>
+  <li>View
+    <ul>
+      <li>Similar to reshape, but <strong>shares the same memory</strong> as the original tensor ()</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.view(9, 1)</code></li>
+    </ul>
+  </li>
+  <li>Permute
+    <ul>
+      <li>Return a view of a tensor with dmensions permuted (swapped) in a certain way</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.permute(2, 0, 1)</code> (dim0-&gt; dim1, dim2-&gt; dim0, dim1-&gt; dim2)</li>
+    </ul>
+  </li>
+  <li>Stack
+    <ul>
+      <li>Combine multiple tensors along a specified dimension (default=0)</li>
+      <li><code class="language-plaintext highlighter-rouge">torch.stack([tensor1, tensor2, tensor3])</code></li>
+    </ul>
+  </li>
+  <li>Squeeze
+    <ul>
+      <li>Removes all dimensions of size 1 from the tensor</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.squeeze()</code></li>
+    </ul>
+  </li>
+  <li>Unsqueeze
+    <ul>
+      <li>Adds a dimension of size 1 to the tensor in specified index</li>
+      <li><code class="language-plaintext highlighter-rouge">tensor.unsqueeze(dim=0)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="indexing-into-tensors">Indexing into Tensors</h4>
+
+<p>The creators of PyTorch worked hard to ensure that their library was easy to learn if you already are familiar with other technologies in the data work world. Luckily for us, that means that if you’re comfortable slicing and dicing multidimensional arrays in NumPy, then you’ll find the same syntax works for slicing and indexing into PyTorch Tensors.</p>
+
+<p>Consider the following tensor:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A = [[1, 2, 3]
+     [4, 5, 6]
+     [7, 8, 9]]
+</code></pre></div></div>
 
 <ul>
-  <li>What is a tensor?
+  <li>Indexing
     <ul>
-      <li>Similar to NumPy ndarrays with additional functionality to optimizer for backdrop</li>
-      <li>How we represent data that passes thru NNs and the NNs themselves</li>
+      <li><code class="language-plaintext highlighter-rouge">A[0] --&gt; tensor([1, 2, 3])</code></li>
+      <li><code class="language-plaintext highlighter-rouge">A[0][0] --&gt; tensor(1)</code></li>
     </ul>
   </li>
-  <li>Common tensors
+  <li>Slicing
     <ul>
-      <li>Zeros</li>
-      <li>Ones</li>
-      <li>Random</li>
+      <li><code class="language-plaintext highlighter-rouge">A[1][0:2] --&gt; tensor([4, 5])</code></li>
     </ul>
   </li>
-  <li>Common Operations
-    <ul>
-      <li>Add</li>
-      <li>Subtract</li>
-      <li>Multiply</li>
-      <li>Division</li>
-      <li>Matmul</li>
-    </ul>
-  </li>
-  <li>Aggregations
-    <ul>
-      <li>Min</li>
-      <li>Max</li>
-      <li>Mean</li>
-      <li>Sum</li>
-      <li>Etc.</li>
-    </ul>
-  </li>
-  <li>Tensor Transformations
-    <ul>
-      <li>Reshape</li>
-      <li>View</li>
-      <li>Permute</li>
-      <li>Stack</li>
-      <li>Squeeze</li>
-      <li>Unsqueeze</li>
-    </ul>
-  </li>
-  <li>Indexing into Tensors
-    <ul>
-      <li>Indexing</li>
-      <li>Slicing</li>
-    </ul>
-  </li>
-  <li>Numpy Compatibility</li>
 </ul>
+
+<h4 id="thanks">Thanks!</h4>
+
+<p>That’s it for this whirlwind tour of the basic knowledge needed to work with tensors in PyTorch. For a deeper look, check out the <a href="https://pytorch.org/docs/stable/">Official Documentation</a> and <a href="https://pytorch.org/tutorials/beginner/ptcheat.html"> PyTorch Cheat Sheet</a>. My writing here is meant as a primer to familiarize you with essential concepts. I encourage you now (and in the future) to always check the official resources to learn more!</p>
+
+<h3 id="continue-reading-part-3-basic-pytorch-workflow--"><a href="pytorch-workflow">Continue Reading Part 3: Basic PyTorch Workflow -&gt;</a></h3>
+
+<h3 id="--go-back-to-part-1-a-gentle-introduction"><a href="pytorch-introduction">(&lt;- Go Back to Part 1: A Gentle Introduction)</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-workflow" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-16T00:00:00-06:00</published><updated>2024-08-16T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-workflow</id><content type="html" xml:base="http://localhost:4000/pytorch-workflow"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
+
+<h2 id="part-3-basic-pytorch-workflow">Part 3: Basic PyTorch Workflow</h2>
+
+<h3 id="this-page-is-still-under-construction">THIS PAGE IS STILL UNDER CONSTRUCTION</h3>
 
 <p>Utilizing a GPU (if you’ve got one)</p>
 <ul>
@@ -126,7 +281,7 @@
 <h4 id="join-me">Join Me!</h4>
 <p>As I explore and learn the rich PyTorch ecosystem! Over a series of blog posts I will write about the fundamentals of PyTorch, some principles of deep learning and machine learning, and how to apply PyTorch to solve some common ML problems.</p>
 
-<h3 id="continue-reading-part-2-pytorch-fundamentals"><a href="pytorch-fundamentals">Continue Reading Part 2: PyTorch Fundamentals</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
+<h3 id="continue-reading-part-2-pytorch-fundamentals--"><a href="pytorch-fundamentals">Continue Reading Part 2: PyTorch Fundamentals -&gt;</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />
 </head>
 
@@ -950,60 +1105,4 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 
 <p>Daw, N. D., O’Doherty, J. P., Dayan, P., Seymour, B., &amp; Dolan, R. J. (2006). Cortical substrates for exploratory decisions in humans. Nature, 441(7095), 876–879. https://doi.org/10.1038/nature04766</p>
 
-<p>Sutton, R. S., &amp; Barto, A. G. (1998). Reinforcement Learning Chap 2. MIT Press, 465(1), 90–94. http://www.ncbi.nlm.nih.gov/pubmed/20351022</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Analytic vs Holistic Traditions of Thought</title><link href="http://localhost:4000/individual-diff-cas" rel="alternate" type="text/html" title="Analytic vs Holistic Traditions of Thought" /><published>2022-12-06T00:00:00-07:00</published><updated>2022-12-06T00:00:00-07:00</updated><id>http://localhost:4000/individual-diff-cas</id><content type="html" xml:base="http://localhost:4000/individual-diff-cas"><![CDATA[<head>
-  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
-</head>
-
-<h1 id="analytic-vs-holistic-traditions-of-thought">Analytic vs Holistic <br />Traditions of Thought</h1>
-
-<h4 id="introduction">Introduction</h4>
-
-<p>Aside from the planet we live on and certain biological processes, the one thing all human beings have in common is diversity. There are no two people who are the same on this earth, and, similarly, no two cultures are the same. Our cultures collectively store the awesome wealth of human achievement, including our great discoveries, our great stories, and our collective triumph in surviving long enough to look back and appreciate the wake of history trailing behind us. It is a relatively recent development that psychology has begun to recognize how deeply our cultural heritage can influence the ways in which we interact with the world.</p>
-
-<p>In their paper, Culture and Systems of Thought: Holistic Versus Analytic Cognition (Nisbett et al., 2001), Nisbett et al. investigate cognitive differences between modern denizens of far Eastern cultures (i.e., Chinese, Japanese, and Korean) and Western cultures (i.e., American), which have respectively inherited the core of their intellectual traditions from ancient Chinese and Greek cultures. Holistic cognition was born of ancient Chinese culture, which, as a predominantly agricultural society in which vast numbers of people worked together to produce food, placed strong value on harmony, interdependence, and the oneness of all things. Analytic cognition originated from ancient Greece, which, being an individualistic society of shepherds, fishermen, and tradesmen, placed a high value on autonomy, debate, and logic. Today, these two forms of cognition have resulted in substantial differences in certain cognitive processes between Western (Analytic) and far Eastern (Holistic) people.</p>
-
-<p>The mode of cognition one inherits biases the attention to, and the subsequent interpretation of, the experience of the world around them, resulting in measurable differences between people who come from different traditions. In this essay, we discuss the differences between analytic and holistic cognition by grounding them in the findings discussed in (Nisbett et al., 2001) and then analyze three cognitive domains where these differences manifest: concept representation, analogy, and symbol use.</p>
-
-<h4 id="eastern-vs-western-cognition">Eastern vs Western Cognition</h4>
-
-<p>As proposed by Nisbett et al., the social organization of society has an enormous effect on the cognition of the citizens within it. Social organization biases attention to certain aspects of the field at the expense of others, and what is attended to influences beliefs about the world. Consequently, beliefs about the world guide what is believed to be important and how knowledge can be obtained, which in turn dictates the development and application of certain cognitive processes at the expense of others (Nisbett et al., 2001). In a nutshell, social organization affects cognitive processes in two ways: indirectly by focusing attention on different parts of the environment and directly by making some kinds of social communication patterns more acceptable than others. This can differentially affect the intellectual trajectory of a society.</p>
-
-<p>Indeed, the Greeks held the outlook of objects having their own properties, which in turn led to advancements like surgery and geometry. The Chinese saw the world as utterly interrelated which led to an early system of irrigation and the correct conclusion of why the tides rose and fell. In modern day experiments, numerous differences in cognitive processes between Easterners and Westerners have been found. Easterners attend to the entire perceptual field more than Westerners, who attend more to a salient object within the field. Westerners benefit more from perceived control and are more subject to the illusion of control. Easterners’ explanations of things involve situational factors more than their Western counterparts. They also consider a broader range of potential explanations, resulting in less surprise and predisposition to hindsight bias (the tendency to regard events as having been inevitable in retrospect). Westerners tend to explain events with respect to a target object and its properties, making them more prone to fundamental attribution error, that is, the tendency to attribute behavior to dispositions of a person and to slight the role of situations and context.</p>
-
-<blockquote>
-  <p><i><u>Note</u>: the Western tendency to fall for the illusion of control as well as the fundamental attribution error makes for an interesting combination when considered alongside the modern atmosphere of rampant anxiety in the Western world. Not only do Westerners assume control exists where it does not, but they assume the failure to control is the fault of a person rather than a fact of the situation.</i></p>
-</blockquote>
-
-<p>When it comes to categorization, Easterners group objects and events on the basis of functional relationships whereas Westerners group them on the basis of category membership. The list goes on. Easterners prefer to seek compromise, rely more on experiential knowledge, and heavily rely on prior beliefs. Westerners are less likely to seek compromise, tend to reject one or both of two propositions that could be construed as contradictory, and are more capable of setting aside prior beliefs, as they rely more on logical reasoning. As we will see, these differences have profound implications for cognitive processes traditionally understood in a Western context.</p>
-
-<h4 id="concept-representation">Concept Representation</h4>
-
-<p>Concept representation is a domain where differences between the holistic and analytical modes of cognition become quite stark. Take the notion of conceptual coherence. According to Murphy and Medin, “concepts are coherent to the extent that they fit people’s background knowledge or naïve theories about the world. These theories help to relate the concepts in a domain and to structure the attributes that are internal to a concept (Murphy &amp; Medin, 1985).” Immediately we see how the holistic and analytical modes of cognition might result in completely different conceptual structures for the same stimuli. If conceptual coherence depends on both background knowledge and beliefs about the world, then analytical cognition would result in concepts that are oriented towards objects and their properties, whereas holistic cognition would result in concepts focused on the relationships between objects in the field.</p>
-
-<p>Murphy and Medin describe the theories of conceptual coherence based on the following strategies: similarity, feature correlations, and categorization. For each strategy, there is a different perspective for the holistic and analytic modes. For similarity, an analytic thinker would focus on the properties of objects as the indicator of similarity, whereas a holistic thinker would focus on the functional relationship between objects. The same logic applies to categorization strategies. Similarly, for feature correlations, the most salient features to an analytic thinker would be those that are inherent to an object itself (e.g., grouping baby and mother in separate categories as one is a child and the other an adult). Holistic thinkers would instead attend to features that are most relevant to its functional relations (e.g., grouping baby and mother together since a mother is the caretaker of the baby). Murphy and Medin propose that the glue that binds up a conceptually coherent category is the role of theories. This conclusion seems particularly relevant to the current discussion. It is unlikely that a holistic and analytic thinker would arrive at the same conclusion for a conceptually coherent category, yet each thinker may be correct in their conclusion, as it is their respective theories of the world which differentiate them. To make a holistic remark, two definitions for the same concept may seem contradictory, but it doesn’t necessarily make either definition incoherent.</p>
-
-<h4 id="analogy">Analogy</h4>
-
-<p>Analogy is another cognitive process that operates differently between the analytic and holistic modes of cognition. In the structure-mapping theory presented in (Gentner, 1982), Gentner asserts that analogy essentially works as the mapping the structural relations of a base domain into a target domain. The base and target domain will be different based on the salience of features most relevant in the domains. Considering this view, we again see how the process of analogy would be different between holistic and analytic thinkers.</p>
-
-<p>Consider the example of the solar system. An analytic thinker would preferentially think of each planet as a constituent of the solar system, where each planet has its own orbit around the sun. When all these pieces are put together, there you have the solar system. On the other hand, a holistic thinker would think of the solar system in the opposite direction, where the solar system exists as a single system of all the planets revolving around the sun, and that each planet depends on the system as a whole. Interestingly, despite the difference in perspective, the analogy appears to be apt for mapping to similar cases from either perspective. Regardless of how the concept of solar system was construed, if the relations of the solar system map neatly into another domain (e.g., the structure of an atom), then the approach shouldn’t matter. While this applies to physical systems, it is likely a different story for social ones. Consider the domain of law, which is very different between West (contractual, permanent) and East (situational, flexible). Analogies in these domains are unlikely to translate neatly between cultures, as they are culturally dependent.</p>
-
-<h4 id="symbols">Symbols</h4>
-
-<p>A third domain of cognitive processing to compare the holistic and analytic modes of cognition is that of symbols. According to Andy Clark, language itself is a cognition-enhancing animal-built structure, which makes it not a means to express cognition, but rather an aspect of cognition itself (Clark, 2006). He argues that “by materializing thought in words, we create structures that are themselves proper objects of perception, manipulation, and (further) thought.” Consider the English writing system used in Western cultures. There is an alphabet composed of twenty-six characters, each with its own name and sound. Words are composed of characters when they are put together in certain, correct orders. Words are put together in a certain order to form sentences, and so on. Now, consider the writing system used in China, where there are over 10,000 characters! Each character has a unique meaning depending on the markings that make it up. Characters represent entities or actions rather than individual sounds. This distinction echoes that of the differences between analytic and holistic cognition.</p>
-
-<p>Clark would argue that each symbolic system, English and Chinese, not only work differently as systems of writing, but so too do they differ in how cognition operates through their usage. To demonstrate, consider the fact that many languages have words with no suitable translation for a foreign tongue. For example, the Japanese word satori has no adequate English translation, and is in fact translated in numerous ways, including enlightenment, sudden awakening, flash of insight, etc. This is some evidence supporting Clark’s claim that language itself is an aspect of cognition rather than merely a vehicle for expressing cognition. From this perspective, holistic and analytic thinkers are likely working with language in completely different ways, which really makes one think just how different it must be to exist as a person from a different intellectual tradition than the one they were raised in.</p>
-
-<h4 id="conclusion">Conclusion</h4>
-
-<p>In this essay we have discussed the role of culture in cognition, the differences between analytic and holistic cognition, and the implications these differences have in interpreting cognitive processes traditionally understood in a Western context. Note that the differences laid out here are stark, as the Eastern and Western intellectual traditions are particularly distinct (a clever and intentional choice made by Nisbett et al. to demonstrate their point). Keep in mind that many more cultures exist outside of these two intellectual traditions. The point here is to demonstrate that differences exist rather than to pin down exactly which differences exist for everyone. What is clear is that cognitive processes are deeply intertwined with the social and environmental context in which they develop, and that there can be no clear separation between process and content when it comes to cognition (Nisbett et al., 2001). However, now that psychology and other sciences have begun to recognize these facts, much work needs to be done to extend existing models of cognitive processes to encompass this broader view of humanity.</p>
-
-<h3 id="references">References</h3>
-
-<p>Clark, A. (2006). Language, embodiment, and the cognitive niche. Trends in Cognitive Sciences, 10(8), 370–374. https://doi.org/10.1016/j.tics.2006.06.012</p>
-
-<p>Gentner, D. (1982). Gentner_Structure Mapping. Cognitive Science, 7(2), 155–170. file://localhost/Volumes/alexvanvenrooij 1/Elektronische Artikelen/Papers/Unknown/2004-34.pdf</p>
-
-<p>Murphy, G. L., &amp; Medin, D. L. (1985). The Role of Theories in Conceptual Coherence. Psychological Review, 92(3), 289–316. https://doi.org/10.1037/0033-295X.92.3.289</p>
-
-<p>Nisbett, R. E., Choi, I., Peng, K., &amp; Norenzayan, A. (2001). Culture and systems of thought: Holistic versus analytic cognition. Psychological Review, 108(2), 291–310. https://doi.org/10.1037/0033-295X.108.2.291</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>Sutton, R. S., &amp; Barto, A. G. (1998). Reinforcement Learning Chap 2. MIT Press, 465(1), 90–94. http://www.ncbi.nlm.nih.gov/pubmed/20351022</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>

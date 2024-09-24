@@ -43,4 +43,4 @@ The above description of DNNs might sound too abstract to be helpful. However, t
 As I explore and learn the rich PyTorch ecosystem! Over a series of blog posts I will write about the fundamentals of PyTorch, some principles of deep learning and machine learning, and how to apply PyTorch to solve some common ML problems. 
 
 
-### [Continue Reading Part 2: PyTorch Fundamentals](pytorch-fundamentals)
+### [Continue Reading Part 2: PyTorch Fundamentals ->](pytorch-fundamentals)

@@ -1,287 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-24T12:57:54-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-fundamentals" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-16T00:00:00-06:00</published><updated>2024-08-16T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-fundamentals</id><content type="html" xml:base="http://localhost:4000/pytorch-fundamentals"><![CDATA[<head>
-  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
-</head>
-
-<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
-
-<h2 id="part-2-fundamentals">Part 2: Fundamentals</h2>
-
-<h4 id="what-is-a-tensor">What Is A Tensor?</h4>
-
-<p>Mathematically, a <a href="https://en.wikipedia.org/wiki/Tensor">tensor</a> is an algebraic object that describes the relationship between its elements as it pertains to a vector space. That sounds like a lot, but it’s actualy not so complicated. You can think of a tensor as an extension of a multidimensional array where each element within the array is a vector.</p>
-
-<p>If that’s confusing and abstract, don’t worry. We can leave the exact definition of a tensor to the mathematicians. The point is that tensors are similar to multidimensional arrays, but have a few extra perks that make them ideal for representing deep neural networks.</p>
-
-<h4 id="tensors-in-pytorch">Tensors in PyTorch</h4>
-
-<p>A PyTorch tensor is very similar to NumPy array. They can hold similar data structures and even share the same syntax for indexing. However, PyTorch tensors come with a couple of crucial bonus features:</p>
-<ul>
-  <li><strong>Device Flexibility</strong>: Tensors can be moved easily between the CPU and GPU to optimize your workflow.</li>
-  <li><strong>Autograd Support</strong>: PyTorch tensors can automatically keep track of the operations performed on them, an essential feature for backpropagation.</li>
-</ul>
-
-<h3 id="note">NOTE</h3>
-<p class="center"><i>While I will include sample code snippets with this post, I will not include much output. This is on purpose! The best thing to learn quickly is to try these code snippets out for yourself and see what happens!</i></p>
-<p><br />
-<br /></p>
-
-<h4 id="creating-tensors">Creating Tensors</h4>
-
-<p>Tensors can be made in multiple ways. Below are a few of the most common methods. Before we do anything, let’s import the PyTorch library</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import torch
-</code></pre></div></div>
-
-<h5 id="scalars">Scalars</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scalar = torch.tensor(7)
-</code></pre></div></div>
-
-<h5 id="vectors">Vectors</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vector = torch.tensor([7, 7])
-</code></pre></div></div>
-
-<h5 id="matrices">Matrices</h5>
-<ul>
-  <li>Note that matrix variable names are capitalized by convention.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MATRIX = torch.tensor([[7, 7],
-                       [7, 7]])
-</code></pre></div></div>
-
-<h5 id="tensors-of-ones-zeros--random-values">Tensors of Ones, Zeros, &amp; Random Values</h5>
-<p>We can make tensors filled with ones, zeros, or random values in a single line. All we need to do is pass in the dimensions we want of the output tensor.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ones = torch.ones(size=(3, 4))
-zeros = torch.zeros(size=(1, 2, 3, 4))
-random = torch.randn(size=(3, 20, 20))
-</code></pre></div></div>
-
-<h5 id="other-useful-methods---arange--like">Other Useful Methods - arange &amp; like</h5>
-
-<p><code class="language-plaintext highlighter-rouge">torch.arange(start, stop, step)</code> - Create a tensor populated with values ranging from <i>start</i> to <i>stop</i> at incrememnts of size <i>step</i></p>
-
-<p><code class="language-plaintext highlighter-rouge">torch.zeros_like(input=other_tensor)</code> - Create a tensor of zeros (could be ones or randn) with the same shape as the input tensor</p>
-
-<h4 id="working-with-tensors">Working With Tensors</h4>
-
-<p>If tensors are going to do all the heavy lifting for our DNNs, then we better know how to work with them and how they can interact with each other. Here are some of the most common tensor operations, aggregations, and transformations. :</p>
-
-<h5 id="common-operations">Common Operations</h5>
-<ul>
-  <li>Addition (<code class="language-plaintext highlighter-rouge">+</code>):
-    <ul>
-      <li>Add a scalar to each element of a tensor or element-wise addition of two tensors of the same shape.</li>
-      <li><code class="language-plaintext highlighter-rouge">A + B</code></li>
-      <li><code class="language-plaintext highlighter-rouge">A + c</code></li>
-    </ul>
-  </li>
-  <li>Subtraction (<code class="language-plaintext highlighter-rouge">-</code>):
-    <ul>
-      <li>Subtract a scalar from each element of a tensor or element-wise subtraction of two tensors of the same shape.</li>
-      <li><code class="language-plaintext highlighter-rouge">A - B</code></li>
-      <li><code class="language-plaintext highlighter-rouge">A - c</code></li>
-    </ul>
-  </li>
-  <li>Multiplication (<code class="language-plaintext highlighter-rouge">*</code>):
-    <ul>
-      <li>Multiply each element of a tensor by a scalar or element-wise multiplication of two tensors of the same shape.</li>
-      <li><code class="language-plaintext highlighter-rouge">A * B</code></li>
-      <li><code class="language-plaintext highlighter-rouge">A * c</code></li>
-    </ul>
-  </li>
-  <li>Division (<code class="language-plaintext highlighter-rouge">/</code>):
-    <ul>
-      <li>Divide each element of a tensor by a scalar or element-wise division of two tensors of the same shape.</li>
-      <li><code class="language-plaintext highlighter-rouge">A / B</code></li>
-      <li><code class="language-plaintext highlighter-rouge">A / c</code></li>
-    </ul>
-  </li>
-  <li>Matrix Multiplication (<code class="language-plaintext highlighter-rouge">@</code>):
-    <ul>
-      <li>Matrix multiplication between two tensors with matching inner dimensions (i.e. <code class="language-plaintext highlighter-rouge">[m x n] @ [n x k]</code> )</li>
-      <li><code class="language-plaintext highlighter-rouge">A @ B</code></li>
-      <li><code class="language-plaintext highlighter-rouge">torch.matmul(A, B)</code></li>
-    </ul>
-  </li>
-</ul>
-
-<h5 id="aggregations">Aggregations</h5>
-<ul>
-  <li>Min
-    <ul>
-      <li>Return the minimum value in a tensor</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.min()</code></li>
-    </ul>
-  </li>
-  <li>Max
-    <ul>
-      <li>Return the maximum value in a tensor</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.max()</code></li>
-    </ul>
-  </li>
-  <li>Mean
-    <ul>
-      <li>Return the mean value of a tensor</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.mean()</code></li>
-    </ul>
-  </li>
-  <li>Sum
-    <ul>
-      <li>Return the sum of values in a tensor</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.sum()</code></li>
-    </ul>
-  </li>
-</ul>
-
-<h5 id="tensor-transformations">Tensor Transformations</h5>
-<ul>
-  <li>Reshape
-    <ul>
-      <li>Reshape input tensor to specified new dimensions ()</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.reshape(9, 1)</code></li>
-    </ul>
-  </li>
-  <li>View
-    <ul>
-      <li>Similar to reshape, but <strong>shares the same memory</strong> as the original tensor ()</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.view(9, 1)</code></li>
-    </ul>
-  </li>
-  <li>Permute
-    <ul>
-      <li>Return a view of a tensor with dmensions permuted (swapped) in a certain way</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.permute(2, 0, 1)</code> (dim0-&gt; dim1, dim2-&gt; dim0, dim1-&gt; dim2)</li>
-    </ul>
-  </li>
-  <li>Stack
-    <ul>
-      <li>Combine multiple tensors along a specified dimension (default=0)</li>
-      <li><code class="language-plaintext highlighter-rouge">torch.stack([tensor1, tensor2, tensor3])</code></li>
-    </ul>
-  </li>
-  <li>Squeeze
-    <ul>
-      <li>Removes all dimensions of size 1 from the tensor</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.squeeze()</code></li>
-    </ul>
-  </li>
-  <li>Unsqueeze
-    <ul>
-      <li>Adds a dimension of size 1 to the tensor in specified index</li>
-      <li><code class="language-plaintext highlighter-rouge">tensor.unsqueeze(dim=0)</code></li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="indexing-into-tensors">Indexing into Tensors</h4>
-
-<p>The creators of PyTorch worked hard to ensure that their library was easy to learn if you already are familiar with other technologies in the data work world. Luckily for us, that means that if you’re comfortable slicing and dicing multidimensional arrays in NumPy, then you’ll find the same syntax works for slicing and indexing into PyTorch Tensors.</p>
-
-<p>Consider the following tensor:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A = [[1, 2, 3]
-     [4, 5, 6]
-     [7, 8, 9]]
-</code></pre></div></div>
-
-<ul>
-  <li>Indexing
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">A[0] --&gt; tensor([1, 2, 3])</code></li>
-      <li><code class="language-plaintext highlighter-rouge">A[0][0] --&gt; tensor(1)</code></li>
-    </ul>
-  </li>
-  <li>Slicing
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">A[1][0:2] --&gt; tensor([4, 5])</code></li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="thanks">Thanks!</h4>
-
-<p>That’s it for this whirlwind tour of the basic knowledge needed to work with tensors in PyTorch. For a deeper look, check out the <a href="https://pytorch.org/docs/stable/">Official Documentation</a> and <a href="https://pytorch.org/tutorials/beginner/ptcheat.html"> PyTorch Cheat Sheet</a>. My writing here is meant as a primer to familiarize you with essential concepts. I encourage you now (and in the future) to always check the official resources to learn more!</p>
-
-<h3 id="continue-reading-part-3-basic-pytorch-workflow--"><a href="pytorch-workflow">Continue Reading Part 3: Basic PyTorch Workflow -&gt;</a></h3>
-
-<h3 id="--go-back-to-part-1-a-gentle-introduction"><a href="pytorch-introduction">(&lt;- Go Back to Part 1: A Gentle Introduction)</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Deep Learning With PyTorch, Part 2: Fundamentals</title><link href="http://localhost:4000/pytorch-workflow" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 2: Fundamentals" /><published>2024-08-16T00:00:00-06:00</published><updated>2024-08-16T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-workflow</id><content type="html" xml:base="http://localhost:4000/pytorch-workflow"><![CDATA[<head>
-  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
-</head>
-
-<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
-
-<h2 id="part-3-basic-pytorch-workflow">Part 3: Basic PyTorch Workflow</h2>
-
-<h3 id="this-page-is-still-under-construction">THIS PAGE IS STILL UNDER CONSTRUCTION</h3>
-
-<p>Utilizing a GPU (if you’ve got one)</p>
-<ul>
-  <li>Device agnostic code</li>
-</ul>
-
-<p>Essential PyTorch Workflow</p>
-
-<ol>
-  <li>Data</li>
-  <li>Build a model</li>
-  <li>Model training
-    <ol>
-      <li>Instantiate model</li>
-      <li>Select loss function and optimizer</li>
-      <li>Iterate over training data - epochs</li>
-      <li>For each epoch
-        <ol>
-          <li>Generate predictions by calling forward() on the NN</li>
-          <li>Calculate the loss using the loss function from earlier</li>
-          <li>Clear the gradients from the optimizer using .zero_grad()</li>
-          <li>Call backward() on loss function to calculate gradients (back propagation)</li>
-          <li>Call optimizer.step() to update network weights according to calculated gradients (gradient descent)</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Inference and evaluation</li>
-  <li>Save a model</li>
-</ol>
-
-<p>Simple Example - linear model</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Deep Learning With PyTorch, Part 1: A Gentle Introduction</title><link href="http://localhost:4000/pytorch-introduction" rel="alternate" type="text/html" title="Deep Learning With PyTorch, Part 1: A Gentle Introduction" /><published>2024-08-02T00:00:00-06:00</published><updated>2024-08-02T00:00:00-06:00</updated><id>http://localhost:4000/pytorch-introduction</id><content type="html" xml:base="http://localhost:4000/pytorch-introduction"><![CDATA[<head>
-  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
-</head>
-
-<h1 id="deep-learning-with-pytorch">Deep Learning With PyTorch</h1>
-
-<h2 id="part-1-a-gentle-introduction">Part 1: A Gentle Introduction</h2>
-
-<p>With all the media coverage of ChatGPT and other large language models, you’re probably aware that the field of artificial intelligence is red hot these days. Indeed, the initial release and subsequent success of ChatGPT nearly two years ago sent shockwaves through the AI community and brought the technology to fore of public discussion.</p>
-
-<p>But just how do these technologies work? After all, hasn’t AI been a topic of research and discussion for decades? Why has it just now come into prominence?</p>
-
-<p>There are several major factors driving the success of modern AI models like ChatGPT. First, the internet and age of information has given rise to enormous amounts of data, an essential ingredient for model training. Second, modern advances in computing architecture (e.g., distributed computing) and hardware (e.g., GPUs) have made it possible to train larger and more complex models. The final driver, and the topic of this and several future posts, is the maturation of the field of <i>deep learning.</i></p>
-
-<h4 id="what-is-deep-learning">What is Deep Learning?</h4>
-<p>At a high level, deep learning is a machine learning technique that was inspired by the structure of neurons in the brain. Deep learning models are composed of layers of connected artificial neurons, mimicking how neurons connect and fire together in the brain. For this reason, deep learning networks are also referred to as neural networks. The term “deep” comes from when there are at least two layers within the network, but modern deep neural networks (DNNs) can have dozens or even hundreds of layers.</p>
-
-<figure>  
-  <img class="center" src="../assets/img/blog/pytorch/dnn.png" alt="Example DNN" />
-  <figcaption>Example Deep Neural Network</figcaption>
-</figure>
-
-<p>The above description of DNNs might sound too abstract to be helpful. However, the abstract nature of DNNs is exactly what makes them so powerful. It’s up to us as designers to create the DNN best suited to the problem we are trying to solve. Depending on the application, one could choose completely different components of underlying architecture (e.g., Attention, GANs, CNNs, LSTMs). Indeed, if you could open up and look inside a popular AI application like ChatGPT or Dall-E you would see a composition of these components.</p>
-
-<h4 id="why-pytorch">Why PyTorch?</h4>
-<p><a href="https://pytorch.org/">PyTorch</a> is an open source deep learning framework created by the folks over at Facebook (Meta). In recent years it has grown in popularity both in industry and academia due to its flexibility, readability, and behind-the-scenes optimization. Check out the trends over at <a href="https://paperswithcode.com/trends">paperswithcode</a> to get an idea of just how popular PyTorch has become! It’s used at Facebook, Microsoft, Tesla, and OpenAI to name a few. For this reason, PyTorch is an excellent framework in which to learn the basics of deep learning.</p>
-
-<figure>  
-  <img src="../assets/img/blog/pytorch/pytorch-trends.png" alt="pytorch trends" />
-  <figcaption>PyTorch Trends (Aug 2024)</figcaption>
-</figure>
-
-<h4 id="join-me">Join Me!</h4>
-<p>As I explore and learn the rich PyTorch ecosystem! Over a series of blog posts I will write about the fundamentals of PyTorch, some principles of deep learning and machine learning, and how to apply PyTorch to solve some common ML problems.</p>
-
-<h3 id="continue-reading-part-2-pytorch-fundamentals--"><a href="pytorch-fundamentals">Continue Reading Part 2: PyTorch Fundamentals -&gt;</a></h3>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-07T13:55:44-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nick Hunkins</title><subtitle>Nick Hunkins&apos; personal website - Powered by Jekyll and GitHub Pages</subtitle><author><name>Nick Hunkins</name></author><entry><title type="html">A Semblance of Style</title><link href="http://localhost:4000/semblance-of-style" rel="alternate" type="text/html" title="A Semblance of Style" /><published>2024-05-12T00:00:00-06:00</published><updated>2024-05-12T00:00:00-06:00</updated><id>http://localhost:4000/semblance-of-style</id><content type="html" xml:base="http://localhost:4000/semblance-of-style"><![CDATA[<head>
   <link rel="stylesheet" href="../assets/css/blogstyles.css" />
 </head>
 
@@ -1105,4 +822,187 @@ Problem-orientated, Driven, Investigative, Weakness-orientated, Responsive, Unin
 
 <p>Daw, N. D., O’Doherty, J. P., Dayan, P., Seymour, B., &amp; Dolan, R. J. (2006). Cortical substrates for exploratory decisions in humans. Nature, 441(7095), 876–879. https://doi.org/10.1038/nature04766</p>
 
-<p>Sutton, R. S., &amp; Barto, A. G. (1998). Reinforcement Learning Chap 2. MIT Press, 465(1), 90–94. http://www.ncbi.nlm.nih.gov/pubmed/20351022</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>Sutton, R. S., &amp; Barto, A. G. (1998). Reinforcement Learning Chap 2. MIT Press, 465(1), 90–94. http://www.ncbi.nlm.nih.gov/pubmed/20351022</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Analytic vs Holistic Traditions of Thought</title><link href="http://localhost:4000/individual-diff-cas" rel="alternate" type="text/html" title="Analytic vs Holistic Traditions of Thought" /><published>2022-12-06T00:00:00-07:00</published><updated>2022-12-06T00:00:00-07:00</updated><id>http://localhost:4000/individual-diff-cas</id><content type="html" xml:base="http://localhost:4000/individual-diff-cas"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="analytic-vs-holistic-traditions-of-thought">Analytic vs Holistic <br />Traditions of Thought</h1>
+
+<h4 id="introduction">Introduction</h4>
+
+<p>Aside from the planet we live on and certain biological processes, the one thing all human beings have in common is diversity. There are no two people who are the same on this earth, and, similarly, no two cultures are the same. Our cultures collectively store the awesome wealth of human achievement, including our great discoveries, our great stories, and our collective triumph in surviving long enough to look back and appreciate the wake of history trailing behind us. It is a relatively recent development that psychology has begun to recognize how deeply our cultural heritage can influence the ways in which we interact with the world.</p>
+
+<p>In their paper, Culture and Systems of Thought: Holistic Versus Analytic Cognition (Nisbett et al., 2001), Nisbett et al. investigate cognitive differences between modern denizens of far Eastern cultures (i.e., Chinese, Japanese, and Korean) and Western cultures (i.e., American), which have respectively inherited the core of their intellectual traditions from ancient Chinese and Greek cultures. Holistic cognition was born of ancient Chinese culture, which, as a predominantly agricultural society in which vast numbers of people worked together to produce food, placed strong value on harmony, interdependence, and the oneness of all things. Analytic cognition originated from ancient Greece, which, being an individualistic society of shepherds, fishermen, and tradesmen, placed a high value on autonomy, debate, and logic. Today, these two forms of cognition have resulted in substantial differences in certain cognitive processes between Western (Analytic) and far Eastern (Holistic) people.</p>
+
+<p>The mode of cognition one inherits biases the attention to, and the subsequent interpretation of, the experience of the world around them, resulting in measurable differences between people who come from different traditions. In this essay, we discuss the differences between analytic and holistic cognition by grounding them in the findings discussed in (Nisbett et al., 2001) and then analyze three cognitive domains where these differences manifest: concept representation, analogy, and symbol use.</p>
+
+<h4 id="eastern-vs-western-cognition">Eastern vs Western Cognition</h4>
+
+<p>As proposed by Nisbett et al., the social organization of society has an enormous effect on the cognition of the citizens within it. Social organization biases attention to certain aspects of the field at the expense of others, and what is attended to influences beliefs about the world. Consequently, beliefs about the world guide what is believed to be important and how knowledge can be obtained, which in turn dictates the development and application of certain cognitive processes at the expense of others (Nisbett et al., 2001). In a nutshell, social organization affects cognitive processes in two ways: indirectly by focusing attention on different parts of the environment and directly by making some kinds of social communication patterns more acceptable than others. This can differentially affect the intellectual trajectory of a society.</p>
+
+<p>Indeed, the Greeks held the outlook of objects having their own properties, which in turn led to advancements like surgery and geometry. The Chinese saw the world as utterly interrelated which led to an early system of irrigation and the correct conclusion of why the tides rose and fell. In modern day experiments, numerous differences in cognitive processes between Easterners and Westerners have been found. Easterners attend to the entire perceptual field more than Westerners, who attend more to a salient object within the field. Westerners benefit more from perceived control and are more subject to the illusion of control. Easterners’ explanations of things involve situational factors more than their Western counterparts. They also consider a broader range of potential explanations, resulting in less surprise and predisposition to hindsight bias (the tendency to regard events as having been inevitable in retrospect). Westerners tend to explain events with respect to a target object and its properties, making them more prone to fundamental attribution error, that is, the tendency to attribute behavior to dispositions of a person and to slight the role of situations and context.</p>
+
+<blockquote>
+  <p><i><u>Note</u>: the Western tendency to fall for the illusion of control as well as the fundamental attribution error makes for an interesting combination when considered alongside the modern atmosphere of rampant anxiety in the Western world. Not only do Westerners assume control exists where it does not, but they assume the failure to control is the fault of a person rather than a fact of the situation.</i></p>
+</blockquote>
+
+<p>When it comes to categorization, Easterners group objects and events on the basis of functional relationships whereas Westerners group them on the basis of category membership. The list goes on. Easterners prefer to seek compromise, rely more on experiential knowledge, and heavily rely on prior beliefs. Westerners are less likely to seek compromise, tend to reject one or both of two propositions that could be construed as contradictory, and are more capable of setting aside prior beliefs, as they rely more on logical reasoning. As we will see, these differences have profound implications for cognitive processes traditionally understood in a Western context.</p>
+
+<h4 id="concept-representation">Concept Representation</h4>
+
+<p>Concept representation is a domain where differences between the holistic and analytical modes of cognition become quite stark. Take the notion of conceptual coherence. According to Murphy and Medin, “concepts are coherent to the extent that they fit people’s background knowledge or naïve theories about the world. These theories help to relate the concepts in a domain and to structure the attributes that are internal to a concept (Murphy &amp; Medin, 1985).” Immediately we see how the holistic and analytical modes of cognition might result in completely different conceptual structures for the same stimuli. If conceptual coherence depends on both background knowledge and beliefs about the world, then analytical cognition would result in concepts that are oriented towards objects and their properties, whereas holistic cognition would result in concepts focused on the relationships between objects in the field.</p>
+
+<p>Murphy and Medin describe the theories of conceptual coherence based on the following strategies: similarity, feature correlations, and categorization. For each strategy, there is a different perspective for the holistic and analytic modes. For similarity, an analytic thinker would focus on the properties of objects as the indicator of similarity, whereas a holistic thinker would focus on the functional relationship between objects. The same logic applies to categorization strategies. Similarly, for feature correlations, the most salient features to an analytic thinker would be those that are inherent to an object itself (e.g., grouping baby and mother in separate categories as one is a child and the other an adult). Holistic thinkers would instead attend to features that are most relevant to its functional relations (e.g., grouping baby and mother together since a mother is the caretaker of the baby). Murphy and Medin propose that the glue that binds up a conceptually coherent category is the role of theories. This conclusion seems particularly relevant to the current discussion. It is unlikely that a holistic and analytic thinker would arrive at the same conclusion for a conceptually coherent category, yet each thinker may be correct in their conclusion, as it is their respective theories of the world which differentiate them. To make a holistic remark, two definitions for the same concept may seem contradictory, but it doesn’t necessarily make either definition incoherent.</p>
+
+<h4 id="analogy">Analogy</h4>
+
+<p>Analogy is another cognitive process that operates differently between the analytic and holistic modes of cognition. In the structure-mapping theory presented in (Gentner, 1982), Gentner asserts that analogy essentially works as the mapping the structural relations of a base domain into a target domain. The base and target domain will be different based on the salience of features most relevant in the domains. Considering this view, we again see how the process of analogy would be different between holistic and analytic thinkers.</p>
+
+<p>Consider the example of the solar system. An analytic thinker would preferentially think of each planet as a constituent of the solar system, where each planet has its own orbit around the sun. When all these pieces are put together, there you have the solar system. On the other hand, a holistic thinker would think of the solar system in the opposite direction, where the solar system exists as a single system of all the planets revolving around the sun, and that each planet depends on the system as a whole. Interestingly, despite the difference in perspective, the analogy appears to be apt for mapping to similar cases from either perspective. Regardless of how the concept of solar system was construed, if the relations of the solar system map neatly into another domain (e.g., the structure of an atom), then the approach shouldn’t matter. While this applies to physical systems, it is likely a different story for social ones. Consider the domain of law, which is very different between West (contractual, permanent) and East (situational, flexible). Analogies in these domains are unlikely to translate neatly between cultures, as they are culturally dependent.</p>
+
+<h4 id="symbols">Symbols</h4>
+
+<p>A third domain of cognitive processing to compare the holistic and analytic modes of cognition is that of symbols. According to Andy Clark, language itself is a cognition-enhancing animal-built structure, which makes it not a means to express cognition, but rather an aspect of cognition itself (Clark, 2006). He argues that “by materializing thought in words, we create structures that are themselves proper objects of perception, manipulation, and (further) thought.” Consider the English writing system used in Western cultures. There is an alphabet composed of twenty-six characters, each with its own name and sound. Words are composed of characters when they are put together in certain, correct orders. Words are put together in a certain order to form sentences, and so on. Now, consider the writing system used in China, where there are over 10,000 characters! Each character has a unique meaning depending on the markings that make it up. Characters represent entities or actions rather than individual sounds. This distinction echoes that of the differences between analytic and holistic cognition.</p>
+
+<p>Clark would argue that each symbolic system, English and Chinese, not only work differently as systems of writing, but so too do they differ in how cognition operates through their usage. To demonstrate, consider the fact that many languages have words with no suitable translation for a foreign tongue. For example, the Japanese word satori has no adequate English translation, and is in fact translated in numerous ways, including enlightenment, sudden awakening, flash of insight, etc. This is some evidence supporting Clark’s claim that language itself is an aspect of cognition rather than merely a vehicle for expressing cognition. From this perspective, holistic and analytic thinkers are likely working with language in completely different ways, which really makes one think just how different it must be to exist as a person from a different intellectual tradition than the one they were raised in.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>In this essay we have discussed the role of culture in cognition, the differences between analytic and holistic cognition, and the implications these differences have in interpreting cognitive processes traditionally understood in a Western context. Note that the differences laid out here are stark, as the Eastern and Western intellectual traditions are particularly distinct (a clever and intentional choice made by Nisbett et al. to demonstrate their point). Keep in mind that many more cultures exist outside of these two intellectual traditions. The point here is to demonstrate that differences exist rather than to pin down exactly which differences exist for everyone. What is clear is that cognitive processes are deeply intertwined with the social and environmental context in which they develop, and that there can be no clear separation between process and content when it comes to cognition (Nisbett et al., 2001). However, now that psychology and other sciences have begun to recognize these facts, much work needs to be done to extend existing models of cognitive processes to encompass this broader view of humanity.</p>
+
+<h3 id="references">References</h3>
+
+<p>Clark, A. (2006). Language, embodiment, and the cognitive niche. Trends in Cognitive Sciences, 10(8), 370–374. https://doi.org/10.1016/j.tics.2006.06.012</p>
+
+<p>Gentner, D. (1982). Gentner_Structure Mapping. Cognitive Science, 7(2), 155–170. file://localhost/Volumes/alexvanvenrooij 1/Elektronische Artikelen/Papers/Unknown/2004-34.pdf</p>
+
+<p>Murphy, G. L., &amp; Medin, D. L. (1985). The Role of Theories in Conceptual Coherence. Psychological Review, 92(3), 289–316. https://doi.org/10.1037/0033-295X.92.3.289</p>
+
+<p>Nisbett, R. E., Choi, I., Peng, K., &amp; Norenzayan, A. (2001). Culture and systems of thought: Holistic versus analytic cognition. Psychological Review, 108(2), 291–310. https://doi.org/10.1037/0033-295X.108.2.291</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Our Attention Crisis</title><link href="http://localhost:4000/attention-crisis" rel="alternate" type="text/html" title="Our Attention Crisis" /><published>2022-05-02T00:00:00-06:00</published><updated>2022-05-02T00:00:00-06:00</updated><id>http://localhost:4000/attention-crisis</id><content type="html" xml:base="http://localhost:4000/attention-crisis"><![CDATA[<head>
+  <link rel="stylesheet" href="../assets/css/blogstyles.css" />
+</head>
+
+<h1 id="our-attention-crisis">Our Attention Crisis</h1>
+
+<h4 id="the-current-situation">The Current Situation</h4>
+
+<p>We are living through an attention crisis. Despite all the progress we have made as a society, it seems we have lost our ability to focus. A study in 2014 found that the average college student switches tasks every 65 seconds [19]. Almost as bleak for office workers, another study found they only remain focused for about three minutes before switching tasks [6]. What’s going on here? In an age where people have a portal in their pocket to all human knowledge, where a wealth of information about nearly any obstacle can be accessed almost instantaneously, it would stand to reason that we should be more focused, not less. But, of course, nothing is so simple.</p>
+
+<p>The information age has given rise to an unprecedented amount of content. For example, as of February 2020, more than 500 hours of video were uploaded to YouTube every minute [10]. The sheer quantity of content available online is far more than any one person could hope to meaningfully engage with. For the individual, this situation presents a need for effective navigation through a ceaselessly expanding ocean of information. For the purveyors of content, the challenge becomes attracting and holding attention. Some services accomplish this by providing quality content to their users in exchange for a subscription fee (e.g., Netflix), while others, like Facebook and YouTube, generate revenue through advertisements. This advertising model is most profitable when it captures as much time as possible from as many people as possible. To that end, these attention merchants (a term coined by Tim Wu in his book The Attention Merchants [18]) have discovered, developed, and deployed an array of tactics to distract us and gobble up our time, often using unethical practices.</p>
+
+<p>In a world with so many things competing for our attention, we must stop and ask ourselves: what is it that we are paying attention to? William James, the American psychologist and father of pragmatism, once said,</p>
+
+<blockquote>
+  <p>“My experience is what I agree to attend to. Only those items which I notice shape my mind.”</p>
+</blockquote>
+
+<p>At the end of our days, when we look back at our lives, we will remember our experience as the composition of all we attended to over the years. Simply put, the brief time we have on Earth is precious. Is it ethical to allow an entire industry to exploit our attention and consume our lives to increase their quarterly earnings? What can we do as individuals to better protect our attention and devote it to the things we find meaningful in our own lives? Whatever the answers may be, to adequately address either of these questions we must first understand how attention works.</p>
+
+<h4 id="the-attentional-bottleneck">The Attentional Bottleneck</h4>
+
+<p>The concept of attention has captivated some of our deepest thinkers throughout the ages. Today, it is a crucial area of investigation in many domains, such as education, psychology, and neuroscience. Attention can be conceptualized in many ways. Here, we define it as the behavioral and cognitive process of allocating limited cognitive resources by selectively concentrating on discrete aspects of information while ignoring other perceivable information. Effective allocation of cognitive resources is crucial, as the amount of information impinging on our senses far exceeds our processing capabilities, resulting in an attentional bottleneck. To illustrate, in human vision, less than 1% of available visual input information can enter the bottleneck, leading to a phenomenon known as inattentional blindness [16]. Indeed, vision and attention are closely linked (even mind-wandering, where internal attention has refocused on task irrelevant stimuli, can be predicted from eye movements [2]). Consequently, much of the research related to attention has placed an emphasis on visual attention.</p>
+
+<p>There are two general models of visual attention. The first is known as the spotlight model, and it was inspired by the work of William James [8]. This model describes attention as having three parts: a focus, a margin, and a fringe. The focus of attention is high resolution, the center of which being where attention is directed. The focus is surrounded by a low-resolution zone called the fringe, which is then circumscribed by the margin of attention, or where attention is completely absent. The second model of visual attention is called the zoom lens model, and it inherits all the properties of the spotlight model with the added property of the focus changing in size [3] (similar to how a zoom lens on a camera works). The zoom lens feature accounts for the attentional bottleneck by assuming that attentional resources are fixed. In this model, it follows that the larger the area of focus is, the slower the processing of that region will be since the fixed resource is distributed over a larger area.</p>
+
+<h4 id="sifting-through-the-infinite-haystack">Sifting Through the Infinite Haystack</h4>
+
+<p>The attentional bottleneck presents a challenge for us in the modern world. Today’s deluge of content is flooding our senses (and inboxes) at an unprecedented pace.  As observed by Herbert A. Simon back in 1971:</p>
+
+<blockquote>
+  <p>“In an information-rich world, the wealth of information means a dearth of something else: a scarcity of whatever it is that information consumes. What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention and a need to allocate that attention efficiently among the overabundance of information sources that might consume it [15].”</p>
+</blockquote>
+
+<p>In other words, in our modern world of near infinite content, a need has emerged to efficiently connect people with the proverbial needle in the haystack. The tech giant Google made its name and fortune by creating a solution to this problem in the form of a search engine, a feat so well done that to ‘google’ something is itself a verb meaning to search for something on the internet. Search engines are great for users who can describe what they are looking for. But what about the users who want to discover something new? For them, recommendation systems have been a boon. Recommendation systems, like their name implies, offer recommendations of new content to a user based on that user’s history, such as the content they have viewed in the past (e.g., YouTube), what they’ve purchased (e.g., Amazon), or how they write their emails (e.g., Gmail autocomplete).  These systems can conveniently connect people with new content that they may have never encountered on their own.</p>
+
+<p>Unfortunately for these innovations, several ethical concerns have been raised about these systems. Some believe that they may be subtly guiding users into echo chambers, driving tribalism, and fracturing our shared culture [9]. Others think that these systems learn to exploit cognitive biases in people and manipulate them into making decisions they wouldn’t otherwise make (e.g., impulse buying) [1]. While considering these ethical issues, we should remember that these systems are tools meant to assist our attention and guide it to what we find interesting, which begs the question: what is our attention drawn to? That is, how is attention oriented in our environment?</p>
+
+<h4 id="may-stimul-i-have-your-attention">May Stimul-I Have Your Attention?</h4>
+
+<p>There are two kind of cues (or stimuli) that attract attention: endogenous (i.e., central/internal) and exogenous (i.e., peripheral/external) [14]. Endogenous attention is the intentional allocation of cognitive resources and is typically oriented to one’s goals or desires. This goal-driven, or “top-down,” attention can be manipulated by the demands of a task that aligns with one’s intentions. Conversely, exogenous attention is guided through external processes and is responsive to stimuli in one’s environment. A sudden loud noise or movement in a shadowy bush attracts attention in a non-volitional way – a useful feature for our ancient ancestors. This non-volitional, or “bottom-up,” attention is reflexive, automatic, and stimulus driven.</p>
+
+<p>As mentioned before, the attentional bottleneck makes it essential to have an effective strategy to attend to the most important aspects of the world around us. Endogenous and exogenous orientation, respectively driven by internal and external cues, ideally help us strike a balance between the demands of our inner goals and the constraints of our external environment. If there are relatively few constraints in the environment (e.g., there are no lions chasing us, we can pay our bills, we are healthy, etc.), then we have more cognitive resources to devote to our personal goals.</p>
+
+<p>Humans, being social creatures, also have a particular sensitivity to social cues. For a person living in the distant past, it was crucial to survival that they be accepted by their tribe. Social acceptance meant food, shelter, status, and the chance to reproduce. Social rejection, on the other hand, was dangerous, and perhaps even fatal. Though the stakes aren’t as high as they once were, the biological infrastructure still exists in us today, and we still care deeply about what others think of us. Our attention is deeply intertwined with this fact, and the stimuli from our social environment are particularly salient, which may be one reason why social media has taken such a firm hold on so many people today.</p>
+
+<h4 id="social-media-attention-merchantspirates">Social Media: Attention Merchants/Pirates</h4>
+
+<p>Social connection has been one of the greatest drivers of the internet’s popularity since the 1990’s, with companies like America Online (AOL) selling itself as a place to connect with anybody in the world who has an internet connection. In the early and mid-2000’s, social media services began appearing, such as Friendster, MySpace, and Facebook. These platforms made big promises to bring people together in online communities, thus making friendships and connections possible for people living all over the planet. Even better, they were going to provide this service –- at least on the surface –- free of charge.</p>
+
+<p>As mentioned previously, platforms like Facebook are attention merchants. That is, they profit off the attention of their users by showing them advertisements. Facebook uses the illusion of social cues (e.g., the number of likes on a posted photo) and variable reward signals (e.g., randomly notifying users of their friend’s activity) to keep users coming back to check the platform and scroll through ads. Ironically, Facebook isn’t interested in social connections in the real world (what our social sensitivies developed for), because their goal is to maximize user engagement (i.e., people’s time and attention) with their platform. To an attention merchant like Facebook, people are products. They earn money from advertisers by delivering ads to eyeballs. The more ads they show and the more effective the advertising is, the more profitable they become. That is what they care about, because that is where the money is.</p>
+
+<p>The fiscal interests of attention merchants are aligned with a two-pronged strategy: maximize engagement (i.e., time spent in the platform), and deliver targeted advertisements. To these ends, an enormous amount of effort is taken to collect data from users, often without their knowledge or consent. This data is then used to train algorithms that maximize user engagement and deliver targeted ads, an ethically questionable practice termed surveillance capitalism [20]. It should be obvious that this strategy is not necessarily aligned with beneficence, as there is no consideration of whether it provides useful (or even accurate) content. Indeed, this mindset of engagement above all else is exemplified in Nir Eyal’s book Hooked: How to Build Habit-forming Products [4].</p>
+
+<h5 id="broken-promises">Broken Promises</h5>
+
+<p>What modern social media platforms have turned into is a far cry from their original promise of bringing people together. As has been pointed out by people like Tristan Harris and Aza Raskin in their film The Social Dilemma [13], this business strategy is likely causing serious harm to the fabric of society as we know it by driving polarization and proliferating misinformation, and it all starts with the exploitation of human attention. Worse still, the strategy of engagement above all else forces other industries to abide by the same rules. For example, news outlets have become more and more polarized since the advent of social media, as they are incentivized to sell stories that engage rather than stories that are true. Consider the findings of a 2018 study conducted at MIT which found that false news spreads six time faster than true news on the social media platform Twitter [17].</p>
+
+<p>The fact that our information space has been corrupted by this business model of surveillance capitalism should alarm anybody, yet any meaningful reform currently seems remote. The problem is nuanced enough that it takes real technical knowledge to address it, something lacking in most of today’s politicians. Additionally, there is no incentive for the businesses themselves to change and every reason to maintain the status quo, as they are thriving in the current environment. So, what is there to do?</p>
+
+<h4 id="what-do-we-do">What Do We Do?</h4>
+
+<p>With the endless flood of content available to us and an array of powerful entities competing for our eyes, it seems very difficult to protect our attention and use it for our own interests. Fortunately, there are several ways that we as individuals can defend ourselves.</p>
+
+<h5 id="education">Education</h5>
+
+<p>The first step is education. People like Tristan Harris and Aza Raskin, who were once Silicon Valley insiders, have made great efforts to broadcast the severity of the situation to the public, and have even started the non-profit Center for Humane Technology. Nir Eyal, mentioned before for his book Hooked, wrote another book titled Indistractable: How to Control Your Attention and Choose Your Life [5], in which he offers some practical solutions to protect one’s attention (ostensibly from the exploitative practices that he helped proliferate). Johann Hari took a broader perspective on the attention crisis in his book Stolen Focus: Why You Can’t Pay Attention – and How to Think Deeply Again [7], where he considers a range of factors including social media, the modern diet, and our culture’s obsession with speed and convenience.</p>
+
+<h5 id="device-management">Device Management</h5>
+
+<p>There is no shortage of resources for understanding this problem and its potential solutions. However, while these may offer some useful advice for protecting our attention, they are focused primarily on exogenous factors. It certainly helps to disable notifications and to turn our phones to grayscale, but these address only the hook. What about when our attention has already been captured? Identifying when our attention has gone to a place that isn’t serving us and then reorienting it to something that is aligned with our interests takes a certain degree of self-awareness and executive functioning. Luckily, there is a way to cultivate these skills.</p>
+
+<h5 id="mindfulness-practice">Mindfulness Practice</h5>
+
+<p>Within the western psychological context, mindfulness is usually described as non-judgmental awareness of the present moment and is thought to entail paying attention with a certain attitude [12].  Training and refining attention skills are central to most conceptualizations of mindfulness practices, which often takes place during meditation [11]. Developing mindfulness skills positively impacts attentional functions by improving the allocation of attentional resources, specifically during early stages of processing [12]. A common form of mindfulness practice is to place attention on one’s breath for a fixed period (e.g., 10 minutes), and, when the mind inevitably wanders, to recognize where attention has gone and then return it to the breath non-judgmentally. Repeating this process over and over again develops an ability to recognize when attention has been unintentionally captured. Aside from the wealth of benefits that mindfulness practices offer, this one is particularly useful for protecting our attention from those who seek to prey upon it. Whereas disabling notifications is a form of exogenous defense, mindfulness can be considered a form of endogenous defense, training our executive functioning to recognize and reorient away from stimuli that have captured our attention but have nothing of substance to offer.</p>
+
+<p>It should be noted that just because mindfulness practice can breed a form of equanimity with the world as it is, that doesn’t mean the world should not change. While we as individuals can use exogenous and endogenous defense strategies to protect our attention, we must ask ourselves whether the industries that seek to harvest our attention should be entitled to such power over us to begin with.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>Each of us has only a short time on Earth to do the things that we truly want to do, to live a life that is meaningful to us. This requires that we devote our time and attention to the things that matter most. But our attention, limited by the attentional bottleneck, can only be allocated to so many things. Attention merchants like Facebook further complicate the picture by exploiting our social sensitivities to attract and keep our attention to boost their bottom line. While human attention has been sought after for a long time, never has it been harvested at such a massive scale and with such impunity. Even though we as individuals can disable notifications on our phones and practice mindfulness to bolster our attentional defenses, there remain glaring ethical issues in the practices of some of today’s largest attention merchants. Despite their lucrative business model, systemic change is needed. To quote him once more, William James once said,</p>
+
+<blockquote>
+  <p>“The moral flabbiness born of the exclusive worship of the bitch-goddess success. That – with the squalid cash interpretation put on the word ‘success’ – is our national disease.”</p>
+</blockquote>
+
+<p>We must ask whether these tech giants are successful in a way that is commensurate with the needs of society, or if they’re just rich from exploiting the society they’re embedded in. There is a world in which the technology we use helps us achieve our deeper goals rather than subverting them, but that is a world we must build together, and that will take a lot of attention.</p>
+
+<h3 id="references">References</h3>
+<p>[1]	Adomavicius, G. et al. 2013. Do recommender systems manipulate consumer preferences? A study of anchoring effects. Information Systems Research. 24, 4 (2013), 956–975. DOI:https://doi.org/10.1287/isre.2013.0497.</p>
+
+<p>[2]	D’Mello, S.K. and Mills, C.S. 2021. Mind wandering during reading: An interdisciplinary and integrative review of psychological, computing, &amp; intervention research and theory. Language and Linguistics Compass: Cognitive Science of Lanuage. (2021).</p>
+
+<p>[3]	Eriksen, C.W. and James, J.D.S. 1986. Visual attention within and around the field of focal attention. Perception &amp; Psychophysics. 40, 4 (1986), 225–240.</p>
+
+<p>[4]	Eyal, N. 2014. Hooked: How to Build Habit-Forming Products. Penguin Random House.</p>
+
+<p>[5]	Eyal, N. 2019. Indistractable: How to Control Your Attention and Choose Your Life. BenBella Books, Inc.</p>
+
+<p>[6]	González, V.M. and Mark, G. 1960. Managing Multiple Working Spheres “ Constant , Constant , Multi-tasking Craziness ”: Human Factors. 6, 1 (1960), 113–120.</p>
+
+<p>[7]	Hari, J. 2022. Stolen Focus: Why You Can’t Pay Attention - and How to Think Deeply Again. Random House.</p>
+
+<p>[8]	Hoffman, J.E. and Eriksen, C.W. 1972. Temporal and spatial characteristics of selective coding from visual displays. Perception &amp; Psychophysics. 12, August (1972), 201–204.</p>
+
+<p>[9]	Hosanagar, K. et al. 2014. Will the global village fracture into tribes recommender systems and their effects on consumer fragmentation. Management Science. 60, 4 (2014), 805–823. DOI:https://doi.org/10.1287/mnsc.2013.1808.</p>
+
+<p>[10]	Hours of video uploaded to YouTube every minute as of February 2020: 2022. https://www.statista.com/statistics/259477/hours-of-video-uploaded-to-youtube-every-minute/. Accessed: 2022-02-05.</p>
+
+<p>[11]	Lutz, A. et al. 2008. Attention regulation and monitoring in meditation. Trends in Cognitive Sciences. 12, 4 (2008), 163–169. DOI:https://doi.org/10.1016/j.tics.2008.01.005.</p>
+
+<p>[12]	Malinowski, P. 2013. Neural mechanisms of attentional control in mindfulness meditation. Frontiers in Neuroscience. 7, 7 FEB (2013), 1–11. DOI:https://doi.org/10.3389/fnins.2013.00008.</p>
+
+<p>[13]	Orlowski, J. 2020. The Social Dilemma.</p>
+
+<p>[14]	Posner, M.I. 1980. Orienting of attention. The Quarterly journal of experimental psychology. 32, 1 (1980), 3–25. DOI:https://doi.org/10.1080/00335558008248231.</p>
+
+<p>[15]	Simon, H.A. 1971. Designing Organizations for an Information-Rich World. Computers, Communication, and the Public Interest. (1971), 37–72.</p>
+
+<p>[16]	Simons, D.J. and Chabris, C.F. 1999. Gorillas in our midst: Sustained inattentional blindness for dynamic events. Perception. 28, 9 (1999), 1059–1074. DOI:https://doi.org/10.1068/p281059.</p>
+
+<p>[17]	Vosoughi, S. et al. 2018. The Spread of True and False News Online. Science. 1151, March (2018), 1146–1151.</p>
+
+<p>[18]	Wu, T. 2016. The Attention Merchants. Vintage Books.</p>
+
+<p>[19]	Yeykelis, L. et al. 2014. Multitasking on a Single Device: Arousal and the Frequency, Anticipation, and Prediction of Switching Between Media Content on a Computer. Journal of Communication. 64, 1 (2014), 167–192. DOI:https://doi.org/10.1111/jcom.12070.</p>
+
+<p>[20]	Zuboff, S. 2019. Surveillance Capitalism and the Challenge of Collective Action. New Labor Forum. 28, 1 (2019), 10–29. DOI:https://doi.org/10.1177/1095796018819461.</p>]]></content><author><name>Nick Hunkins</name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
